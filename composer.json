@@ -1,7 +1,6 @@
 {
   "name": "ec-europa/poc-code-review",
   "description": "Drupal 8 proof of concept: Code review component.",
-  "type": "composer-plugin",
   "require": {
     "phpro/grumphp": "dev-master#6fac607",
     "drupal/coder": "^8.2"
