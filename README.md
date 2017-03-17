@@ -23,3 +23,13 @@ Add path to GrumPHP configuration file to your `composer.json`'s extra:
 ## Usage
 
 Just commit some changes and you see warnings if you don't follow [conventions](CONVENTIONS.md).
+
+## Note
+
+When using a test editor to edit your commit message it is recommended to set:
+
+```
+$ git config --add commit.cleanup scissors # use --global if you wish this to apply globally.
+```
+
+This will ensure you can start your messages with an hash `#`.
