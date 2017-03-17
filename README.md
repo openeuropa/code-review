@@ -15,7 +15,7 @@ Add path to GrumPHP configuration file to your `composer.json`'s extra:
 ```
 "extra": {
   "grumphp": {
-    "config-default-path": "vendor/ec-europa/poc-code-review/dist/grumphp.yml"
+    "config-default-path": "vendor/ec-europa/poc-code-review/dist/grumphp.yml.dist"
   }
 }
 ```

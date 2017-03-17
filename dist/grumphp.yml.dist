@@ -1,0 +1,21 @@
+parameters:
+  ascii:
+    failed: ~
+    succeeded: ~
+  tasks:
+    phpcs:
+      standard: vendor/drupal/coder/coder_sniffer/Drupal/
+      ignore_patterns:
+        - vendor/
+        - node_modules/
+      triggered_by:
+        - php
+        - module
+        - inc
+      metadata:
+        priority: 300
+    git_commit_message:
+      matchers:
+        - '/^#\d+: [A-Z].+\./'
+      case_insensitive: false
+      multiline: false
