@@ -14,7 +14,7 @@ In your project root create the following `grumphp.yml.dist`:
 
 ```yaml
 imports:
-  - { resource: vendor/ec-europa/poc-code-review/dist/grumphp.yml }
+  - { resource: vendor/ec-europa/poc-code-review/dist/conventions.yml }
 parameters:
   # Your GrumPHP parameters here.
 ```
