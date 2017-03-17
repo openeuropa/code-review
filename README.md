@@ -15,8 +15,6 @@ In your project root create the following `grumphp.yml.dist`:
 ```yaml
 imports:
   - { resource: vendor/ec-europa/poc-code-review/dist/conventions.yml }
-parameters:
-  # Your GrumPHP parameters here.
 ```
 
 Since GrumPHP uses the [Symfony Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection.html)
