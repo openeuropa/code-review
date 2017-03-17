@@ -27,6 +27,8 @@ parameters:
   tasks.git_commit_message.matchers: ['/^JIRA-\d+: [A-Z].+\./']
 ```
 
+Check [``dist/conventions.yml``](dist/conventions.yml) for a list of parameters that can be overridden.
+
 More on how to import and override configuration files [here](http://symfony.com/doc/current/service_container/import.html).
 
 ## Usage
