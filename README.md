@@ -1,28 +1,53 @@
 ## Code review component
 
-Make automatic [conventions](CONVENTIONS.md) checking on each commit.
+Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
 
 ## Installation
 
-Add the code review component to your `composer.json`:
+Install the code review component via Composer:
 
 ```
 composer require --dev ec-europa/poc-code-review
 ```
 
-Add path to GrumPHP configuration file to your `composer.json`'s extra:
+In your project root create the following `grumphp.yml.dist`:
 
+```yaml
+imports:
+  - { resource: vendor/ec-europa/poc-code-review/dist/grumphp.yml }
+parameters:
+  # Your GrumPHP parameters here.
 ```
-"extra": {
-  "grumphp": {
-    "config-default-path": "vendor/ec-europa/poc-code-review/dist/grumphp.yml.dist"
-  }
-}
+
+You can also override default parameters by re-declaring them in your `grumphp.yml.dist` file:
+
+```yaml
+imports:
+  - { resource: vendor/ec-europa/poc-code-review/dist/conventions.yml }
+parameters:
+  tasks:
+    git_commit_message:
+      matchers:
+        - '/^JIRA-\d+: [A-Z].+\./'
 ```
 
 ## Usage
 
-Just commit some changes and you see warnings if you don't follow [conventions](CONVENTIONS.md).
+Just commit some changes and you'll see warnings if you don't follow [conventions](CONVENTIONS.md).
+
+If you want to perform all checks without a performing a commit run:
+
+```
+$ ./vendor/bin/grumphp run
+```
+
+If you want to simulate a commit message use:
+
+```
+$ ./vendor/bin/grumphp git:pre-commit
+```
+
+Check [GrumPHP documentation](https://github.com/phpro/grumphp/tree/master/doc) for more.
 
 ## Note
 
