@@ -1,4 +1,4 @@
-## Code review component
+# Code review component
 
 Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
 
