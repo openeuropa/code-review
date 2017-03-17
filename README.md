@@ -19,17 +19,17 @@ parameters:
   # Your GrumPHP parameters here.
 ```
 
-You can also override default parameters by re-declaring them in your `grumphp.yml.dist` file:
+Since GrumPHP uses the [Symfony Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection.html)
+you can override specific parameters in your project's `grumphp.yml.dist` file as follows:
 
 ```yaml
 imports:
   - { resource: vendor/ec-europa/poc-code-review/dist/conventions.yml }
 parameters:
-  tasks:
-    git_commit_message:
-      matchers:
-        - '/^JIRA-\d+: [A-Z].+\./'
+  tasks.git_commit_message.matchers: ['/^JIRA-\d+: [A-Z].+\./']
 ```
+
+More on how to import and override configuration files [here](http://symfony.com/doc/current/service_container/import.html).
 
 ## Usage
 
