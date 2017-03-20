@@ -1,5 +1,7 @@
 # Code review component
 
+[![Build Status](https://travis-ci.com/ec-europa/poc-code-review.svg?token=dqSmBxPQnRgBZvpCZAqo&branch=master)](https://travis-ci.com/ec-europa/poc-code-review)
+
 Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
 
 ## Installation
