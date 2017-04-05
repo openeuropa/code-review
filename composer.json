@@ -3,6 +3,7 @@
   "description": "Drupal 8 proof of concept: Code review component.",
   "require": {
     "phpro/grumphp": "dev-master#6fac607",
+    "phpmd/phpmd" : "~2.4",
     "drupal/coder": "^8.2"
   },
   "license": "EUPL-1.1"

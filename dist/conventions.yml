@@ -13,6 +13,10 @@ parameters:
     - inc
   tasks.phpcs.whitelist_patterns: []
 
+  # PHP Mess Detector parameters
+  tasks.phpmd.exclude:
+    - vendor/
+
   # Commit message parameters.
   tasks.git_commit_message.matchers:
     - '/^#\d+: [A-Z].+\./'
@@ -28,6 +32,10 @@ parameters:
       whitelist_patterns: %tasks.phpcs.whitelist_patterns%
       metadata:
         priority: 300
+
+    # PHP Mess Detector.
+    phpmd:
+      exclude: %tasks.phpmd.exclude%
 
     # Commit message format.
     git_commit_message:
