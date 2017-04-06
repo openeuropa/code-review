@@ -5,5 +5,8 @@
     "phpro/grumphp": "dev-master#6fac607",
     "drupal/coder": "^8.2"
   },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8.31"
+  },
   "license": "EUPL-1.1"
 }
