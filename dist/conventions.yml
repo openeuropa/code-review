@@ -16,6 +16,14 @@ parameters:
   # PHP Mess Detector parameters
   tasks.phpmd.exclude:
     - vendor/
+  tasks.phpmd.ruleset:
+    - cleancode
+    - codesize
+    - naming
+  tasks.phpmd.triggered_by:
+    - php
+    - module
+    - inc
 
   # Commit message parameters.
   tasks.git_commit_message.matchers:
@@ -36,6 +44,8 @@ parameters:
     # PHP Mess Detector.
     phpmd:
       exclude: %tasks.phpmd.exclude%
+      ruleset: %tasks.phpmd.ruleset%
+      triggered_by: %tasks.phpmd.triggered_by%
 
     # Commit message format.
     git_commit_message:
