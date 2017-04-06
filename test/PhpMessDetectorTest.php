@@ -5,8 +5,6 @@ namespace Europa\CodeReview\Test;
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Collection\FilesCollection;
 use GrumPHP\Task\Context\GitPreCommitContext;
-use RuntimeException;
-use SplFileInfo;
 
 /**
  * Tests for git commit message conventions.
@@ -14,14 +12,18 @@ use SplFileInfo;
 class PhpMessDetectorTest extends AbstractTest {
 
   /**
-   * @param string $fixture
+   * Get fixture file object.
    *
-   * @return SplFileInfo
+   * @param string $fixture
+   *   Fixture file name.
+   *
+   * @return \SplFileInfo
+   *   Return fixture file object.
    */
   private function getFixture($fixture) {
-    $file = new SplFileInfo(__DIR__ . '/fixtures/phpmd/' . $fixture);
+    $file = new \SplFileInfo(__DIR__ . '/fixtures/phpmd/' . $fixture);
     if (!$file->isReadable()) {
-      throw new RuntimeException(sprintf('The fixture %s could not be loaded!', $fixture));
+      throw new \RuntimeException(sprintf('The fixture %s could not be loaded!', $fixture));
     }
 
     return $file;
@@ -39,7 +41,7 @@ class PhpMessDetectorTest extends AbstractTest {
    */
   public function testPhpCodeMessage($fixture, $expected_result) {
     $container = $this->getContainer($this->getDistPath() . '/conventions.yml');
-    $collection = new FilesCollection(array($this->getFixture($fixture)));
+    $collection = new FilesCollection([$this->getFixture($fixture)]);
     $context = new GitPreCommitContext($collection);
     /** @var \GrumPHP\Task\TaskInterface $task */
     $task = $container->get('task.phpmd');

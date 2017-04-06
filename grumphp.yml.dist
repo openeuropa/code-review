@@ -8,11 +8,11 @@ parameters:
         - '/^#\d+: [A-Z].+\./'
       case_insensitive: false
       multiline: false
-    # PHP Code Sniffer.
     phpcs:
       standard: vendor/drupal/coder/coder_sniffer/Drupal/
       ignore_patterns:
-       - vendor/
+        - vendor/
+        - test/fixtures/
       triggered_by:
-       - php
-    yamllint:
+        - php
+    yamllint: ~

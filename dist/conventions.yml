@@ -36,9 +36,6 @@ parameters:
     # PHP Mess Detector.
     phpmd:
       exclude: %tasks.phpmd.exclude%
-      ruleset:
-        - codesize
-        - naming
 
     # Commit message format.
     git_commit_message:

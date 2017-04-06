@@ -3,6 +3,8 @@
 namespace Europa\CodeReview\Test;
 
 use GrumPHP\Configuration\ContainerFactory;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Tests\Fixtures\DummyOutput;
 
 /**
  * Abstract test class.
@@ -19,7 +21,10 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase {
    *   Returns a container.
    */
   protected function getContainer($filepath) {
-    return ContainerFactory::buildFromConfiguration($filepath);
+    $container = ContainerFactory::buildFromConfiguration($filepath);
+    $container->set('console.input', new ArgvInput());
+    $container->set('console.output', new DummyOutput());
+    return $container;
   }
 
   /**
