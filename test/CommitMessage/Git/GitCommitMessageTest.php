@@ -7,15 +7,22 @@ use GrumPHP\Runner\TaskResult;
 use GrumPHP\Task\Context\GitCommitMsgContext;
 use GrumPHP\Collection\FilesCollection;
 
+/**
+ * Tests for git commit message conventions.
+ */
 class GitCommitMessageTest extends AbstractTest {
 
   /**
+   * Tests different git messages against the predefined conventions.
+   *
    * @param string $message
+   *   Commit message to test.
    * @param int $expected_result
+   *   Expected result after the test.
+   *
    * @dataProvider commitMessageProvider
    */
-  public function testCommitMessage($message, $expected_result)
-  {
+  public function testCommitMessage($message, $expected_result) {
     $container = $this->getContainer($this->getDistPath() . '/conventions.yml');
     $collection = new FilesCollection();
     $context = new GitCommitMsgContext($collection, $message, '', '');
@@ -25,8 +32,10 @@ class GitCommitMessageTest extends AbstractTest {
     $this->assertEquals($result->getResultCode(), $expected_result);
   }
 
-  public function commitMessageProvider()
-  {
+  /**
+   * Test case provider function.
+   */
+  public function commitMessageProvider() {
     return [
       ['#3: Nice commit message.', TaskResult::PASSED],
       ['Failed message', TaskResult::FAILED],

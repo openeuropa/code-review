@@ -1,28 +1,32 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: local-dev
- * Date: 06.04.17
- * Time: 14:15
- */
 
 namespace EuropaCodeReview;
 
 use GrumPHP\Configuration\ContainerFactory;
 
-abstract class AbstractTest extends \PHPUnit_Framework_TestCase{
+/**
+ * Abstract test class.
+ */
+abstract class AbstractTest extends \PHPUnit_Framework_TestCase {
 
   /**
-   * @param $filepath
+   * Getter function to return a container.
+   *
+   * @param string $filepath
+   *   Real path of the conventions file.
+   *
    * @return \Symfony\Component\DependencyInjection\ContainerBuilder
+   *   Returns a container.
    */
-  protected function getContainer($filepath)
-  {
+  protected function getContainer($filepath) {
     return ContainerFactory::buildFromConfiguration($filepath);
   }
 
   /**
+   * Getter function to return the dist folder path.
+   *
    * @return string
+   *   Returns the real path of the dist folder
    */
   protected function getDistPath() {
     return realpath(__DIR__ . '/../dist');
