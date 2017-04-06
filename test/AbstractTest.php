@@ -1,6 +1,6 @@
 <?php
 
-namespace EuropaCodeReview;
+namespace Europa\CodeReview\Test;
 
 use GrumPHP\Configuration\ContainerFactory;
 

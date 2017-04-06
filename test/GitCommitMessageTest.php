@@ -1,8 +1,7 @@
 <?php
 
-namespace EuropaCodeReview\CommitMessage\Git;
+namespace Europa\CodeReview\Test;
 
-use EuropaCodeReview\AbstractTest;
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Task\Context\GitCommitMsgContext;
 use GrumPHP\Collection\FilesCollection;
