@@ -51,6 +51,14 @@ $ ./vendor/bin/grumphp git:pre-commit
 
 Check [GrumPHP documentation](https://github.com/phpro/grumphp/tree/master/doc) for more.
 
+## Tests
+
+Tests are provided by [PHPUnit](https://phpunit.de), run them with the following command:
+
+```
+$ ./vendor/bin/phpunit
+```
+
 ## Note
 
 When using a test editor to edit your commit message it is recommended to set:
