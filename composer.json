@@ -6,7 +6,7 @@
     "drupal/coder": "^8.2"
   },
   "require-dev": {
-    "phpunit/phpunit": "^4.8.31"
+    "phpunit/phpunit": "^6"
   },
   "license": "EUPL-1.1"
 }

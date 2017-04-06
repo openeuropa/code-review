@@ -15,3 +15,4 @@ parameters:
        - vendor/
       triggered_by:
        - php
+    yamllint:
