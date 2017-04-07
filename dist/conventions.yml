@@ -27,7 +27,7 @@ parameters:
 
   # Commit message parameters.
   tasks.git_commit_message.matchers:
-    - '/^#\d+: [A-Z].+\./'
+    - '/^(([A-Z]+\-\d+)|(#\d+)): [A-Z].+\./'
 
   # Tasks.
   tasks:
