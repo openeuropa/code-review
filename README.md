@@ -59,7 +59,9 @@ Tests are provided by [PHPUnit](https://phpunit.de), run them with the following
 $ ./vendor/bin/phpunit
 ```
 
-## Note
+## Troubleshooting
+
+### Commit messages starting with "#" being ignored
 
 When using a test editor to edit your commit message it is recommended to set:
 
@@ -68,3 +70,20 @@ $ git config --add commit.cleanup scissors # use --global if you wish this to ap
 ```
 
 This will ensure you can start your messages with an hash `#`.
+
+### GrumPHP not fired on new commits
+ 
+With Git 2.9+ (June 2016) you have a new option for centralizing hooks: `core.hooksPath`. In case GrumPHP is not
+fired on new commits check for `core.hooksPath` global option by running:
+
+```
+$ git config --global --list
+```
+
+To unset that option run:
+
+```
+$ git config --global --unset core.hooksPath 
+```
+
+
