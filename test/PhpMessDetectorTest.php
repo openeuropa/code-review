@@ -1,6 +1,6 @@
 <?php
 
-namespace Europa\CodeReview\Test;
+namespace EC\OpenEuropa\CodeReview\Test;
 
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Collection\FilesCollection;

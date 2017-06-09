@@ -1,6 +1,6 @@
-# Code review component
+# OpenEuropa code review
 
-[![Build Status](https://travis-ci.com/ec-europa/poc-code-review.svg?token=dqSmBxPQnRgBZvpCZAqo&branch=master)](https://travis-ci.com/ec-europa/poc-code-review)
+[![Build Status](https://travis-ci.com/ec-europa/oe-code-review.svg?token=dqSmBxPQnRgBZvpCZAqo&branch=master)](https://travis-ci.com/ec-europa/oe-code-review)
 
 Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
 
@@ -9,14 +9,14 @@ Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPH
 Install the code review component via Composer:
 
 ```
-composer require --dev ec-europa/poc-code-review
+composer require --dev ec-europa/oe-code-review
 ```
 
 In your project root create the following `grumphp.yml.dist`:
 
 ```yaml
 imports:
-  - { resource: vendor/ec-europa/poc-code-review/dist/conventions.yml }
+  - { resource: vendor/ec-europa/oe-code-review/dist/conventions.yml }
 ```
 
 Since GrumPHP uses the [Symfony Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection.html)
@@ -24,7 +24,7 @@ you can override specific parameters in your project's `grumphp.yml.dist` file a
 
 ```yaml
 imports:
-  - { resource: vendor/ec-europa/poc-code-review/dist/conventions.yml }
+  - { resource: vendor/ec-europa/oe-code-review/dist/conventions.yml }
 parameters:
   tasks.git_commit_message.matchers: ['/^JIRA-\d+: [A-Z].+\./']
 ```

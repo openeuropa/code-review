@@ -1,6 +1,7 @@
 {
-  "name": "ec-europa/poc-code-review",
-  "description": "Drupal 8 proof of concept: Code review component.",
+  "name": "ec-europa/oe-code-review",
+  "description": "OpenEuropa code review component.",
+  "license": "EUPL-1.1",
   "require": {
     "phpro/grumphp": "0.11.4",
     "phpmd/phpmd" : "~2.4",
@@ -8,6 +9,5 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^5"
-  },
-  "license": "EUPL-1.1"
+  }
 }

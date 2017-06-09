@@ -1,6 +1,6 @@
 # Conventions
 
-List of convention for EC projects.  
+List of conventions for OpenEuropa projects and components.
 
 ## Commit messages
 
