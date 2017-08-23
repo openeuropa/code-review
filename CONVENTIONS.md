@@ -4,7 +4,7 @@ List of conventions for OpenEuropa projects and components.
 
 ## Commit messages
 
-Valid commit message: `#123: My commit.`
+Valid commit message: `Issue #123: My commit.`
 
 - Must start with GitHub issue reference
 - Must have a colon followed by a space after the issue reference

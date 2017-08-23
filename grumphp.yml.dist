@@ -5,7 +5,7 @@ parameters:
   tasks:
     git_commit_message:
       matchers:
-        - '/^(([A-Z]+\-\d+)|(#\d+)): [A-Z].+\./'
+        - '/^([A-Z]+\-\d+|Issue #\d+): [A-Z].+\./'
       case_insensitive: false
       multiline: false
     phpcs:

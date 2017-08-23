@@ -61,16 +61,6 @@ $ ./vendor/bin/phpunit
 
 ## Troubleshooting
 
-### Commit messages starting with "#" being ignored
-
-When using a test editor to edit your commit message it is recommended to set:
-
-```
-$ git config --add commit.cleanup scissors # use --global if you wish this to apply globally.
-```
-
-This will ensure you can start your messages with an hash `#`.
-
 ### GrumPHP not fired on new commits
  
 With Git 2.9+ (June 2016) you have a new option for centralizing hooks: `core.hooksPath`. In case GrumPHP is not
