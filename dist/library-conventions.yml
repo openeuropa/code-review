@@ -1,0 +1,5 @@
+imports:
+  - { resource: base-conventions.yml }
+
+parameters:
+  tasks.phpcs.standard: ./vendor/escapestudios/symfony2-coding-standard/Symfony2

@@ -1,0 +1,50 @@
+parameters:
+  ascii:
+    failed: ~
+    succeeded: ~
+
+  # PHP Code Sniffer parameters.
+  tasks.phpcs.ignore_patterns:
+    - vendor/
+    - node_modules/
+  tasks.phpcs.triggered_by:
+    - php
+  tasks.phpcs.whitelist_patterns: []
+  tasks.phpcs.standard: ~
+
+  # PHP Mess Detector parameters
+  tasks.phpmd.exclude:
+    - vendor/
+  tasks.phpmd.ruleset:
+    - codesize
+    - naming
+  tasks.phpmd.triggered_by:
+    - php
+
+  # Commit message parameters.
+  tasks.git_commit_message.matchers:
+    - '/^([A-Z]+\-\d+|Issue #\d+): [A-Z].+\./'
+
+  # Tasks.
+  tasks:
+
+    # PHP Code Sniffer.
+    phpcs:
+      standard: %tasks.phpcs.standard%
+      ignore_patterns: %tasks.phpcs.ignore_patterns%
+      triggered_by: %tasks.phpcs.triggered_by%
+      whitelist_patterns: %tasks.phpcs.whitelist_patterns%
+      metadata:
+        priority: 300
+
+    # PHP Mess Detector.
+    phpmd:
+      exclude: %tasks.phpmd.exclude%
+      ruleset: %tasks.phpmd.ruleset%
+      triggered_by: %tasks.phpmd.triggered_by%
+
+    # Commit message format.
+    git_commit_message:
+      matchers: %tasks.git_commit_message.matchers%
+      case_insensitive: false
+      multiline: false

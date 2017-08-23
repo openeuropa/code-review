@@ -9,7 +9,8 @@ use Symfony\Component\Console\Tests\Fixtures\DummyOutput;
 /**
  * Abstract test class.
  */
-abstract class AbstractTest extends \PHPUnit_Framework_TestCase {
+abstract class AbstractTest extends \PHPUnit_Framework_TestCase
+{
 
   /**
    * Getter function to return a container.
@@ -20,12 +21,14 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase {
    * @return \Symfony\Component\DependencyInjection\ContainerBuilder
    *   Returns a container.
    */
-  protected function getContainer($filepath) {
-    $container = ContainerFactory::buildFromConfiguration($filepath);
-    $container->set('console.input', new ArgvInput());
-    $container->set('console.output', new DummyOutput());
-    return $container;
-  }
+    protected function getContainer($filepath)
+    {
+        $container = ContainerFactory::buildFromConfiguration($filepath);
+        $container->set('console.input', new ArgvInput());
+        $container->set('console.output', new DummyOutput());
+
+        return $container;
+    }
 
   /**
    * Getter function to return the dist folder path.
@@ -33,8 +36,8 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase {
    * @return string
    *   Returns the real path of the dist folder
    */
-  protected function getDistPath() {
-    return realpath(__DIR__ . '/../dist');
-  }
-
+    protected function getDistPath()
+    {
+        return realpath(__DIR__.'/../dist');
+    }
 }

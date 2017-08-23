@@ -1,18 +1,10 @@
+imports:
+  - { resource: ./dist/library-conventions.yml }
+
 parameters:
-  ascii:
-    failed: ~
-    succeeded: ~
-  tasks:
-    git_commit_message:
-      matchers:
-        - '/^([A-Z]+\-\d+|Issue #\d+): [A-Z].+\./'
-      case_insensitive: false
-      multiline: false
-    phpcs:
-      standard: vendor/drupal/coder/coder_sniffer/Drupal/
-      ignore_patterns:
-        - vendor/
-        - test/fixtures/
-      triggered_by:
-        - php
-    yamllint: ~
+  tasks.phpcs.ignore_patterns:
+    - vendor/
+    - test/fixtures/
+  tasks.phpmd.exclude:
+    - vendor/
+    - test/fixtures/
