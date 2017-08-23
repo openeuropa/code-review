@@ -16,28 +16,36 @@ In your project root create the following `grumphp.yml.dist`:
 
 ```yaml
 imports:
-  - { resource: vendor/ec-europa/oe-code-review/dist/conventions.yml }
+  - { resource: vendor/ec-europa/oe-code-review/dist/library-conventions.yml }
 ```
+
+For a list of available conventions please check [CONVENTIONS.md](CONVENTIONS.md).
 
 Since GrumPHP uses the [Symfony Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection.html)
 you can override specific parameters in your project's `grumphp.yml.dist` file as follows:
 
 ```yaml
 imports:
-  - { resource: vendor/ec-europa/oe-code-review/dist/conventions.yml }
+  - { resource: vendor/ec-europa/oe-code-review/dist/library-conventions.yml }
 parameters:
   tasks.git_commit_message.matchers: ['/^JIRA-\d+: [A-Z].+\./']
 ```
 
-Check [``dist/conventions.yml``](dist/conventions.yml) for a list of parameters that can be overridden.
+Below the list of task parameters can that be overridden on a per-project basis:
+
+- `tasks.phpcs.ignore_patterns`
+- `tasks.phpcs.triggered_by`
+- `tasks.phpcs.whitelist_patterns`
+- `tasks.phpmd.exclude`
+- `tasks.phpmd.ruleset`
+- `tasks.phpmd.triggered_by`
+- `tasks.git_commit_message.matchers`
 
 More on how to import and override configuration files [here](http://symfony.com/doc/current/service_container/import.html).
 
 ## Usage
 
-Just commit some changes and you'll see warnings if you don't follow [conventions](CONVENTIONS.md).
-
-If you want to perform all checks without a performing a commit run:
+GrumPHP tasks will be ran at every commit, if you with to run them without performing a commit use the following command:
 
 ```
 $ ./vendor/bin/grumphp run
@@ -53,7 +61,7 @@ Check [GrumPHP documentation](https://github.com/phpro/grumphp/tree/master/doc) 
 
 ## Tests
 
-Tests are provided by [PHPUnit](https://phpunit.de), run them with the following command:
+Run [PHPUnit](https://phpunit.de) tests with the following command:
 
 ```
 $ ./vendor/bin/phpunit
@@ -61,7 +69,7 @@ $ ./vendor/bin/phpunit
 
 ## Troubleshooting
 
-### GrumPHP not fired on new commits
+**GrumPHP not fired on new commits**
  
 With Git 2.9+ (June 2016) you have a new option for centralizing hooks: `core.hooksPath`. In case GrumPHP is not
 fired on new commits check for `core.hooksPath` global option by running:
