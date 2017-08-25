@@ -1,6 +1,6 @@
 # OpenEuropa code review
 
-[![Build Status](https://travis-ci.com/ec-europa/oe-code-review.svg?token=dqSmBxPQnRgBZvpCZAqo&branch=master)](https://travis-ci.com/ec-europa/oe-code-review)
+[![Build Status](https://travis-ci.org/ec-europa/oe-code-review.svg?branch=master)](https://travis-ci.org/ec-europa/oe-code-review)
 
 Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
 
