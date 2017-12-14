@@ -1,12 +1,16 @@
 # Change Log
 
-## [Unreleased](https://github.com/ec-europa/oe-code-review/tree/HEAD)
-
-[Full Changelog](https://github.com/ec-europa/oe-code-review/compare/0.0.2...HEAD)
+## [0.1.0](https://github.com/ec-europa/oe-code-review/tree/0.1.0) (2017-12-14)
+[Full Changelog](https://github.com/ec-europa/oe-code-review/compare/0.0.2...0.1.0)
 
 **Closed issues:**
 
+- NEPT-1100\_documentation\_and\_changelog [\#13](https://github.com/ec-europa/oe-code-review/issues/13)
 - Add convention files for both Drupal and non-Drupal projects [\#11](https://github.com/ec-europa/oe-code-review/issues/11)
+
+**Merged pull requests:**
+
+- Issue \#13: Create CHANGELOG.md [\#14](https://github.com/ec-europa/oe-code-review/pull/14) ([richardcanoe](https://github.com/richardcanoe))
 
 ## [0.0.2](https://github.com/ec-europa/oe-code-review/tree/0.0.2) (2017-08-23)
 [Full Changelog](https://github.com/ec-europa/oe-code-review/compare/0.0.1...0.0.2)
