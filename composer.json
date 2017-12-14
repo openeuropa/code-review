@@ -10,5 +10,9 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^5"
+  },
+  "scripts": {
+    "changelog": "docker run --rm -v \"$(pwd):$(pwd)\" -w $(pwd) muccg/github-changelog-generator ec-europa/oe-code-review -t $CHANGELOG_GITHUB_TOKEN"
   }
 }
+
