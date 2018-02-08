@@ -12,15 +12,34 @@ use Symfony\Component\Console\Tests\Fixtures\DummyOutput;
 abstract class AbstractTest extends \PHPUnit_Framework_TestCase
 {
 
-  /**
-   * Getter function to return a container.
-   *
-   * @param string $filepath
-   *   Real path of the conventions file.
-   *
-   * @return \Symfony\Component\DependencyInjection\ContainerBuilder
-   *   Returns a container.
-   */
+    /**
+     * Get fixture file object.
+     *
+     * @param string $fixture
+     *   Fixture file name.
+     *
+     * @return \SplFileInfo
+     *   Return fixture file object.
+     */
+    public function getFixture($fixture)
+    {
+        $file = new \SplFileInfo(__DIR__.'/fixtures/phpmd/'.$fixture);
+        if (!$file->isReadable()) {
+            throw new \RuntimeException(sprintf('The fixture %s could not be loaded!', $fixture));
+        }
+
+        return $file;
+    }
+
+    /**
+     * Getter function to return a container.
+     *
+     * @param string $filepath
+     *   Real path of the conventions file.
+     *
+     * @return \Symfony\Component\DependencyInjection\ContainerBuilder
+     *   Returns a container.
+     */
     protected function getContainer($filepath)
     {
         $container = ContainerFactory::buildFromConfiguration($filepath);
@@ -30,12 +49,12 @@ abstract class AbstractTest extends \PHPUnit_Framework_TestCase
         return $container;
     }
 
-  /**
-   * Getter function to return the dist folder path.
-   *
-   * @return string
-   *   Returns the real path of the dist folder
-   */
+    /**
+     * Getter function to return the dist folder path.
+     *
+     * @return string
+     *   Returns the real path of the dist folder
+     */
     protected function getDistPath()
     {
         return realpath(__DIR__.'/../dist');
