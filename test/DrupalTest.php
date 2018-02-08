@@ -35,7 +35,7 @@ class DrupalTest extends AbstractTest
     /**
      * Test case provider function.
      *
-     * Test different extensions.
+     * Test file extensions.
      *
      * @return array
      *      Test data.
