@@ -7,7 +7,9 @@ parameters:
     - php
     - module
     - inc
+    - theme
   tasks.phpmd.triggered_by:
     - php
     - module
     - inc
+    - theme
