@@ -43,6 +43,8 @@ class DrupalTest extends AbstractTest
     public function commitMessageProvider()
     {
         return [
+          ['correct-code.inc', TaskResult::PASSED],
+          ['correct-code.module', TaskResult::PASSED],
           ['correct-code.theme', TaskResult::PASSED],
           ['ignored-code.xxx', TaskResult::SKIPPED],
         ];
