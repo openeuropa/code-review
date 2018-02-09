@@ -1,5 +1,16 @@
 # Change Log
 
+## [0.1.1](https://github.com/ec-europa/oe-code-review/tree/0.1.1) (2018-02-09)
+[Full Changelog](https://github.com/ec-europa/oe-code-review/compare/0.1.0...0.1.1)
+
+**Closed issues:**
+
+- Add theme files to oe-code-review default conventions [\#17](https://github.com/ec-europa/oe-code-review/issues/17)
+
+**Merged pull requests:**
+
+- Issue \#17: Add theme files to conventions. [\#18](https://github.com/ec-europa/oe-code-review/pull/18) ([dxvargas](https://github.com/dxvargas))
+
 ## [0.1.0](https://github.com/ec-europa/oe-code-review/tree/0.1.0) (2017-12-14)
 [Full Changelog](https://github.com/ec-europa/oe-code-review/compare/0.0.2...0.1.0)
 
