@@ -17,5 +17,5 @@ List of conventions for OpenEuropa projects and components.
 Valid default commit messages: `Issue #123: My commit.` or `NEPT-123: My commit.`
 
 - Must start with GitHub issue reference or a Jira-like ticket ID.
-- Must have a colon followed by a space after the issue reference
-- Must start with capitol letter and end with a period  
+- Must have a colon followed by a space after the issue reference.
+- Must start with capital letter and end with a period.
