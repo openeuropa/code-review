@@ -1,6 +1,6 @@
 <?php
 
-namespace EC\OpenEuropa\CodeReview\Test;
+namespace OpenEuropa\CodeReview\Test;
 
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Task\Context\GitCommitMsgContext;
