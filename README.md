@@ -1,6 +1,6 @@
-# OpenEuropa code review
+# Code review
 
-[![Build Status](https://travis-ci.org/ec-europa/oe-code-review.svg?branch=master)](https://travis-ci.org/ec-europa/oe-code-review)
+[![Build Status](https://travis-ci.org/openeuropa/code-review.svg?branch=master)](https://travis-ci.org/openeuropa/code-review)
 
 Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
 
@@ -9,14 +9,14 @@ Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPH
 Install the code review component via Composer:
 
 ```
-composer require --dev ec-europa/oe-code-review
+composer require --dev openeuropa/code-review
 ```
 
 In your project root create the following `grumphp.yml.dist`:
 
 ```yaml
 imports:
-  - { resource: vendor/ec-europa/oe-code-review/dist/library-conventions.yml }
+  - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
 ```
 
 For a list of available conventions please check [CONVENTIONS.md](CONVENTIONS.md).
@@ -26,7 +26,7 @@ you can override specific parameters in your project's `grumphp.yml.dist` file a
 
 ```yaml
 imports:
-  - { resource: vendor/ec-europa/oe-code-review/dist/library-conventions.yml }
+  - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
 parameters:
   tasks.git_commit_message.matchers: ['/^JIRA-\d+: [A-Z].+\./']
 ```
@@ -71,7 +71,7 @@ $ ./vendor/bin/phpunit
 
 The changelog is generated using a local docker installation which installs [muccg/docker-github-changelog-generator](https://github.com/muccg/docker-github-changelog-generator)
 
-This reads the [Github API](https://api.github.com/repos/ec-europa/oe-code-review) for the required repository and writes the CHANGELOG.md to the root of the repository.
+This reads the [Github API](https://api.github.com/repos/openeuropa/code-review) for the required repository and writes the CHANGELOG.md to the root of the repository.
 
 **Prerequisites**
 
