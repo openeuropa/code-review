@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.2.0](https://github.com/openeuropa/code-review/tree/0.2.0) (2018-02-21)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/0.1.1...0.2.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-322: Transfer projects to OpenEuropa organisation [\#20](https://github.com/openeuropa/code-review/pull/20) ([ademarco](https://github.com/ademarco))
+- OPENEUROPA-197: Use OpenEuropa namespace to avoid redundant prefixes [\#19](https://github.com/openeuropa/code-review/pull/19) ([ademarco](https://github.com/ademarco))
+
 ## [0.1.1](https://github.com/openeuropa/code-review/tree/0.1.1) (2018-02-09)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/0.1.0...0.1.1)
 
