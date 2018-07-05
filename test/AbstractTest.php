@@ -5,11 +5,12 @@ namespace OpenEuropa\CodeReview\Test;
 use GrumPHP\Configuration\ContainerFactory;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Tests\Fixtures\DummyOutput;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Abstract test class.
  */
-abstract class AbstractTest extends \PHPUnit_Framework_TestCase
+abstract class AbstractTest extends TestCase
 {
 
     /**
