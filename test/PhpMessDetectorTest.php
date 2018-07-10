@@ -41,8 +41,8 @@ class PhpMessDetectorTest extends AbstractTest
     public function commitMessageProvider()
     {
         return [
-          ['correct-code.php', TaskResult::PASSED],
-          ['incorrect-code.php', TaskResult::FAILED],
+          ['phpmd/correct-code.php', TaskResult::PASSED],
+          ['phpmd/incorrect-code.php', TaskResult::FAILED],
         ];
     }
 }
