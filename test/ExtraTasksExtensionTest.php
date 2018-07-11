@@ -2,8 +2,7 @@
 
 namespace OpenEuropa\CodeReview\Test;
 
-use Symfony\Component\Console\Input\StringInput;
-use Symfony\Component\Console\Output\NullOutput;
+use GrumPHP\Configuration\ContainerFactory;
 
 /**
  * Test extra tasks extension.
@@ -16,13 +15,8 @@ class ExtraTasksExtensionTest extends AbstractTest
     public function testExtraTask()
     {
         $path = $this->getFixture('extra-tasks/grumphp.yml.dist')->getRealPath();
-        $app = new TestApplication($path);
-        $app->setAutoExit(false);
-
-        $input = new StringInput('');
-        $output = new NullOutput();
-        $app->run($input, $output);
-        $tasks = $app->getParameter('tasks');
+        $container = ContainerFactory::buildFromConfiguration($path);
+        $tasks = $container->getParameter('tasks');
 
         $this->assertEquals([
             'phpcs' => null,
