@@ -1,10 +1,7 @@
+imports:
+  - { resource: base.yml }
+
 parameters:
-    ascii:
-        failed: ~
-        succeeded: ~
-    tasks:
-        phpcs: ~
-        phpmd: ~
     extra_tasks:
         git_commit_message: ~
     extensions:
