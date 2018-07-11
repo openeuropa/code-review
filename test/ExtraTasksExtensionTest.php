@@ -3,6 +3,7 @@
 namespace OpenEuropa\CodeReview\Test;
 
 use GrumPHP\Configuration\ContainerFactory;
+use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 
 /**
  * Test extra tasks extension.
@@ -10,11 +11,11 @@ use GrumPHP\Configuration\ContainerFactory;
 class ExtraTasksExtensionTest extends AbstractTest
 {
     /**
-     * Test extra task.
+     * Test adding an extra task.
      */
-    public function testExtraTask()
+    public function testAddExtraTask()
     {
-        $path = $this->getFixture('extra-tasks/grumphp.yml.dist')->getRealPath();
+        $path = $this->getFixture('extra-tasks/success.yml')->getRealPath();
         $container = ContainerFactory::buildFromConfiguration($path);
         $tasks = $container->getParameter('tasks');
 
@@ -23,5 +24,17 @@ class ExtraTasksExtensionTest extends AbstractTest
             'phpmd' => null,
             'git_commit_message' => null,
         ], $tasks);
+    }
+
+    /**
+     * Test throwing an exception if trying to override already defined tasks.
+     */
+    public function testThrowExceptionForExistingTasks()
+    {
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage("Cannot override already defined task 'phpcs' in 'extra_tasks'.");
+
+        $path = $this->getFixture('extra-tasks/fail.yml')->getRealPath();
+        ContainerFactory::buildFromConfiguration($path);
     }
 }
