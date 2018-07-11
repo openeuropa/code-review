@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenEuropa\CodeReview\Test;
+namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Configuration\ContainerFactory;
 use Symfony\Component\Console\Input\ArgvInput;

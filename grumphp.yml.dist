@@ -4,7 +4,7 @@ imports:
 parameters:
   tasks.phpcs.ignore_patterns:
     - vendor/
-    - test/fixtures/
+    - tests/fixtures/
   tasks.phpmd.exclude:
     - vendor/
-    - test/fixtures/
+    - tests/fixtures/

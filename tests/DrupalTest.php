@@ -1,15 +1,15 @@
 <?php
 
-namespace OpenEuropa\CodeReview\Test;
+namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Collection\FilesCollection;
 use GrumPHP\Task\Context\GitPreCommitContext;
 
 /**
- * Tests for git commit message conventions.
+ * Tests for Drupal conventions.
  */
-class PhpMessDetectorTest extends AbstractTest
+class DrupalTest extends AbstractTest
 {
     /**
      * Tests different git messages against the predefined conventions.
@@ -23,7 +23,7 @@ class PhpMessDetectorTest extends AbstractTest
      */
     public function testPhpCodeMessage($fixture, $expected)
     {
-        $container = $this->getContainer($this->getDistPath().'/base-conventions.yml');
+        $container = $this->getContainer($this->getDistPath().'/drupal-conventions.yml');
         $collection = new FilesCollection([$this->getFixture($fixture)]);
         $context = new GitPreCommitContext($collection);
         /** @var \GrumPHP\Task\TaskInterface $task */
@@ -35,14 +35,18 @@ class PhpMessDetectorTest extends AbstractTest
     /**
      * Test case provider function.
      *
+     * Test file extensions.
+     *
      * @return array
      *      Test data.
      */
     public function commitMessageProvider()
     {
         return [
-          ['phpmd/correct-code.php', TaskResult::PASSED],
-          ['phpmd/incorrect-code.php', TaskResult::FAILED],
+          ['phpmd/correct-code.inc', TaskResult::PASSED],
+          ['phpmd/correct-code.module', TaskResult::PASSED],
+          ['phpmd/correct-code.theme', TaskResult::PASSED],
+          ['phpmd/ignored-code.xxx', TaskResult::SKIPPED],
         ];
     }
 }
