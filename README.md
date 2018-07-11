@@ -17,9 +17,18 @@ In your project root create the following `grumphp.yml.dist`:
 ```yaml
 imports:
   - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
+
+parameters:
+    extensions:
+        - OpenEuropa\CodeReview\ExtraTasksExtension
+
 ```
 
-For a list of available conventions please check [CONVENTIONS.md](CONVENTIONS.md).
+
+## Customization
+
+This component offers a variety of ready conventions that all projects need to follow.
+This list of default conventions can be found in [CONVENTIONS.md](CONVENTIONS.md).
 
 Since GrumPHP uses the [Symfony Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection.html)
 you can override specific parameters in your project's `grumphp.yml.dist` file as follows:
@@ -42,6 +51,24 @@ Below the list of task parameters can that be overridden on a per-project basis:
 - `tasks.git_commit_message.matchers`
 
 More on how to import and override configuration files [here](http://symfony.com/doc/current/service_container/import.html).
+
+It is also possible to extend the list of tasks to be run by adding the extra_tasks parameter
+in your configuration file:
+
+```yaml
+imports:
+  - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
+parameters:
+  extra_tasks:
+    phpparser: ~
+  tasks.git_commit_message.matchers: ['/^JIRA-\d+: [A-Z].+\./']
+```
+
+GrumPHP already has a series of ready tasks that can be added out of the box.
+You can find the complete list in the [GrumPHP tasks page](https://github.com/phpro/grumphp/blob/master/doc/tasks.md).
+
+It is also possible to create your own tasks as explained in the [GrumPHP extensions page](https://github.com/phpro/grumphp/blob/master/doc/extensions.md).
+
 
 ## Usage
 
