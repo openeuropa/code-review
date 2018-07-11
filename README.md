@@ -1,6 +1,7 @@
 # Code review
 
-[![Build Status](https://travis-ci.org/openeuropa/code-review.svg?branch=master)](https://travis-ci.org/openeuropa/code-review)
+[![Build Status](https://drone.fpfis.eu/api/badges/openeuropa/code-review/status.svg?branch=master)](https://drone.fpfis.eu/openeuropa/code-review)
+
 
 Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
 
