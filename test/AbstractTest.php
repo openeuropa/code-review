@@ -8,7 +8,7 @@ use Symfony\Component\Console\Tests\Fixtures\DummyOutput;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Abstract test class.
+ * Base class for testing conventions.
  */
 abstract class AbstractTest extends TestCase
 {
@@ -42,10 +42,9 @@ abstract class AbstractTest extends TestCase
     }
 
     /**
-     * Getter function to return a container.
+     * Returns the dependency injection container for the convention being tested.
      *
      * @return \Symfony\Component\DependencyInjection\ContainerBuilder
-     *   Returns a container.
      */
     protected function getContainer()
     {
