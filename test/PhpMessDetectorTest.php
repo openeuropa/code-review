@@ -23,11 +23,9 @@ class PhpMessDetectorTest extends AbstractTest
      */
     public function testPhpCodeMessage($fixture, $expected)
     {
-        $container = $this->getContainer($this->getDistPath().'/base-conventions.yml');
         $collection = new FilesCollection([$this->getFixture($fixture)]);
         $context = new GitPreCommitContext($collection);
-        /** @var \GrumPHP\Task\TaskInterface $task */
-        $task = $container->get('task.phpmd');
+        $task = $this->getTask('phpmd');
         $result = $task->run($context);
         $this->assertEquals($result->getResultCode(), $expected);
     }
@@ -44,5 +42,30 @@ class PhpMessDetectorTest extends AbstractTest
           ['correct-code.php', TaskResult::PASSED],
           ['incorrect-code.php', TaskResult::FAILED],
         ];
+    }
+
+    /**
+     * Returns the task with the given name.
+     *
+     * @param string $name
+     *   The name of the task to return.
+     *
+     * @return \GrumPHP\Task\TaskInterface
+     *
+     * @throws \Exception
+     *   Thrown when the task with the given name does not exist, or if the task runner service is not registered.
+     */
+    protected function getTask($name)
+    {
+        $container = $this->getContainer($this->getDistPath().'/base-conventions.yml');
+        /** @var \GrumPHP\Runner\TaskRunner $taskrunner */
+        $taskrunner = $container->get('task_runner');
+        foreach ($taskrunner->getTasks() as $task) {
+            if ($task->getName() === $name) {
+                return $task;
+            }
+        }
+
+        throw new \InvalidArgumentException("Task with name $name is not registered.");
     }
 }
