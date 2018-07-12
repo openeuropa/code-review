@@ -11,6 +11,12 @@ use GrumPHP\Task\Context\GitPreCommitContext;
  */
 class DrupalTest extends AbstractTest
 {
+
+    /**
+     * {@inheritdoc}
+     */
+    protected $convention = 'drupal-conventions';
+
     /**
      * Tests different git messages against the predefined conventions.
      *
@@ -61,7 +67,7 @@ class DrupalTest extends AbstractTest
      */
     protected function getTask($name)
     {
-        $container = $this->getContainer($this->getDistPath().'/drupal-conventions.yml');
+        $container = $this->getContainer();
         /** @var \GrumPHP\Runner\TaskRunner $taskrunner */
         $taskrunner = $container->get('task_runner');
         foreach ($taskrunner->getTasks() as $task) {

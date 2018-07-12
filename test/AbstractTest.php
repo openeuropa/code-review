@@ -14,6 +14,15 @@ abstract class AbstractTest extends TestCase
 {
 
     /**
+     * The convention being tested.
+     *
+     * This maps to the convention YAML file, without the `.yml` extension.
+     *
+     * @var string
+     */
+    protected $convention;
+
+    /**
      * Get fixture file object.
      *
      * @param string $fixture
@@ -35,15 +44,12 @@ abstract class AbstractTest extends TestCase
     /**
      * Getter function to return a container.
      *
-     * @param string $filepath
-     *   Real path of the conventions file.
-     *
      * @return \Symfony\Component\DependencyInjection\ContainerBuilder
      *   Returns a container.
      */
-    protected function getContainer($filepath)
+    protected function getContainer()
     {
-        $container = ContainerFactory::buildFromConfiguration($filepath);
+        $container = ContainerFactory::buildFromConfiguration($this->getConventionPath());
         $container->set('console.input', new ArgvInput());
         $container->set('console.output', new DummyOutput());
 
@@ -59,5 +65,15 @@ abstract class AbstractTest extends TestCase
     protected function getDistPath()
     {
         return realpath(__DIR__.'/../dist');
+    }
+
+    /**
+     * Returns the absolute path to the YAML file containing the convention being tested.
+     *
+     * @return string
+     */
+    protected function getConventionPath()
+    {
+        return $this->getDistPath().'/'.$this->convention.'.yml';
     }
 }

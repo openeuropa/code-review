@@ -13,6 +13,11 @@ class GitCommitMessageTest extends AbstractTest
 {
 
     /**
+     * {@inheritdoc}
+     */
+    protected $convention = 'base-conventions';
+
+    /**
      * Tests different git messages against the predefined conventions.
      *
      * @param string $message
@@ -60,7 +65,7 @@ class GitCommitMessageTest extends AbstractTest
      */
     protected function getTask($name)
     {
-        $container = $this->getContainer($this->getDistPath().'/base-conventions.yml');
+        $container = $this->getContainer();
         /** @var \GrumPHP\Runner\TaskRunner $taskrunner */
         $taskrunner = $container->get('task_runner');
         foreach ($taskrunner->getTasks() as $task) {

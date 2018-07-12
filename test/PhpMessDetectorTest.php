@@ -11,6 +11,12 @@ use GrumPHP\Task\Context\GitPreCommitContext;
  */
 class PhpMessDetectorTest extends AbstractTest
 {
+
+    /**
+     * {@inheritdoc}
+     */
+    protected $convention = 'base-conventions';
+
     /**
      * Tests different git messages against the predefined conventions.
      *
@@ -57,7 +63,7 @@ class PhpMessDetectorTest extends AbstractTest
      */
     protected function getTask($name)
     {
-        $container = $this->getContainer($this->getDistPath().'/base-conventions.yml');
+        $container = $this->getContainer();
         /** @var \GrumPHP\Runner\TaskRunner $taskrunner */
         $taskrunner = $container->get('task_runner');
         foreach ($taskrunner->getTasks() as $task) {
