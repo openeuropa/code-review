@@ -27,7 +27,7 @@ class PhpMessDetectorTest extends AbstractTest
         $context = new GitPreCommitContext($collection);
         $task = $this->getTask('phpmd');
         $result = $task->run($context);
-        $this->assertEquals($result->getResultCode(), $expected);
+        $this->assertEquals($expected, $result->getResultCode());
     }
 
     /**
