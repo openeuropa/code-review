@@ -3,7 +3,7 @@
   "description": "OpenEuropa code review component.",
   "license": "EUPL-1.2",
   "require": {
-    "phpro/grumphp": "~0.11",
+    "phpro/grumphp": "~0.12",
     "phpmd/phpmd" : "^2.6",
     "drupal/coder": "^8.2",
     "escapestudios/symfony2-coding-standard": "^2.11"
