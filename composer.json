@@ -11,6 +11,16 @@
   "require-dev": {
     "phpunit/phpunit": "^5.5.0|^6.0"
   },
+  "autoload": {
+    "psr-4": {
+      "OpenEuropa\\CodeReview\\": "./src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "OpenEuropa\\CodeReview\\Tests\\": "./tests/"
+    }
+  },
   "scripts": {
     "changelog": "docker run --rm -v \"$(pwd):$(pwd)\" -w $(pwd) muccg/github-changelog-generator openeuropa/code-review -t $CHANGELOG_GITHUB_TOKEN --future-release=$CHANGELOG_FUTURE_RELEASE"
   }

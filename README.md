@@ -1,6 +1,7 @@
 # Code review
 
-[![Build Status](https://travis-ci.org/openeuropa/code-review.svg?branch=master)](https://travis-ci.org/openeuropa/code-review)
+[![Build Status](https://drone.fpfis.eu/api/badges/openeuropa/code-review/status.svg?branch=master)](https://drone.fpfis.eu/openeuropa/code-review)
+
 
 Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
 
@@ -19,7 +20,11 @@ imports:
   - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
 ```
 
-For a list of available conventions please check [CONVENTIONS.md](CONVENTIONS.md).
+
+## Customization
+
+This component offers a variety of ready conventions that all projects need to follow.
+This list of default conventions can be found in [CONVENTIONS.md](CONVENTIONS.md).
 
 Since GrumPHP uses the [Symfony Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection.html)
 you can override specific parameters in your project's `grumphp.yml.dist` file as follows:
@@ -27,6 +32,7 @@ you can override specific parameters in your project's `grumphp.yml.dist` file a
 ```yaml
 imports:
   - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
+
 parameters:
   tasks.git_commit_message.matchers: ['/^JIRA-\d+: [A-Z].+\./']
 ```
@@ -42,6 +48,25 @@ Below the list of task parameters can that be overridden on a per-project basis:
 - `tasks.git_commit_message.matchers`
 
 More on how to import and override configuration files [here](http://symfony.com/doc/current/service_container/import.html).
+
+It is also possible to extend the list of tasks to be run by loading the extra tasks extension and adding tasks under
+the `extra_tasks:` parameter as shown below:
+
+```yaml
+imports:
+  - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
+
+parameters:
+  extra_tasks:
+    phpparser: ~
+  extensions:
+    - OpenEuropa\CodeReview\ExtraTasksExtension
+```
+
+GrumPHP already has a series of tasks that can be used out of the box, you can find the complete list in the
+[GrumPHP tasks page](https://github.com/phpro/grumphp/blob/master/doc/tasks.md).
+
+It is also possible to create your own tasks as explained in the [GrumPHP extensions page](https://github.com/phpro/grumphp/blob/master/doc/extensions.md).
 
 ## Usage
 

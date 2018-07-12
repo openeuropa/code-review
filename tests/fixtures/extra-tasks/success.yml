@@ -1,0 +1,8 @@
+imports:
+  - { resource: base.yml }
+
+parameters:
+    extra_tasks:
+        git_commit_message: ~
+    extensions:
+        - OpenEuropa\CodeReview\ExtraTasksExtension

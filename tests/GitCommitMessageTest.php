@@ -1,15 +1,15 @@
 <?php
 
-namespace OpenEuropa\CodeReview\Test;
+namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Runner\TaskResult;
+use GrumPHP\Task\Context\GitCommitMsgContext;
 use GrumPHP\Collection\FilesCollection;
-use GrumPHP\Task\Context\GitPreCommitContext;
 
 /**
  * Tests for git commit message conventions.
  */
-class PhpMessDetectorTest extends AbstractTest
+class GitCommitMessageTest extends AbstractTest
 {
 
     /**
@@ -20,18 +20,18 @@ class PhpMessDetectorTest extends AbstractTest
     /**
      * Tests different git messages against the predefined conventions.
      *
-     * @param string $fixture
-     *   Name of the fixture.
+     * @param string $message
+     *   Commit message to test.
      * @param int    $expected
      *   Expected result after the test.
      *
      * @dataProvider commitMessageProvider
      */
-    public function testPhpCodeMessage($fixture, $expected)
+    public function testCommitMessage($message, $expected)
     {
-        $collection = new FilesCollection([$this->getFixture($fixture)]);
-        $context = new GitPreCommitContext($collection);
-        $task = $this->getTask('phpmd');
+        $collection = new FilesCollection();
+        $context = new GitCommitMsgContext($collection, $message, '', '');
+        $task = $this->getTask('git_commit_message');
         $result = $task->run($context);
         $this->assertEquals($expected, $result->getResultCode());
     }
@@ -45,8 +45,10 @@ class PhpMessDetectorTest extends AbstractTest
     public function commitMessageProvider()
     {
         return [
-          ['correct-code.php', TaskResult::PASSED],
-          ['incorrect-code.php', TaskResult::FAILED],
+          ['Issue #3: Nice GitHub commit message.', TaskResult::PASSED],
+          ['#3: Not nice GitHub commit message.', TaskResult::FAILED],
+          ['NEPT-123: Nice Jira commit message.', TaskResult::PASSED],
+          ['Failed message', TaskResult::FAILED],
         ];
     }
 }

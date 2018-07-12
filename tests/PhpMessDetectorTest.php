@@ -1,21 +1,21 @@
 <?php
 
-namespace OpenEuropa\CodeReview\Test;
+namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Collection\FilesCollection;
 use GrumPHP\Task\Context\GitPreCommitContext;
 
 /**
- * Tests for Drupal conventions.
+ * Tests for git commit message conventions.
  */
-class DrupalTest extends AbstractTest
+class PhpMessDetectorTest extends AbstractTest
 {
 
     /**
      * {@inheritdoc}
      */
-    protected $convention = 'drupal-conventions';
+    protected $convention = 'base-conventions';
 
     /**
      * Tests different git messages against the predefined conventions.
@@ -39,18 +39,14 @@ class DrupalTest extends AbstractTest
     /**
      * Test case provider function.
      *
-     * Test file extensions.
-     *
      * @return array
      *      Test data.
      */
     public function commitMessageProvider()
     {
         return [
-          ['correct-code.inc', TaskResult::PASSED],
-          ['correct-code.module', TaskResult::PASSED],
-          ['correct-code.theme', TaskResult::PASSED],
-          ['ignored-code.xxx', TaskResult::SKIPPED],
+          ['phpmd/correct-code.php', TaskResult::PASSED],
+          ['phpmd/incorrect-code.php', TaskResult::FAILED],
         ];
     }
 }

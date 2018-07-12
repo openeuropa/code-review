@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenEuropa\CodeReview\Test;
+namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Configuration\ContainerFactory;
 use Symfony\Component\Console\Input\ArgvInput;
@@ -33,7 +33,7 @@ abstract class AbstractTest extends TestCase
      */
     public function getFixture($fixture)
     {
-        $file = new \SplFileInfo(__DIR__.'/fixtures/phpmd/'.$fixture);
+        $file = new \SplFileInfo(__DIR__.'/fixtures/'.$fixture);
         if (!$file->isReadable()) {
             throw new \RuntimeException(sprintf('The fixture %s could not be loaded!', $fixture));
         }
