@@ -3,3 +3,4 @@ imports:
 
 parameters:
   tasks.phpcs.standard: ./vendor/squizlabs/php_codesniffer/src/Standards/PSR2
+  tasks.phpcs.warning_severity: 0

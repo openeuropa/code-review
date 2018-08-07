@@ -11,6 +11,7 @@ parameters:
     - php
   tasks.phpcs.whitelist_patterns: []
   tasks.phpcs.standard: ~
+  tasks.phpcs.warning_severity: ~
 
   # PHP Mess Detector parameters
   tasks.phpmd.exclude:
@@ -34,6 +35,7 @@ parameters:
       ignore_patterns: '%tasks.phpcs.ignore_patterns%'
       triggered_by: '%tasks.phpcs.triggered_by%'
       whitelist_patterns: '%tasks.phpcs.whitelist_patterns%'
+      warning_severity: '%tasks.phpcs.warning_severity%'
       metadata:
         priority: 300
 
