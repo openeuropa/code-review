@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.0-alpha1](https://github.com/openeuropa/code-review/tree/1.0.0-alpha1) (2018-08-20)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/0.3.0...1.0.0-alpha1)
+
+**Merged pull requests:**
+
+- Use the PSR-2 standard for PHP libraries. [\#27](https://github.com/openeuropa/code-review/pull/27) ([pfrenssen](https://github.com/pfrenssen))
+
 ## [0.3.0](https://github.com/openeuropa/code-review/tree/0.3.0) (2018-07-13)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/0.2.0...0.3.0)
 
@@ -9,6 +16,7 @@
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 0.3.0. [\#26](https://github.com/openeuropa/code-review/pull/26) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-719: Latest version of GrumPHP causes errors [\#25](https://github.com/openeuropa/code-review/pull/25) ([pfrenssen](https://github.com/pfrenssen))
 - OPENEUROPA-550: Allow additional tasks to be defined in grumphp.yml.dist [\#24](https://github.com/openeuropa/code-review/pull/24) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-369: Make sure that all OpenEuropa projects are released under EUPL-1.2 [\#23](https://github.com/openeuropa/code-review/pull/23) ([drupol](https://github.com/drupol))
