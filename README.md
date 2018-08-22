@@ -20,6 +20,25 @@ imports:
   - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
 ```
 
+### Using Docker Compose
+
+The setup procedure described above can be sensitively simplified by using Docker Compose.
+
+Copy docker-compose.yml.dist into docker-compose.yml.
+
+You can make any alterations you need for your local Docker setup. However, the defaults should be enough to set the project up.
+
+Run:
+
+```
+$ docker-compose up -d
+```
+
+Then:
+
+```
+$ docker-compose exec web composer install
+```
 
 ## Customization
 
