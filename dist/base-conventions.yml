@@ -51,3 +51,5 @@ parameters:
       case_insensitive: false
       enforce_no_subject_trailing_period: false
       multiline: false
+      max_body_width: 0
+      max_subject_width: 0
