@@ -95,7 +95,7 @@ GrumPHP tasks will be ran at every commit, if you with to run them without perfo
 $ ./vendor/bin/grumphp run
 ```
 
-If you want to simulate a commit message use:
+If you want to simulate the tasks that will be run when creating a new commit:
 
 ```
 $ ./vendor/bin/grumphp git:pre-commit
