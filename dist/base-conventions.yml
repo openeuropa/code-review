@@ -17,8 +17,7 @@ parameters:
   tasks.phpmd.exclude:
     - vendor/
   tasks.phpmd.ruleset:
-    - codesize
-    - naming
+    - './Resources/phpmd-ruleset.xml'
   tasks.phpmd.triggered_by:
     - php
 
