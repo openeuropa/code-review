@@ -24,13 +24,6 @@
   },
   "scripts": {
     "changelog": "docker run --rm -v \"$(pwd):$(pwd)\" -w $(pwd) muccg/github-changelog-generator openeuropa/code-review -t $CHANGELOG_GITHUB_TOKEN --future-release=$CHANGELOG_FUTURE_RELEASE"
-  },
-  "extra":{
-    "patches": {
-      "phpro/grumphp": {
-        "Remove max length restrictions to commit messages": "https://patch-diff.githubusercontent.com/raw/phpro/grumphp/pull/536.patch"
-      }
-    }
   }
 }
 
