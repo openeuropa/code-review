@@ -1,7 +1,6 @@
 # Code review
-
 [![Build Status](https://drone.fpfis.eu/api/badges/openeuropa/code-review/status.svg?branch=master)](https://drone.fpfis.eu/openeuropa/code-review)
-
+[![Packagist](https://img.shields.io/packagist/v/openeuropa/code-review.svg)](https://packagist.org/packages/openeuropa/code-review)
 
 Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
 
@@ -23,6 +22,11 @@ imports:
 ### Using Docker Compose
 
 The setup procedure described above can be sensitively simplified by using Docker Compose.
+
+Requirements:
+
+- [Docker](https://www.docker.com/get-docker)
+- [Docker-compose](https://docs.docker.com/compose/)
 
 Copy docker-compose.yml.dist into docker-compose.yml.
 
