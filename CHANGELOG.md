@@ -1,10 +1,24 @@
 # Change Log
 
+## [1.0.0-alpha2](https://github.com/openeuropa/code-review/tree/1.0.0-alpha2)
+
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha1...1.0.0-alpha2)
+
+**Merged pull requests:**
+
+- OPENEUROPA-1160: Removed the patch as it has been added on last grumphp release, version 0.14.2. [\#35](https://github.com/openeuropa/code-review/pull/35) ([aritomelo](https://github.com/aritomelo))
+- OPENEUROPA-775: Make sure component dependencies are as relaxed as possible. [\#34](https://github.com/openeuropa/code-review/pull/34) ([aritomelo](https://github.com/aritomelo))
+- Description of the git:pre-commit command is incorrect [\#33](https://github.com/openeuropa/code-review/pull/33) ([pfrenssen](https://github.com/pfrenssen))
+- OPENEUROPA-1160: Remove max length restrictions to commit messages. [\#32](https://github.com/openeuropa/code-review/pull/32) ([imanoleguskiza](https://github.com/imanoleguskiza))
+- OPENEUROPA-1119: Create a docker-compose.yml.dist file [\#31](https://github.com/openeuropa/code-review/pull/31) ([netlooker](https://github.com/netlooker))
+- OPENEUROPA-792: Remove phpmd rules that enforce bad practices [\#30](https://github.com/openeuropa/code-review/pull/30) ([imanoleguskiza](https://github.com/imanoleguskiza))
+
 ## [1.0.0-alpha1](https://github.com/openeuropa/code-review/tree/1.0.0-alpha1) (2018-08-20)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/0.3.0...1.0.0-alpha1)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for 1.0.0-alpha1 release. [\#29](https://github.com/openeuropa/code-review/pull/29) ([ademarco](https://github.com/ademarco))
 - Use the PSR-2 standard for PHP libraries. [\#27](https://github.com/openeuropa/code-review/pull/27) ([pfrenssen](https://github.com/pfrenssen))
 
 ## [0.3.0](https://github.com/openeuropa/code-review/tree/0.3.0) (2018-07-13)
