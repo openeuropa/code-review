@@ -1,3 +1,0 @@
-# The `conventions.yml` file is kept only to guarantee backward-compatibility and it will be removed asap.
-imports:
-  - { resource: drupal-conventions.yml }

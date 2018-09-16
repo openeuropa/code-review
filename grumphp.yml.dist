@@ -9,4 +9,4 @@ parameters:
     - vendor/
     - tests/fixtures/
   tasks.phpmd.ruleset:
-  - ./Resources/phpmd-ruleset.xml
+  - ./resources/phpmd-ruleset.xml
