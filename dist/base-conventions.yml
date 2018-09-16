@@ -17,7 +17,7 @@ parameters:
   tasks.phpmd.exclude:
     - vendor/
   tasks.phpmd.ruleset:
-    - './Resources/phpmd-ruleset.xml'
+    - ./vendor/openeuropa/code-review/Resources/phpmd-ruleset.xml
   tasks.phpmd.triggered_by:
     - php
 

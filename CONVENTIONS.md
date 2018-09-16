@@ -4,13 +4,20 @@ List of conventions for OpenEuropa projects and components.
 
 ## PHP Code Sniffer
 
-- For generic PHP projects: [Symfony coding standards](http://symfony.com/doc/current/contributing/code/standards.html).
+- For generic PHP projects: [PSR-2 coding standards](https://www.php-fig.org/psr/psr-2).
 - For Drupal projects: [Drupal coding standards](https://www.drupal.org/docs/develop/standards) 
 
 ## PHP Mess Detector
 
-- [Code size rules](https://phpmd.org/rules/index.html#code-size-rules)
-- [Naming Rules](https://phpmd.org/rules/index.html#naming-rules)
+- [Code size rules](https://phpmd.org/rules/index.html#code-size-rules) except:
+  - `ExcessiveMethodLength`
+  - `ExcessiveClassLength`
+  - `ExcessivePublicCount`
+  - `TooManyMethods`
+  - `TooManyPublicMethods`
+- [Naming Rules](https://phpmd.org/rules/index.html#naming-rules) except:
+  - `LongVariable`
+  - `ConstructorWithNameAsEnclosingClass`
 
 ## Commit messages
 
