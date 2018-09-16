@@ -12,16 +12,6 @@ use PHPUnit\Framework\TestCase;
  */
 abstract class AbstractTest extends TestCase
 {
-
-    /**
-     * The convention being tested.
-     *
-     * This maps to the convention YAML file, without the `.yml` extension.
-     *
-     * @var string
-     */
-    protected $convention;
-
     /**
      * Get fixture file object.
      *
@@ -42,13 +32,21 @@ abstract class AbstractTest extends TestCase
     }
 
     /**
-     * Returns the dependency injection container for the convention being tested.
+     * Build container from target "./dist" configuration file.
+     *
+     * @param string $configuration
+     *   Configuration file name from which to build the container from.
      *
      * @return \Symfony\Component\DependencyInjection\ContainerBuilder
      */
-    protected function getContainer()
+    protected function getContainer($configuration)
     {
-        $container = ContainerFactory::buildFromConfiguration($this->getConventionPath());
+        // Prepare test GrumPHP configuration file.
+        $content = file_get_contents(__DIR__."/grumphp.yml.dist");
+        $content = str_replace("{configuration}", $configuration, $content);
+        file_put_contents(__DIR__."/grumphp.yml", $content);
+
+        $container = ContainerFactory::buildFromConfiguration(__DIR__.'/grumphp.yml');
         $container->set('console.input', new ArgvInput());
         $container->set('console.output', new DummyOutput());
 
@@ -67,29 +65,21 @@ abstract class AbstractTest extends TestCase
     }
 
     /**
-     * Returns the absolute path to the YAML file containing the convention being tested.
-     *
-     * @return string
-     */
-    protected function getConventionPath()
-    {
-        return $this->getDistPath().'/'.$this->convention.'.yml';
-    }
-
-    /**
      * Returns the task with the given name.
      *
      * @param string $name
      *   The name of the task to return.
+     * @param string $configuration
+     *   Configuration file name from which to build the container from.
      *
      * @return \GrumPHP\Task\TaskInterface
      *
      * @throws \Exception
      *   Thrown when the task with the given name does not exist, or if the task runner service is not registered.
      */
-    protected function getTask($name)
+    protected function getTask($name, $configuration)
     {
-        $container = $this->getContainer($this->getDistPath().'/base-conventions.yml');
+        $container = $this->getContainer($configuration);
         /** @var \GrumPHP\Runner\TaskRunner $taskrunner */
         $taskrunner = $container->get('task_runner');
         foreach ($taskrunner->getTasks() as $task) {

@@ -11,12 +11,6 @@ use GrumPHP\Collection\FilesCollection;
  */
 class GitCommitMessageTest extends AbstractTest
 {
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $convention = 'base-conventions';
-
     /**
      * Tests different git messages against the predefined conventions.
      *
@@ -31,7 +25,7 @@ class GitCommitMessageTest extends AbstractTest
     {
         $collection = new FilesCollection();
         $context = new GitCommitMsgContext($collection, $message, '', '');
-        $task = $this->getTask('git_commit_message');
+        $task = $this->getTask('git_commit_message', 'base-conventions');
         $result = $task->run($context);
         $this->assertEquals($expected, $result->getResultCode());
     }

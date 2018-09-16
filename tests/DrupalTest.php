@@ -13,11 +13,6 @@ class DrupalTest extends AbstractTest
 {
 
     /**
-     * {@inheritdoc}
-     */
-    protected $convention = 'drupal-conventions';
-
-    /**
      * Tests different git messages against the predefined conventions.
      *
      * @param string $fixture
@@ -27,11 +22,11 @@ class DrupalTest extends AbstractTest
      *
      * @dataProvider commitMessageProvider
      */
-    public function testPhpCodeMessage($fixture, $expected)
+    public function testPhpMessDetector($fixture, $expected)
     {
         $collection = new FilesCollection([$this->getFixture($fixture)]);
         $context = new GitPreCommitContext($collection);
-        $task = $this->getTask('phpmd');
+        $task = $this->getTask('phpmd', 'drupal-conventions');
         $result = $task->run($context);
         $this->assertEquals($expected, $result->getResultCode());
     }
