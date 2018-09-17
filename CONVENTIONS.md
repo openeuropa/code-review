@@ -16,6 +16,7 @@ List of conventions for OpenEuropa projects and components.
   - `TooManyMethods`
   - `TooManyPublicMethods`
 - [Naming Rules](https://phpmd.org/rules/index.html#naming-rules) except:
+  - `ShortVariable`
   - `LongVariable`
   - `ConstructorWithNameAsEnclosingClass`
 
