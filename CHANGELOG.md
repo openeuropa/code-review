@@ -1,11 +1,30 @@
 # Change Log
 
-## [1.0.0-alpha2](https://github.com/openeuropa/code-review/tree/1.0.0-alpha2)
+## [1.0.0-alpha4](https://github.com/openeuropa/code-review/tree/1.0.0-alpha4) (2018-09-18)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha3...1.0.0-alpha4)
 
+**Merged pull requests:**
+
+- OPENEUROPA-781: Update php\_codesniffer version in composer [\#39](https://github.com/openeuropa/code-review/pull/39) ([dxvargas](https://github.com/dxvargas))
+
+## [1.0.0-alpha3](https://github.com/openeuropa/code-review/tree/1.0.0-alpha3) (2018-09-17)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha2...1.0.0-alpha3)
+
+**Closed issues:**
+
+- Drop character limit on first line of commit messages [\#28](https://github.com/openeuropa/code-review/issues/28)
+
+**Merged pull requests:**
+
+- Update CHANGELOG.md for release 1.0.0-alpha3 [\#38](https://github.com/openeuropa/code-review/pull/38) ([ademarco](https://github.com/ademarco))
+- OPENEUROPA-1218: Fix PHPMD ruleset path [\#37](https://github.com/openeuropa/code-review/pull/37) ([ademarco](https://github.com/ademarco))
+
+## [1.0.0-alpha2](https://github.com/openeuropa/code-review/tree/1.0.0-alpha2) (2018-09-14)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha1...1.0.0-alpha2)
 
 **Merged pull requests:**
 
+- release-1.0.0-alpha2: Create changelog. [\#36](https://github.com/openeuropa/code-review/pull/36) ([richardcanoe](https://github.com/richardcanoe))
 - OPENEUROPA-1160: Removed the patch as it has been added on last grumphp release, version 0.14.2. [\#35](https://github.com/openeuropa/code-review/pull/35) ([aritomelo](https://github.com/aritomelo))
 - OPENEUROPA-775: Make sure component dependencies are as relaxed as possible. [\#34](https://github.com/openeuropa/code-review/pull/34) ([aritomelo](https://github.com/aritomelo))
 - Description of the git:pre-commit command is incorrect [\#33](https://github.com/openeuropa/code-review/pull/33) ([pfrenssen](https://github.com/pfrenssen))
