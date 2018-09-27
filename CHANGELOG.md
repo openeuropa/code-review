@@ -1,10 +1,18 @@
 # Change Log
 
+## [1.0.0-alpha5](https://github.com/openeuropa/code-review/tree/1.0.0-alpha5) (2018-09-27)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha4...1.0.0-alpha5)
+
+**Merged pull requests:**
+
+- Openeuropa 1218 Update to include coder-3.0 [\#41](https://github.com/openeuropa/code-review/pull/41) ([richardcanoe](https://github.com/richardcanoe))
+
 ## [1.0.0-alpha4](https://github.com/openeuropa/code-review/tree/1.0.0-alpha4) (2018-09-18)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha3...1.0.0-alpha4)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for 1.0.0-alpha4 release [\#40](https://github.com/openeuropa/code-review/pull/40) ([dxvargas](https://github.com/dxvargas))
 - OPENEUROPA-781: Update php\_codesniffer version in composer [\#39](https://github.com/openeuropa/code-review/pull/39) ([dxvargas](https://github.com/dxvargas))
 
 ## [1.0.0-alpha3](https://github.com/openeuropa/code-review/tree/1.0.0-alpha3) (2018-09-17)
