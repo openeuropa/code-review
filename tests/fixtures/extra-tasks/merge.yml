@@ -1,0 +1,11 @@
+imports:
+    - { resource: base.yml }
+
+parameters:
+    merge_tasks:
+        phpcs:
+            parameter: "parameter"
+        unexistant_task:
+            parameter: "parameter"
+    extensions:
+        - OpenEuropa\CodeReview\ExtraTasksExtension

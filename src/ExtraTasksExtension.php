@@ -24,6 +24,30 @@ class ExtraTasksExtension implements ExtensionInterface
                 }
                 $tasks[$name] = $value;
             }
+
+            $container->setParameter('tasks', $tasks);
+        }
+
+        if ($container->hasParameter('merge_tasks')) {
+            $tasks = $container->getParameter('tasks');
+
+            foreach ($container->getParameter('merge_tasks') as $name => $value) {
+                if (!array_key_exists($name, $tasks)) {
+                    continue;
+                }
+                $tasks[$name] = array_merge((array) $tasks[$name], $value);
+            }
+
+            $container->setParameter('tasks', $tasks);
+        }
+
+        if ($container->hasParameter('delete_tasks')) {
+            $tasks = $container->getParameter('tasks');
+
+            foreach ($container->getParameter('delete_tasks') as $name) {
+                unset($tasks[$name]);
+            }
+
             $container->setParameter('tasks', $tasks);
         }
     }

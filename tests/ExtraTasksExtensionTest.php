@@ -27,6 +27,35 @@ class ExtraTasksExtensionTest extends AbstractTest
     }
 
     /**
+     * Test merge configuration with a task.
+     */
+    public function testMergeWithExistingTask()
+    {
+        $path = $this->getFixture('extra-tasks/merge.yml')->getRealPath();
+        $container = ContainerFactory::buildFromConfiguration($path);
+        $tasks = $container->getParameter('tasks');
+
+        $this->assertEquals([
+            'phpcs' => ['parameter' => 'parameter'],
+            'phpmd' => null,
+        ], $tasks);
+    }
+
+    /**
+     * Test delete an existing task.
+     */
+    public function testDeleteAnExistingTask()
+    {
+        $path = $this->getFixture('extra-tasks/delete.yml')->getRealPath();
+        $container = ContainerFactory::buildFromConfiguration($path);
+        $tasks = $container->getParameter('tasks');
+
+        $this->assertEquals([
+            'phpmd' => null,
+        ], $tasks);
+    }
+
+    /**
      * Test throwing an exception if trying to override already defined tasks.
      */
     public function testThrowExceptionForExistingTasks()

@@ -1,0 +1,9 @@
+imports:
+    - { resource: base.yml }
+
+parameters:
+    delete_tasks:
+        - phpcs
+        - unexistant_task
+    extensions:
+        - OpenEuropa\CodeReview\ExtraTasksExtension
