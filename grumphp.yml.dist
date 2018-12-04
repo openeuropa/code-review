@@ -2,6 +2,7 @@ imports:
   - { resource: ./dist/library-conventions.yml }
 
 parameters:
+  tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml
   tasks.phpcs.ignore_patterns:
     - vendor/
     - tests/fixtures/
@@ -10,4 +11,4 @@ parameters:
     - tests/fixtures/
   tasks.phpmd.ruleset:
   - ./resources/phpmd-ruleset.xml
-  tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml
+  tasks.phpcsfixer2.config: ./resources/php_cs_fixer.library.php
