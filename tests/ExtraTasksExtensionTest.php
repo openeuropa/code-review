@@ -9,8 +9,11 @@ use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 
 /**
  * Test extra tasks extension.
+ *
+ * @internal
+ * @coversNothing
  */
-class ExtraTasksExtensionTest extends AbstractTest
+final class ExtraTasksExtensionTest extends AbstractTest
 {
     /**
      * Test adding an extra task.
@@ -21,7 +24,7 @@ class ExtraTasksExtensionTest extends AbstractTest
         $container = ContainerFactory::buildFromConfiguration($path);
         $tasks = $container->getParameter('tasks');
 
-        $this->assertEquals([
+        $this->assertSame([
             'phpcs' => null,
             'phpmd' => null,
             'git_commit_message' => null,

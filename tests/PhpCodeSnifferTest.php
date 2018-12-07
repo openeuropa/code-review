@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Collection\FilesCollection;
@@ -7,30 +9,12 @@ use GrumPHP\Task\Context\GitPreCommitContext;
 
 /**
  * Tests the PHP_CodeSniffer task using the library conventions.
+ *
+ * @internal
+ * @coversNothing
  */
-class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
+final class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
 {
-    /**
-     * Tests different git messages against the predefined conventions.
-     *
-     * @param string $fixture
-     *   Name of the fixture to use in the test.
-     * @param string $configuration
-     *   The name of the configuration to use in the task.
-     * @param array $expected_failures
-     *   An array of failures that are expected to be thrown when testing the fixture for coding standards violations.
-     *
-     * @dataProvider phpCodeSnifferTaskProvider
-     */
-    public function testPhpCodeSnifferTask($fixture, $configuration, array $expected_failures)
-    {
-        $collection = new FilesCollection([$this->getFixture($fixture)]);
-        $context = new GitPreCommitContext($collection);
-        $task = $this->getTask('phpcs', $configuration);
-        $result = $task->run($context);
-        $this->assertFailures($expected_failures, $this->getFailures($result));
-    }
-
     /**
      * Provides test cases for testing the PHP_CodeSniffer task.
      *
@@ -66,5 +50,26 @@ class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
                 [],
             ],
         ];
+    }
+
+    /**
+     * Tests different git messages against the predefined conventions.
+     *
+     * @param string $fixture
+     *   Name of the fixture to use in the test
+     * @param string $configuration
+     *   The name of the configuration to use in the task
+     * @param array $expected_failures
+     *   An array of failures that are expected to be thrown when testing the fixture for coding standards violations
+     *
+     * @dataProvider phpCodeSnifferTaskProvider
+     */
+    public function testPhpCodeSnifferTask($fixture, $configuration, array $expected_failures)
+    {
+        $collection = new FilesCollection([$this->getFixture($fixture)]);
+        $context = new GitPreCommitContext($collection);
+        $task = $this->getTask('phpcs', $configuration);
+        $result = $task->run($context);
+        $this->assertFailures($expected_failures, $this->getFailures($result));
     }
 }

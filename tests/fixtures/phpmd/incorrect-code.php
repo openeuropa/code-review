@@ -19,7 +19,7 @@ class Foo
                 fiddle();
             }
         } elseif ($e === $f) {
-            for ($n = 0; $n < $h; $n++) {
+            for ($n = 0; $n < $h; ++$n) {
                 fiddle();
             }
         } else {
