@@ -23,7 +23,7 @@ abstract class AbstractTest extends TestCase
      */
     public function getFixture($fixture)
     {
-        $file = new \SplFileInfo(__DIR__.'/fixtures/'.$fixture);
+        $file = new \SplFileInfo(__DIR__ . '/fixtures/' . $fixture);
         if (!$file->isReadable()) {
             throw new \RuntimeException(sprintf('The fixture %s could not be loaded!', $fixture));
         }
@@ -44,9 +44,10 @@ abstract class AbstractTest extends TestCase
         // Prepare test GrumPHP configuration file.
         $content = file_get_contents(__DIR__."/grumphp.yml.dist");
         $content = str_replace("{configuration}", $configuration, $content);
-        file_put_contents(__DIR__."/grumphp.yml", $content);
 
-        $container = ContainerFactory::buildFromConfiguration(__DIR__.'/grumphp.yml');
+        file_put_contents(__DIR__ . "/grumphp.yml", $content);
+
+        $container = ContainerFactory::buildFromConfiguration(__DIR__ . '/grumphp.yml');
         $container->set('console.input', new ArgvInput());
         $container->set('console.output', new DummyOutput());
 
@@ -61,7 +62,7 @@ abstract class AbstractTest extends TestCase
      */
     protected function getDistPath()
     {
-        return realpath(__DIR__.'/../dist');
+        return realpath(__DIR__ . '/../dist');
     }
 
     /**
