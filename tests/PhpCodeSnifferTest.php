@@ -61,6 +61,11 @@ class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
                     ],
                 ],
             ],
+            [
+                'phpcs/correct-library-code.php',
+                'library-conventions',
+                [],
+            ],
         ];
     }
 }
