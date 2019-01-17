@@ -41,8 +41,10 @@ abstract class AbstractTest extends TestCase
      */
     protected function getContainer($configuration)
     {
-        // Prepare test GrumPHP configuration file.
-        $content = file_get_contents(__DIR__."/grumphp.yml.dist");
+        // Create a GrumPHP configuration file to use in the test. Check if a configuration specific file exists, or
+        // fall back to a generic template file.
+        $filename = file_exists(__DIR__ . "/$configuration.yml.dist") ? __DIR__ . "/$configuration.yml.dist" : __DIR__ . '/grumphp.yml.dist';
+        $content = file_get_contents($filename);
         $content = str_replace("{configuration}", $configuration, $content);
 
         file_put_contents(__DIR__ . "/grumphp.yml", $content);
