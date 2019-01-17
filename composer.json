@@ -21,8 +21,16 @@
       "OpenEuropa\\CodeReview\\Tests\\": "./tests/"
     }
   },
+  "extra": {
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": 1,
+    "patches": {
+      "squizlabs/php_codesniffer": {
+        "Fix conflict between scope indentation and array indentation checking. Ref. https://github.com/squizlabs/PHP_CodeSniffer/issues/2281": "./resources/patches/phpcs-390bffe2265aac8184fdf86400c0d0841e65bc4b.patch"
+      }
+    }
+  },
   "scripts": {
     "changelog": "docker run --rm -v \"$(pwd):$(pwd)\" -w $(pwd) muccg/github-changelog-generator openeuropa/code-review -t $CHANGELOG_GITHUB_TOKEN --future-release=$CHANGELOG_FUTURE_RELEASE"
   }
 }
-
