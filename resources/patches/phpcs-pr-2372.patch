@@ -1,0 +1,20 @@
+diff --git a/src/Standards/Generic/Sniffs/WhiteSpace/ScopeIndentSniff.php b/src/Standards/Generic/Sniffs/WhiteSpace/ScopeIndentSniff.php
+index 28aa06491..59175efc2 100644
+--- a/src/Standards/Generic/Sniffs/WhiteSpace/ScopeIndentSniff.php
++++ b/src/Standards/Generic/Sniffs/WhiteSpace/ScopeIndentSniff.php
+@@ -903,6 +903,15 @@ public function process(File $phpcsFile, $stackPtr)
+                 $exact = true;
+             }
+ 
++            // Don't perform strict checking on chained method calls since they
++            // are often covered by custom rules.
++            if ($checkToken !== null
++                && $tokens[$checkToken]['code'] === T_OBJECT_OPERATOR
++                && $exact === true
++            ) {
++                $exact = false;
++            }
++
+             if ($checkIndent === null) {
+                 $checkIndent = $currentIndent;
+             }
