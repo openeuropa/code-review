@@ -3,4 +3,4 @@ composer.lock
 grumphp.yml
 phpunit.xml
 .idea
-docker-compose.yml
+docker-compose.*.yml
