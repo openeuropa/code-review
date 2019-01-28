@@ -145,3 +145,12 @@ parameters:
         jsonlint:
             detect_key_conflicts: true
             ignore_patterns: '%tasks.jsonlint.ignore_patterns%'
+
+        # YAML Lint
+        yamllint:
+          whitelist_patterns: []
+          ignore_patterns: []
+          object_support: true
+          exception_on_invalid_type: true
+          parse_constant: true
+          parse_custom_tags: true
