@@ -1,0 +1,10 @@
+imports:
+    - { resource: ../../../../../vendor/drupol/drupal-conventions/config/drupal7/grumphp.yml }
+
+parameters:
+    tasks.phpmd.triggered_by:
+        - inc
+        - install
+        - module
+        - php
+        - profile
