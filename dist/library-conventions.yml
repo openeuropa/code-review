@@ -1,6 +1,68 @@
 imports:
-  - { resource: base-conventions.yml }
+    - { resource: base-conventions.yml }
 
 parameters:
-  tasks.phpcs.standard: ./vendor/openeuropa/code-review/resources/library-phpcs-ruleset.xml
-  tasks.phpcs.warning_severity: 0
+    tasks.phpcs.standard: ./vendor/openeuropa/code-review/resources/library-phpcs-ruleset.xml
+    tasks.phpcs.warning_severity: 0
+    tasks.phpcsfixer2.config: ./vendor/openeuropa/code-review/resources/php_cs_fixer.library.php
+    tasks.phpcsfixer2.rules:
+        '@PSR2': true
+        '@PhpCsFixer': true
+        '@PhpCsFixer:risky' : true
+        blank_line_before_statement:
+            statements:
+                - break
+                - continue
+                - declare
+                - return
+                - throw
+                - try
+        cast_spaces:
+            space: single
+        class_definition:
+            multi_line_extends_each_single_line: true
+        # From PSR-12
+        concat_space:
+            spacing: one
+        declare_equal_normalize:
+            space: single
+        declare_strict_types: true
+        is_null: true
+        multiline_whitespace_before_semicolons:
+            strategy: no_multi_line
+        no_extra_blank_lines:
+            tokens:
+                - extra
+                - curly_brace_block
+                - parenthesis_brace_block
+                - square_brace_block
+                - return
+                - throw
+                - use
+                - use_trait
+        ordered_class_elements:
+            order:
+                - use_trait
+                - constant_public
+                - constant_protected
+                - constant_private
+                - property_public
+                - property_protected
+                - property_private
+                - construct
+                - destruct
+                - magic
+                - phpunit
+                - method_public
+                - method_protected
+                - method_private
+            sortAlgorithm: alpha
+        phpdoc_align: false
+        # Disable php_unit_strict as it might break too much things for now. Remove the line to enable it.
+        php_unit_strict: false
+        self_accessor: false
+        yoda_style:
+            equal: false
+            identical: false
+            less_and_greater: false
+            always_move_variable: false

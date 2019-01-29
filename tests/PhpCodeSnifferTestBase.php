@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Runner\TaskResultInterface;
@@ -39,8 +41,8 @@ abstract class PhpCodeSnifferTestBase extends AbstractTest
     /**
      * Returns the PHP_CodeSniffer failures that are reported in the given result.
      *
-     * @param TaskResultInterface $result
-     *   The result that has been returned by the PHP_CodeSniffer task executed by GrumPHP.
+     * @param taskResultInterface $result
+     *   The result that has been returned by the PHP_CodeSniffer task executed by GrumPHP
      *
      * @return array
      *   An array of failures, keyed by failure type. Each value is an array with the line number as key and the number
@@ -50,7 +52,7 @@ abstract class PhpCodeSnifferTestBase extends AbstractTest
     {
         $failures = [];
 
-        $output = $result->getMessage();
+        $output = (string) $result->getMessage();
         foreach (explode("\n", $output) as $line) {
             // Skip the lines that do not correspond with an error or warning.
             if (preg_match('/\s+(\d+)\s+\|\s+(error|warning)\s+\|.*/i', $line, $matches) !== 1) {
@@ -63,7 +65,7 @@ abstract class PhpCodeSnifferTestBase extends AbstractTest
             if (!isset($failures[$failure_type][$line_number])) {
                 $failures[$failure_type][$line_number] = 1;
             } else {
-                $failures[$failure_type][$line_number]++;
+                ++$failures[$failure_type][$line_number];
             }
         }
 
