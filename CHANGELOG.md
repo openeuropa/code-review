@@ -1,10 +1,26 @@
 # Change Log
 
+## [1.0.0-beta1](https://github.com/openeuropa/code-review/tree/1.0.0-beta1) (2019-01-29)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha5...1.0.0-beta1)
+
+**Closed issues:**
+
+- Add YML file extension in the codestyle check. [\#16](https://github.com/openeuropa/code-review/issues/16)
+
+**Merged pull requests:**
+
+- OPENEUROPA-1564: Follow-up: Delete file docker-compose.yml.dist. [\#55](https://github.com/openeuropa/code-review/pull/55) ([drupol](https://github.com/drupol))
+- OPENEUROPA-1568: Remove docker-compose.yml.dist. [\#54](https://github.com/openeuropa/code-review/pull/54) ([drupol](https://github.com/drupol))
+- OPENEUROPA-1564: Follow-up - Remove forgotten file. [\#53](https://github.com/openeuropa/code-review/pull/53) ([drupol](https://github.com/drupol))
+- OPENEUROPA-1564: Use the proper Docker way of overriding docker-compose.yml file [\#52](https://github.com/openeuropa/code-review/pull/52) ([drupol](https://github.com/drupol))
+- OPENEUROPA-1535: Coding style, fix indentation and concatenation. [\#51](https://github.com/openeuropa/code-review/pull/51) ([pfrenssen](https://github.com/pfrenssen))
+
 ## [1.0.0-alpha5](https://github.com/openeuropa/code-review/tree/1.0.0-alpha5) (2018-09-27)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha4...1.0.0-alpha5)
 
 **Merged pull requests:**
 
+- OPENEUROPA-1241: Update CHANGELOG.md. [\#42](https://github.com/openeuropa/code-review/pull/42) ([voidtek](https://github.com/voidtek))
 - Openeuropa 1218 Update to include coder-3.0 [\#41](https://github.com/openeuropa/code-review/pull/41) ([richardcanoe](https://github.com/richardcanoe))
 
 ## [1.0.0-alpha4](https://github.com/openeuropa/code-review/tree/1.0.0-alpha4) (2018-09-18)
