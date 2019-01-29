@@ -52,7 +52,7 @@ abstract class PhpCodeSnifferTestBase extends AbstractTest
     {
         $failures = [];
 
-        $output = $result->getMessage();
+        $output = (string) $result->getMessage();
         foreach (explode("\n", $output) as $line) {
             // Skip the lines that do not correspond with an error or warning.
             if (preg_match('/\s+(\d+)\s+\|\s+(error|warning)\s+\|.*/i', $line, $matches) !== 1) {

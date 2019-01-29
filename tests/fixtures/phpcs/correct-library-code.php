@@ -1,11 +1,17 @@
 <?php
 
-declare(strict_types = 1);
-
 namespace OpenEuropa\CodeReview\Tests\Fixtures\PhpCs;
 
 class IncorrectLibraryCode
 {
+
+    /**
+     * A correctly indented docblock.
+     */
+    public function aMethodWithCorrectDocblockIndentation()
+    {
+    }
+
     public function aMethodContainingCorrectArrayIndentation()
     {
         $tasks = [
@@ -19,12 +25,5 @@ class IncorrectLibraryCode
             ->userManager
             ->getUser()
             ->delete();
-    }
-
-    /**
-     * A correctly indented docblock.
-     */
-    public function aMethodWithCorrectDocblockIndentation()
-    {
     }
 }
