@@ -10,3 +10,4 @@ parameters:
     - tests/fixtures/
   tasks.phpmd.ruleset:
   - ./resources/phpmd-ruleset.xml
+  tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml

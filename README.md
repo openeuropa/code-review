@@ -186,3 +186,12 @@ git config --global --unset core.hooksPath
 * Best results were gained using the [Docker app](https://docs.docker.com/docker-for-mac/install/)
 * The local repo folder should be shared under Docker -> Preferences -> File sharing to enable the file to be written locally.
 
+## Patches
+
+The component uses the PSR-2 standard based on version 3.4 of package [squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+As the PSR-2 standard does not enforce indentation, we decided to add custom rules in a custom ruleset in order to make sure
+that our code is properly indented.
+Unfortunately, there are some issues in versions 3.4 of [squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) regarding
+code indentation and we fixed them by including custom patches.
+Those issues are partially solved in version 3.5 which is not stable yet.
+As soon as 3.5 reaches a stable version, we will remove those patches.
