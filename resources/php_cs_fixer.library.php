@@ -11,4 +11,6 @@ return PhpCsFixer\Config::create()
     ->registerCustomFixers([
         new OpenEuropa\CodeReview\PhpCsFixer\Fixer\UppercaseConstantsFixer(),
     ])
+    ->setIndent('    ')
+    ->setLineEnding("\n")
     ->setFinder($finder);

@@ -53,10 +53,9 @@ parameters:
         elseif: true
         fully_qualified_strict_types: true
         include: true
+        indentation_type: true
         is_null: true
         lowercase_static_reference: true
-        # Drupalism: lowercase_constants (not configurable yet, see https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/4275)
-        OpenEuropa/uppercase_constants: true
         no_blank_lines_after_class_opening: false
         no_closing_tag: true
         no_extra_blank_lines:
@@ -72,6 +71,7 @@ parameters:
         no_trailing_whitespace_in_comment: true
         no_unneeded_final_method: true
         no_unused_imports: true
+        OpenEuropa/uppercase_constants: true
         ordered_class_elements:
             order:
                 - use_trait
