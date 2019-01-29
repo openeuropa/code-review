@@ -1,16 +1,18 @@
 imports:
-  - { resource: ./dist/library-conventions.yml }
+    - { resource: ./dist/library-conventions.yml }
 
 parameters:
-  tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml
-  tasks.phpcs.ignore_patterns:
-    - vendor/
-    - tests/fixtures/
-  tasks.phpmd.exclude:
-    - vendor/
-    - tests/fixtures/
-  tasks.phpmd.ruleset:
-  - ./resources/phpmd-ruleset.xml
-  tasks.phpcsfixer2.config: ./resources/php_cs_fixer.library.php
-  tasks.jsonlint.ignore_patterns:
-    - tests/fixtures
+    tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml
+    tasks.phpcs.ignore_patterns:
+        - vendor/
+        - tests/fixtures/
+    tasks.phpmd.exclude:
+        - vendor/
+        - tests/fixtures/
+    tasks.phpmd.ruleset:
+        - ./resources/phpmd-ruleset.xml
+    tasks.phpcsfixer2.config: ./resources/php_cs_fixer.library.php
+    tasks.yamllint.ignore_patterns:
+        - tests/fixtures
+    tasks.jsonlint.ignore_patterns:
+        - tests/fixtures

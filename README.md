@@ -119,6 +119,7 @@ Below the list of task parameters can that be overridden on a per-project basis:
 - `tasks.phpcsfixer2.config`
 - `tasks.phpcsfixer2.rules`
 - `tasks.phpcsfixer2.allow_risky`
+- `tasks.yamllint.ignore_patterns`
 - `tasks.jsonlint.ignore_patterns`
 
 More on how to import and override configuration files [here](http://symfony.com/doc/current/service_container/import.html).

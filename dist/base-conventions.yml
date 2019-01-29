@@ -105,7 +105,9 @@ parameters:
             identical: false
             less_and_greater: false
             always_move_variable: false
+
     tasks.jsonlint.ignore_patterns: []
+    tasks.yamllint.ignore_patterns: []
 
     # Tasks.
     tasks:
@@ -152,3 +154,4 @@ parameters:
           exception_on_invalid_type: true
           parse_constant: true
           parse_custom_tags: true
+          ignore_patterns: '%tasks.yamllint.ignore_patterns%'
