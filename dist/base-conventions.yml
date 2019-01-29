@@ -139,3 +139,7 @@ parameters:
             verbose: true
             allow_risky: '%tasks.phpcsfixer2.allow_risky%'
             using_cache: false
+
+        # JSON Lint
+        jsonlint:
+            detect_key_conflicts: true
