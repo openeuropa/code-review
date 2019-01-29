@@ -12,3 +12,5 @@ parameters:
   tasks.phpmd.ruleset:
   - ./resources/phpmd-ruleset.xml
   tasks.phpcsfixer2.config: ./resources/php_cs_fixer.library.php
+  tasks.jsonlint.ignore_patterns:
+    - tests/fixtures
