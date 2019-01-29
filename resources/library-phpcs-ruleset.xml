@@ -19,7 +19,4 @@
 
     <!-- Chained method calls should be indented with 4 spaces. -->
     <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent" />
-
-    <!-- The concatenation operator should be surrounded by spaces. -->
-    <rule ref="PSR12.Operators.OperatorSpacing" />
 </ruleset>

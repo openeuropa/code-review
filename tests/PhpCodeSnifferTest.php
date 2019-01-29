@@ -57,7 +57,6 @@ class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
                         15 => 1,
                         25 => 1,
                         32 => 1,
-                        37 => 2,
                     ],
                 ],
             ],

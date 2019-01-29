@@ -31,9 +31,4 @@ class IncorrectLibraryCode
         $this->userManager
           ->delete();
     }
-
-    public function aMethodContainingIncorrectConcatenationSpacing()
-    {
-        $string = 'foo'.'bar';
-    }
 }

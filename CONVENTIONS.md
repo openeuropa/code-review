@@ -8,7 +8,6 @@ List of conventions for OpenEuropa projects and components.
   with the following additions:
   - Comments, array declarations and code that is split over multiple lines also
     need to be indented with 4 characters.
-  - The concatenation operator should be surrounded by spaces.
 - For Drupal projects: [Drupal coding standards](https://www.drupal.org/docs/develop/standards) 
 
 ## PHP Mess Detector
