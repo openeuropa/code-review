@@ -148,8 +148,6 @@ parameters:
 
         # YAML Lint
         yamllint:
-          whitelist_patterns: []
-          ignore_patterns: []
           object_support: true
           exception_on_invalid_type: true
           parse_constant: true
