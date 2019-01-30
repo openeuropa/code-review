@@ -105,6 +105,7 @@ parameters:
             identical: false
             less_and_greater: false
             always_move_variable: false
+    tasks.jsonlint.ignore_patterns: []
 
     # Tasks.
     tasks:
@@ -139,3 +140,8 @@ parameters:
             verbose: true
             allow_risky: '%tasks.phpcsfixer2.allow_risky%'
             using_cache: false
+
+        # JSON Lint
+        jsonlint:
+            detect_key_conflicts: true
+            ignore_patterns: '%tasks.jsonlint.ignore_patterns%'
