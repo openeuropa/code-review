@@ -34,6 +34,19 @@ parameters:
 
     # Tasks.
     tasks:
+        # PHP Lint
+        phplint:
+            triggered_by: ['php', 'module', 'install', 'profile', 'inc', 'theme']
+            metadata:
+                priority: 5000
+
+        # JSON Lint
+        jsonlint:
+            detect_key_conflicts: true
+            ignore_patterns: '%tasks.jsonlint.ignore_patterns%'
+            metadata:
+                priority: 4000
+
         # PHP Code Sniffer.
         phpcs:
             standard: '%tasks.phpcs.standard%'
@@ -41,12 +54,26 @@ parameters:
             triggered_by: '%tasks.phpcs.triggered_by%'
             whitelist_patterns: '%tasks.phpcs.whitelist_patterns%'
             warning_severity: '%tasks.phpcs.warning_severity%'
+            metadata:
+                priority: 3000
+
+        # PHP CS Fixer
+        phpcsfixer2:
+            config: '%tasks.phpcsfixer2.config%'
+            config_contains_finder: true
+            verbose: true
+            allow_risky: '%tasks.phpcsfixer2.allow_risky%'
+            using_cache: false
+            metadata:
+                priority: 2000
 
         # PHP Mess Detector.
         phpmd:
             exclude: '%tasks.phpmd.exclude%'
             ruleset: '%tasks.phpmd.ruleset%'
             triggered_by: '%tasks.phpmd.triggered_by%'
+            metadata:
+                priority: 1000
 
         # Commit message format.
         git_commit_message:
@@ -56,16 +83,3 @@ parameters:
             multiline: false
             max_body_width: 0
             max_subject_width: 0
-
-        # PHP CS Fixer
-        phpcsfixer2:
-            config: '%tasks.phpcsfixer2.config%'
-            config_contains_finder: true
-            verbose: true
-            allow_risky: '%tasks.phpcsfixer2.allow_risky%'
-            using_cache: false
-
-        # JSON Lint
-        jsonlint:
-            detect_key_conflicts: true
-            ignore_patterns: '%tasks.jsonlint.ignore_patterns%'
