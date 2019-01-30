@@ -34,7 +34,7 @@ final class YamlLintTest extends AbstractTest
         $context = new GitPreCommitContext($collection);
         $task = $this->getTask('yamllint', 'base-conventions');
         $result = $task->run($context);
-        $this->assertEquals($expected, $result->getResultCode());
+        $this->assertEquals($expected, $result->getResultCode(), $result->getMessage());
     }
 
     /**
