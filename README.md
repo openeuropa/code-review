@@ -12,13 +12,33 @@ Install the code review component via Composer:
 composer require --dev openeuropa/code-review
 ```
 
-As this project uses patches, you will have to enable patching your project's composer.json file:
+As this project uses some [patches](#Patches), you will have to enable patching in your project's `composer.json` file.
+
+In order to do this, you have two options.
+
+The first option will enable patching to all the dependencies throughout `composer install`.
 
 ```yaml
-    "extra": {
-        "enable-patching": true,
-        "composer-exit-on-patch-failure": true
+"extra": {
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true
+}
+```
+
+Maybe patching all the dependencies is not what you want, then the second option is to copy the patches applied on this
+project in your `composer.json` file:
+
+```yaml
+"extra": {
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": 1,
+    "patches": {
+        "squizlabs/php_codesniffer": {
+            "Fix conflict between scope indentation and array indentation checking. Ref. https://github.com/squizlabs/PHP_CodeSniffer/issues/2281": "https://gist.githubusercontent.com/drupol/c307b48fe4eb187b0833afb1d1b97e6a/raw/c3d414e9f4c182387ca9405c36f5daeb7b51ae05/phpcs-390bffe2265aac8184fdf86400c0d0841e65bc4b.patch",
+            "Disable exact checking of multi-line chained method calls in Generic.WhiteSpace.ScopeIndent. Ref. https://github.com/squizlabs/PHP_CodeSniffer/pull/2372": "https://gist.githubusercontent.com/drupol/c307b48fe4eb187b0833afb1d1b97e6a/raw/c3d414e9f4c182387ca9405c36f5daeb7b51ae05/phpcs-pr-2372.patch"
+        }
     }
+}
 ```
 
 In your project root create the following `grumphp.yml.dist`:
