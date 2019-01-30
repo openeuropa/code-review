@@ -39,10 +39,10 @@ class GitCommitMessageTest extends AbstractTest
     public function commitMessageProvider()
     {
         return [
-            ['Issue #3: Nice GitHub commit message.', TaskResult::PASSED],
-            ['#3: Not nice GitHub commit message.', TaskResult::FAILED],
-            ['NEPT-123: Nice Jira commit message.', TaskResult::PASSED],
-            ['Failed message', TaskResult::FAILED],
+          ['Issue #3: Nice GitHub commit message.', TaskResult::PASSED],
+          ['#3: Not nice GitHub commit message.', TaskResult::FAILED],
+          ['NEPT-123: Nice Jira commit message.', TaskResult::PASSED],
+          ['Failed message', TaskResult::FAILED],
         ];
     }
 }

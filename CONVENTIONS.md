@@ -4,10 +4,7 @@ List of conventions for OpenEuropa projects and components.
 
 ## PHP Code Sniffer
 
-- For generic PHP projects: [PSR-2 coding standards](https://www.php-fig.org/psr/psr-2)
-  with the following additions:
-  - Comments, array declarations and code that is split over multiple lines also
-    need to be indented with 4 characters.
+- For generic PHP projects: [PSR-2 coding standards](https://www.php-fig.org/psr/psr-2).
 - For Drupal projects: [Drupal coding standards](https://www.drupal.org/docs/develop/standards) 
 
 ## PHP Mess Detector
