@@ -12,6 +12,15 @@ Install the code review component via Composer:
 composer require --dev openeuropa/code-review
 ```
 
+As this project uses patches, you will have to enable patching your project's composer.json file:
+
+```yaml
+    "extra": {
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": true
+    }
+```
+
 In your project root create the following `grumphp.yml.dist`:
 
 ```yaml
