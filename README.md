@@ -14,10 +14,6 @@ composer require --dev openeuropa/code-review
 
 As this project uses some [patches](#Patches), you will have to enable patching in your project's `composer.json` file.
 
-In order to do this, you have two options.
-
-The first option will enable patching to all the dependencies throughout `composer install`.
-
 ```yaml
 "extra": {
     "enable-patching": true,
@@ -25,21 +21,10 @@ The first option will enable patching to all the dependencies throughout `compos
 }
 ```
 
-Maybe patching all the dependencies is not what you want, then the second option is to copy the patches applied on this
-project in your `composer.json` file:
+See the [cweagans/composer-patches](https://github.com/cweagans/composer-patches) package for more information on how to
+apply patches in a project.
 
-```yaml
-"extra": {
-    "enable-patching": true,
-    "composer-exit-on-patch-failure": 1,
-    "patches": {
-        "squizlabs/php_codesniffer": {
-            "Fix conflict between scope indentation and array indentation checking. Ref. https://github.com/squizlabs/PHP_CodeSniffer/issues/2281": "https://gist.githubusercontent.com/drupol/c307b48fe4eb187b0833afb1d1b97e6a/raw/c3d414e9f4c182387ca9405c36f5daeb7b51ae05/phpcs-390bffe2265aac8184fdf86400c0d0841e65bc4b.patch",
-            "Disable exact checking of multi-line chained method calls in Generic.WhiteSpace.ScopeIndent. Ref. https://github.com/squizlabs/PHP_CodeSniffer/pull/2372": "https://gist.githubusercontent.com/drupol/c307b48fe4eb187b0833afb1d1b97e6a/raw/c3d414e9f4c182387ca9405c36f5daeb7b51ae05/phpcs-pr-2372.patch"
-        }
-    }
-}
-```
+See also the [#Patches](#Patches) section for further information.
 
 In your project root create the following `grumphp.yml.dist`:
 
@@ -220,7 +205,10 @@ git config --global --unset core.hooksPath
 The component uses the PSR-2 standard based on version 3.4 of package [squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 As the PSR-2 standard does not enforce indentation, we decided to add custom rules in a custom ruleset in order to make sure
 that our code is properly indented.
+
 Unfortunately, there are some issues in versions 3.4 of [squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) regarding
 code indentation and we fixed them by including custom patches.
+
 Those issues are partially solved in version 3.5 which is not stable yet.
+
 As soon as 3.5 reaches a stable version, we will remove those patches.
