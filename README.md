@@ -12,6 +12,20 @@ Install the code review component via Composer:
 composer require --dev openeuropa/code-review
 ```
 
+As this project uses some [patches](#Patches), you will have to enable patching in your project's `composer.json` file.
+
+```yaml
+"extra": {
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true
+}
+```
+
+See the [cweagans/composer-patches](https://github.com/cweagans/composer-patches) package for more information on how to
+apply patches in a project.
+
+See also the [#Patches](#Patches) section for further information.
+
 In your project root create the following `grumphp.yml.dist`:
 
 ```yaml
@@ -195,7 +209,10 @@ git config --global --unset core.hooksPath
 The component uses the PSR-2 standard based on version 3.4 of package [squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 As the PSR-2 standard does not enforce indentation, we decided to add custom rules in a custom ruleset in order to make sure
 that our code is properly indented.
+
 Unfortunately, there are some issues in versions 3.4 of [squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) regarding
 code indentation and we fixed them by including custom patches.
+
 Those issues are partially solved in version 3.5 which is not stable yet.
+
 As soon as 3.5 reaches a stable version, we will remove those patches.
