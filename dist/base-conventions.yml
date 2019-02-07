@@ -18,7 +18,7 @@ parameters:
     tasks.phpmd.exclude:
         - vendor/
     tasks.phpmd.ruleset:
-        - ./vendor/openeuropa/code-review/resources/phpmd-ruleset.xml
+        - ./vendor/openeuropa/code-review/resources/phpmd/phpmd-ruleset.xml
     tasks.phpmd.triggered_by:
         - php
 
@@ -27,7 +27,7 @@ parameters:
         - '/^([A-Z]+\-\d+|Issue #\d+): [A-Z].+\./'
 
     # PHP CS Fixer parameters
-    tasks.phpcsfixer2.config: ./resources/php_cs_fixer.library.php
+    tasks.phpcsfixer2.config: ./resources/php-cs-fixer/php_cs_fixer.library.php
     tasks.phpcsfixer2.allow_risky: true
 
     tasks.jsonlint.ignore_patterns: []

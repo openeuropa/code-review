@@ -8,7 +8,6 @@ use PhpCsFixer\ConfigInterface;
 
 interface Config extends ConfigInterface
 {
-
     /**
      * This hook let you alter the fixers programmatically.
      *

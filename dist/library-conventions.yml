@@ -2,6 +2,6 @@ imports:
     - { resource: base-conventions.yml }
 
 parameters:
-    tasks.phpcs.standard: ./vendor/openeuropa/code-review/resources/library-phpcs-ruleset.xml
+    tasks.phpcs.standard: ./vendor/openeuropa/code-review/resources/phpcs/library-phpcs-ruleset.xml
     tasks.phpcs.warning_severity: 0
-    tasks.phpcsfixer2.config: ./vendor/openeuropa/code-review/resources/php_cs_fixer.library.php
+    tasks.phpcsfixer2.config: ./vendor/openeuropa/code-review/resources/php-cs-fixer/php_cs_fixer.library.php

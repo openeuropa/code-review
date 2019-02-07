@@ -14,7 +14,7 @@ abstract class Drupal extends PHP
     /**
      * @var string
      */
-    public static $filename = 'resources/php-cs-fixer/phpcsfixer.rules.drupal.yml';
+    public static $filename = 'resources/php-cs-fixer/configs/phpcsfixer.rules.drupal.yml';
 
     /**
      * {@inheritdoc}

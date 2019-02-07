@@ -12,7 +12,7 @@ class Drupal8 extends Drupal
     /**
      * @var string
      */
-    public static $filename = 'resources/php-cs-fixer/phpcsfixer.rules.drupal8.yml';
+    public static $filename = 'resources/php-cs-fixer/configs/phpcsfixer.rules.drupal8.yml';
 
     /**
      * {@inheritdoc}

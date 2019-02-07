@@ -3,5 +3,5 @@ imports:
 
 parameters:
   tasks.phpmd.ruleset:
-  - ./resources/phpmd-ruleset.xml
-  tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml
+  - ./resources/phpmd/phpmd-ruleset.xml
+  tasks.phpcs.standard: ./resources/phpcs/library-phpcs-ruleset.xml

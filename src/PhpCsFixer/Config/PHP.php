@@ -15,7 +15,7 @@ abstract class PHP extends PhpCsFixerConfig implements Config
     /**
      * @var string
      */
-    public static $filename = 'resources/php-cs-fixer/phpcsfixer.rules.php.yml';
+    public static $filename = 'resources/php-cs-fixer/configs/phpcsfixer.rules.php.yml';
 
     /**
      * {@inheritdoc}

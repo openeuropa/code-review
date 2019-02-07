@@ -12,7 +12,7 @@ class Libraries extends PHP7
     /**
      * @var string
      */
-    public static $filename = 'config/drupal8/phpcsfixer.rules.yml';
+    public static $filename = 'resources/php-cs-fixer/configs/phpcsfixer.rules.libraries.yml';
 
     /**
      * {@inheritdoc}

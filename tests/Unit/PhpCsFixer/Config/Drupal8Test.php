@@ -9,9 +9,12 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
 
 /**
- * Class Drupal8Test
+ * Class Drupal8Test.
+ *
+ * @internal
+ * @coversNothing
  */
-class Drupal8Test extends TestCase
+final class Drupal8Test extends TestCase
 {
     /**
      * Test the config inheritance in configs.
@@ -19,9 +22,9 @@ class Drupal8Test extends TestCase
     public function testConfigRulesInheritance()
     {
         $configs = [
-            'resources/php-cs-fixer/phpcsfixer.rules.php.yml',
-            'resources/php-cs-fixer/phpcsfixer.rules.drupal.yml',
-            'resources/php-cs-fixer/phpcsfixer.rules.drupal8.yml',
+            'resources/php-cs-fixer/configs/phpcsfixer.rules.php.yml',
+            'resources/php-cs-fixer/configs/phpcsfixer.rules.drupal.yml',
+            'resources/php-cs-fixer/configs/phpcsfixer.rules.drupal8.yml',
         ];
 
         $rules = [];
@@ -31,6 +34,6 @@ class Drupal8Test extends TestCase
         }
         ksort($rules);
 
-        self::assertSame($rules, (new Drupal8())->getRules());
+        $this->assertSame($rules, (new Drupal8())->getRules());
     }
 }

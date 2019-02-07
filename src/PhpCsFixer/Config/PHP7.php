@@ -12,5 +12,5 @@ abstract class PHP7 extends PHP
     /**
      * @var string
      */
-    public static $filename = 'resources/php-cs-fixer/phpcsfixer.rules.php7.yml';
+    public static $filename = 'resources/php-cs-fixer/configs/phpcsfixer.rules.php7.yml';
 }
