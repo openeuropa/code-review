@@ -1,0 +1,5 @@
+parameters:
+    rules:
+        '@PSR2': false
+        # Drupalism: lowercase_constants (not configurable yet, see https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/4275)
+        OpenEuropa/uppercase_constants: true
