@@ -12,6 +12,7 @@ parameters:
         - php
         - profile
         - theme
+        - yml
     tasks.phpmd.triggered_by:
         - inc
         - install
