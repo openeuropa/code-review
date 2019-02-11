@@ -4,7 +4,7 @@ parameters:
         failed: ~
         succeeded: ~
 
-    # PHP Code Sniffer parameters.
+    # PHP Code Sniffer parameters
     tasks.phpcs.ignore_patterns:
         - vendor/
         - node_modules/
@@ -22,7 +22,7 @@ parameters:
     tasks.phpmd.triggered_by:
         - php
 
-    # Commit message parameters.
+    # Commit message parameters
     tasks.git_commit_message.matchers:
         - '/^([A-Z]+\-\d+|Issue #\d+): [A-Z].+\./'
 
@@ -30,13 +30,18 @@ parameters:
     tasks.phpcsfixer2.config: ./resources/php-cs-fixer/php_cs_fixer.library.php
     tasks.phpcsfixer2.allow_risky: true
 
+    # JSON Lint parameters
     tasks.jsonlint.ignore_patterns: []
+
+    # PHP Lint parameters
+    tasks.phplint.exclude: []
 
     # Tasks.
     tasks:
         # PHP Lint
         phplint:
             triggered_by: ['php', 'module', 'install', 'profile', 'inc', 'theme']
+            exclude: '%tasks.phplint.exclude%'
             metadata:
                 priority: 5000
 
