@@ -117,7 +117,6 @@ Below the list of task parameters can that be overridden on a per-project basis:
 - `tasks.phpmd.triggered_by`
 - `tasks.git_commit_message.matchers`
 - `tasks.phpcsfixer2.config`
-- `tasks.phpcsfixer2.rules`
 - `tasks.phpcsfixer2.allow_risky`
 - `tasks.jsonlint.ignore_patterns`
 
