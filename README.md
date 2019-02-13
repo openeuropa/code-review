@@ -141,6 +141,9 @@ GrumPHP already has a series of tasks that can be used out of the box, you can f
 
 It is also possible to create your own tasks as explained in the [GrumPHP extensions page](https://github.com/phpro/grumphp/blob/master/doc/extensions.md).
 
+The Code Review component also provides a task to run the [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer). This task is configured
+using overridable Configuration objects. You can learn more about them and how to customize then on the [documentation page](https://github.com/FriendsOfPHP/PHP-CS-Fixer#config-file) of the project
+
 ## Usage
 
 GrumPHP tasks will be ran at every commit, if you with to run them without performing a commit use the following command:
