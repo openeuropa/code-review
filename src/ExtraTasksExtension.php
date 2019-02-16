@@ -21,7 +21,7 @@ class ExtraTasksExtension implements ExtensionInterface
         if ($container->hasParameter('extra_tasks')) {
             $tasks = $container->getParameter('tasks');
             foreach ($container->getParameter('extra_tasks') as $name => $value) {
-                if (array_key_exists($name, $tasks)) {
+                if (\array_key_exists($name, $tasks)) {
                     throw new RuntimeException("Cannot override already defined task '{$name}' in 'extra_tasks'.");
                 }
                 $tasks[$name] = $value;
