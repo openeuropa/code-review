@@ -109,6 +109,9 @@ parameters:
 
     # Tasks.
     tasks:
+        # Composer Normalize
+        composer_normalize: ~
+
         # PHP Code Sniffer.
         phpcs:
             standard: '%tasks.phpcs.standard%'
@@ -145,3 +148,13 @@ parameters:
         jsonlint:
             detect_key_conflicts: true
             ignore_patterns: '%tasks.jsonlint.ignore_patterns%'
+
+services:
+    task.composer_normalize:
+        class: drupol\PhpConventions\Grumphp\Task\ComposerNormalize
+        arguments:
+            - '@config'
+            - '@process_builder'
+            - '@formatter.phpcsfixer'
+        tags:
+            - {name: grumphp.task, config: composer_normalize}
