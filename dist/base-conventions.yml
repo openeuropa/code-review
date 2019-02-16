@@ -38,6 +38,12 @@ parameters:
 
     # Tasks.
     tasks:
+        # Composer checks
+        composer:
+            strict: true
+            metadata:
+                priority: 6000
+
         # PHP Lint
         phplint:
             triggered_by: ['php', 'module', 'install', 'profile', 'inc', 'theme']
