@@ -117,7 +117,6 @@ Below the list of task parameters can that be overridden on a per-project basis:
 - `tasks.phpmd.triggered_by`
 - `tasks.git_commit_message.matchers`
 - `tasks.phpcsfixer2.config`
-- `tasks.phpcsfixer2.rules`
 - `tasks.phpcsfixer2.allow_risky`
 - `tasks.jsonlint.ignore_patterns`
 
@@ -141,6 +140,9 @@ GrumPHP already has a series of tasks that can be used out of the box, you can f
 [GrumPHP tasks page](https://github.com/phpro/grumphp/blob/master/doc/tasks.md).
 
 It is also possible to create your own tasks as explained in the [GrumPHP extensions page](https://github.com/phpro/grumphp/blob/master/doc/extensions.md).
+
+The Code Review component also provides a task to run the [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer). This task is configured
+using overridable Configuration objects. You can learn more about them and how to customize then on the [documentation page](https://github.com/FriendsOfPHP/PHP-CS-Fixer#config-file) of the project
 
 ## Usage
 

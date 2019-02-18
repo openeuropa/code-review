@@ -1,0 +1,4 @@
+parameters:
+    rules:
+        array_syntax:
+            syntax: short

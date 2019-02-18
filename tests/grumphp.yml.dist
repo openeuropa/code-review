@@ -3,4 +3,4 @@ imports:
 
 parameters:
   tasks.phpmd.ruleset:
-  - ./resources/phpmd-ruleset.xml
+  - ./resources/phpmd/phpmd-ruleset.xml

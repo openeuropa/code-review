@@ -19,4 +19,4 @@ parameters:
         - php
         - profile
         - theme
-    tasks.phpcsfixer2.config: ./vendor/openeuropa/code-review/resources/php_cs_fixer.drupal.php
+    tasks.phpcsfixer2.config: ./vendor/openeuropa/code-review/resources/php-cs-fixer/php_cs_fixer.drupal.php
