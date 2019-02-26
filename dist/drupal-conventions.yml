@@ -2,6 +2,10 @@ imports:
     - { resource: base-conventions.yml }
 
 parameters:
+    tasks.phpcs.ignore_patterns:
+        - build/
+        - node_modules/
+        - vendor/
     tasks.phpcs.standard:
         - ./vendor/drupal/coder/coder_sniffer/Drupal
         - ./vendor/drupal/coder/coder_sniffer/DrupalPractice
