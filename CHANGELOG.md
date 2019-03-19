@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.0-beta2](https://github.com/openeuropa/code-review/tree/1.0.0-beta2) (2019-03-19)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta1...1.0.0-beta2)
+
+**Merged pull requests:**
+
+- OPENEUROPA-1722: Lock php_codesniffer version on 1.x until our patches are updated. [\#80](https://github.com/openeuropa/code-review/pull/80) ([ademarco](https://github.com/ademarco))
+
 ## [1.0.0-beta1](https://github.com/openeuropa/code-review/tree/1.0.0-beta1) (2019-01-29)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha5...1.0.0-beta1)
 
