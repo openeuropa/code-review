@@ -34,7 +34,7 @@ abstract class PhpCodeSnifferTestBase extends AbstractTest
         $actual_failures += $defaults;
 
         foreach (static::FAILURE_TYPES as $failure_type) {
-            $this->assertEquals($expected_failures[$failure_type], $actual_failures[$failure_type]);
+            static::assertEquals($expected_failures[$failure_type], $actual_failures[$failure_type]);
         }
     }
 

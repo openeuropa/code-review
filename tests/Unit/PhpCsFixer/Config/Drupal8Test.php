@@ -34,6 +34,6 @@ final class Drupal8Test extends TestCase
         }
         ksort($rules);
 
-        $this->assertSame($rules, (new Drupal8())->getRules());
+        static::assertSame($rules, (new Drupal8())->getRules());
     }
 }

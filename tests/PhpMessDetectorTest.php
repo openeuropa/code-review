@@ -46,6 +46,6 @@ final class PhpMessDetectorTest extends AbstractTest
         $context = new GitPreCommitContext($collection);
         $task = $this->getTask('phpmd', 'base-conventions');
         $result = $task->run($context);
-        $this->assertEquals($expected, $result->getResultCode());
+        static::assertEquals($expected, $result->getResultCode());
     }
 }

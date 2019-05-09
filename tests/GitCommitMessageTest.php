@@ -48,6 +48,6 @@ final class GitCommitMessageTest extends AbstractTest
         $context = new GitCommitMsgContext($collection, $message, '', '');
         $task = $this->getTask('git_commit_message', 'base-conventions');
         $result = $task->run($context);
-        $this->assertEquals($expected, $result->getResultCode());
+        static::assertEquals($expected, $result->getResultCode());
     }
 }

@@ -24,7 +24,7 @@ final class ExtraTasksExtensionTest extends AbstractTest
         $container = ContainerFactory::buildFromConfiguration($path);
         $tasks = $container->getParameter('tasks');
 
-        $this->assertSame([
+        static::assertSame([
             'phpcs' => null,
             'phpmd' => null,
             'git_commit_message' => null,
