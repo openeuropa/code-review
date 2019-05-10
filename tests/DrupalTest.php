@@ -50,6 +50,6 @@ final class DrupalTest extends AbstractTest
         $context = new GitPreCommitContext($collection);
         $task = $this->getTask('phpmd', 'drupal-conventions');
         $result = $task->run($context);
-        $this->assertEquals($expected, $result->getResultCode());
+        static::assertEquals($expected, $result->getResultCode());
     }
 }

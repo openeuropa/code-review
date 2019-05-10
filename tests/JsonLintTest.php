@@ -48,6 +48,6 @@ final class JsonLintTest extends AbstractTest
         $context = new GitPreCommitContext($collection);
         $task = $this->getTask('jsonlint', 'base-conventions');
         $result = $task->run($context);
-        $this->assertEquals($expected, $result->getResultCode());
+        static::assertEquals($expected, $result->getResultCode());
     }
 }
