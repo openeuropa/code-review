@@ -1,5 +1,48 @@
 # Change Log
 
+## [1.0.0-beta3](https://github.com/openeuropa/code-review/tree/1.0.0-beta3) (2019-05-29)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta2...1.0.0-beta3)
+
+**Closed issues:**
+
+- Release 1.0.0-beta3 [\#88](https://github.com/openeuropa/code-review/issues/88)
+- Update friendsofphp/php-cs-fixer to v2.15.0 [\#84](https://github.com/openeuropa/code-review/issues/84)
+- Update squizlabs/php\_codesniffer to 3.4.1 [\#82](https://github.com/openeuropa/code-review/issues/82)
+- Find a way to normalize the composer.json file. [\#74](https://github.com/openeuropa/code-review/issues/74)
+- Add "composer" task to grumphp. [\#73](https://github.com/openeuropa/code-review/issues/73)
+- Make sure tabs are converted in spaces by adding the rule 'indentation\_type' in php-cs-fixer config. [\#64](https://github.com/openeuropa/code-review/issues/64)
+- Add a Drupal 7 conventions [\#62](https://github.com/openeuropa/code-review/issues/62)
+- Add GrumPHP task: "yamllint" to check yaml files syntax. [\#56](https://github.com/openeuropa/code-review/issues/56)
+- Update or delete a task configuration [\#47](https://github.com/openeuropa/code-review/issues/47)
+- Issue when the tasks key is not set. [\#45](https://github.com/openeuropa/code-review/issues/45)
+- Add roave/security-advisories to dev dependencies. [\#43](https://github.com/openeuropa/code-review/issues/43)
+
+**Merged pull requests:**
+
+- OPENEUROPA-1766 - Fix issues \#82 and \#84. [\#85](https://github.com/openeuropa/code-review/pull/85) ([dxvargas](https://github.com/dxvargas))
+
+## [1.0.0-beta2](https://github.com/openeuropa/code-review/tree/1.0.0-beta2) (2019-03-19)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta1...1.0.0-beta2)
+
+**Closed issues:**
+
+- OPENEUROPA-1535: Revert. [\#68](https://github.com/openeuropa/code-review/issues/68)
+- OPENEUROPA-1575: Add a PHP Lint that checks the PHP syntax before running any other tools. [\#66](https://github.com/openeuropa/code-review/issues/66)
+- Add a grumPHP task: "jsonlint" to check json files syntax. [\#57](https://github.com/openeuropa/code-review/issues/57)
+- Use PHP CS Fixer [\#49](https://github.com/openeuropa/code-review/issues/49)
+
+**Merged pull requests:**
+
+- Update CHANGELOG.md for release 1.0.0-beta2. [\#81](https://github.com/openeuropa/code-review/pull/81) ([ademarco](https://github.com/ademarco))
+- OPENEUROPA-1722: Lock php\_codesniffer version on 1.x until our patches are updated. [\#80](https://github.com/openeuropa/code-review/pull/80) ([ademarco](https://github.com/ademarco))
+- OPENEUROPA-1722: Lock php\_codesniffer version until our patches are updated. [\#79](https://github.com/openeuropa/code-review/pull/79) ([brummbar](https://github.com/brummbar))
+- OPENEUROPA-1607: Use config classes for PHP-CS-Fixer configuration. [\#72](https://github.com/openeuropa/code-review/pull/72) ([drupol](https://github.com/drupol))
+- OPENEUROPA-1566: Core Review: Add DrupalPractice standard from coder. [\#71](https://github.com/openeuropa/code-review/pull/71) ([sergepavle](https://github.com/sergepavle))
+- Issue \#94: Update README. [\#70](https://github.com/openeuropa/code-review/pull/70) ([drupol](https://github.com/drupol))
+- OPENEUROPA-1575: Add the PHP Linter and re-organize the tasks in proper order. [\#67](https://github.com/openeuropa/code-review/pull/67) ([drupol](https://github.com/drupol))
+- OPENEUROPA-1573: Add JSONLint GrumPHP task. [\#59](https://github.com/openeuropa/code-review/pull/59) ([drupol](https://github.com/drupol))
+- OPENEUROPA-1521: Use PHP CS Fixer. [\#50](https://github.com/openeuropa/code-review/pull/50) ([drupol](https://github.com/drupol))
+
 ## [1.0.0-beta1](https://github.com/openeuropa/code-review/tree/1.0.0-beta1) (2019-01-29)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha5...1.0.0-beta1)
 
@@ -9,6 +52,7 @@
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for 1.0.0-beta1. [\#60](https://github.com/openeuropa/code-review/pull/60) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-1564: Follow-up: Delete file docker-compose.yml.dist. [\#55](https://github.com/openeuropa/code-review/pull/55) ([drupol](https://github.com/drupol))
 - OPENEUROPA-1568: Remove docker-compose.yml.dist. [\#54](https://github.com/openeuropa/code-review/pull/54) ([drupol](https://github.com/drupol))
 - OPENEUROPA-1564: Follow-up - Remove forgotten file. [\#53](https://github.com/openeuropa/code-review/pull/53) ([drupol](https://github.com/drupol))
