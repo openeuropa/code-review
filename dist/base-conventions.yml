@@ -24,7 +24,7 @@ parameters:
 
     # Commit message parameters
     tasks.git_commit_message.matchers:
-        - '/^([A-Z]+\-\d+|Issue #\d+): [A-Z].+\./'
+        - '/^([A-Z0-9]+\-\d+|Issue #\d+): [A-Z].+\./'
 
     # PHP CS Fixer parameters
     tasks.phpcsfixer2.config: ./resources/php-cs-fixer/php_cs_fixer.library.php
