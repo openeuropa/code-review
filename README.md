@@ -195,3 +195,14 @@ Unfortunately, there are some issues in versions 3.4 of [squizlabs/PHP_CodeSniff
 code indentation and we fixed them by including custom patches.
 Those issues are partially solved in version 3.5 which is not stable yet.
 As soon as 3.5 reaches a stable version, we will remove those patches.
+
+When using the Code Review component on your project add the following lines to your `composer.json`:
+
+```
+  "extra": {
+    "composer-exit-on-patch-failure": true,
+    "enable-patching": true
+  }
+```
+
+This will allow Code Review's patches to be correctly applied. 
