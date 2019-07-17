@@ -95,13 +95,18 @@ parameters:
 
 Below the list of task parameters can that be overridden on a per-project basis:
 
+- `tasks.phpcs.standard`
 - `tasks.phpcs.ignore_patterns`
 - `tasks.phpcs.triggered_by`
 - `tasks.phpcs.whitelist_patterns`
+- `tasks.phpcs.warning_severity`
+- `tasks.phpcs.exclude`
 - `tasks.phpmd.exclude`
 - `tasks.phpmd.ruleset`
 - `tasks.phpmd.triggered_by`
 - `tasks.git_commit_message.matchers`
+
+Please also check [GrumPHP task documentation](https://github.com/phpro/grumphp/blob/master/doc/tasks/) for other possible parameters.
 
 More on how to import and override configuration files [here](http://symfony.com/doc/current/service_container/import.html).
 
