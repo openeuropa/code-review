@@ -50,8 +50,8 @@ class DrupalPhpCsTest extends PhpCodeSnifferTestBase
                 'drupal-conventions',
                 [
                     'error' => [
-                        13 => 2,
-                        16 => 1,
+                        15 => 2,
+                        18 => 1,
                     ],
                 ],
             ],
@@ -60,7 +60,7 @@ class DrupalPhpCsTest extends PhpCodeSnifferTestBase
                 '../tests/fixtures/dist/drupal-conventions',
                 [
                     'error' => [
-                        16 => 1,
+                        18 => 1,
                     ],
                 ],
             ],

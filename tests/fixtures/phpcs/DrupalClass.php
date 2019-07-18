@@ -2,6 +2,8 @@
 
 namespace Drupal\testmodule;
 
+use Drupal\BlockBase;
+
 /**
  * Some service.
  */
