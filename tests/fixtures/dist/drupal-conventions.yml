@@ -1,0 +1,6 @@
+imports:
+  - { resource: ../../../dist/drupal-conventions.yml }
+
+parameters:
+  tasks.phpcs.exclude:
+    - Drupal.Commenting.Deprecated
