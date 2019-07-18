@@ -2,17 +2,14 @@
 
 namespace OpenEuropa\CodeReview\Tests;
 
-use GrumPHP\Runner\TaskResult;
 use GrumPHP\Collection\FilesCollection;
-use GrumPHP\Task\Context\GitPreCommitContext;
 use GrumPHP\Task\Context\RunContext;
 
 /**
  * Tests for Drupal conventions.
  */
-class DrupalPhpCsTest extends PhpCodeSnifferTestBase
+class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
 {
-
     /**
      * Tests different git messages against the predefined conventions.
      *
@@ -23,7 +20,7 @@ class DrupalPhpCsTest extends PhpCodeSnifferTestBase
      * @param int    $expected
      *   Expected result after the test.
      *
-     * @dataProvider messageProvider
+     * @dataProvider dataProvider
      */
     public function testDrupalPhpCodeSnifferDetector($fixture, $configuration, $expected)
     {
@@ -42,7 +39,7 @@ class DrupalPhpCsTest extends PhpCodeSnifferTestBase
      * @return array
      *      Test data.
      */
-    public function messageProvider()
+    public function dataProvider()
     {
         return [
             [
