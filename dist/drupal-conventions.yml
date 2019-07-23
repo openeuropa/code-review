@@ -13,3 +13,15 @@ parameters:
     - module
     - inc
     - theme
+
+  tasks:
+    phpcs:
+      standard: '%tasks.phpcs.standard%'
+      ignore_patterns: '%tasks.phpcs.ignore_patterns%'
+      triggered_by: '%tasks.phpcs.triggered_by%'
+      whitelist_patterns: '%tasks.phpcs.whitelist_patterns%'
+      warning_severity: '%tasks.phpcs.warning_severity%'
+      exclude:
+        - Drupal.Commenting.Deprecated
+      metadata:
+        priority: 300

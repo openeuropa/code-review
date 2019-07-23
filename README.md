@@ -100,7 +100,6 @@ Below the list of task parameters can that be overridden on a per-project basis:
 - `tasks.phpcs.triggered_by`
 - `tasks.phpcs.whitelist_patterns`
 - `tasks.phpcs.warning_severity`
-- `tasks.phpcs.exclude`
 - `tasks.phpmd.exclude`
 - `tasks.phpmd.ruleset`
 - `tasks.phpmd.triggered_by`
