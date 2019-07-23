@@ -8,7 +8,9 @@ List of conventions for OpenEuropa projects and components.
   with the following additions:
   - Comments, array declarations and code that is split over multiple lines also
     need to be indented with 4 characters.
-- For Drupal projects: [Drupal coding standards](https://www.drupal.org/docs/develop/standards) 
+- For Drupal projects: [Drupal coding standards](https://www.drupal.org/docs/develop/standards)
+  except:
+  - `Drupal.Commenting.Deprecated` because this rule only makes sense for core and projects in drupal.org.
 
 ## PHP Mess Detector
 

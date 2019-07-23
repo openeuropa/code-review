@@ -47,16 +47,6 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
                 'drupal-conventions',
                 [
                     'error' => [
-                        15 => 2,
-                        18 => 1,
-                    ],
-                ],
-            ],
-            [
-                'phpcs/DrupalClass.php',
-                '../tests/fixtures/dist/drupal-conventions',
-                [
-                    'error' => [
                         18 => 1,
                     ],
                 ],
