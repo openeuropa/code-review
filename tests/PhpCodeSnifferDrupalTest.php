@@ -6,12 +6,12 @@ use GrumPHP\Collection\FilesCollection;
 use GrumPHP\Task\Context\RunContext;
 
 /**
- * Tests for Drupal conventions.
+ * Tests the PHP_CodeSniffer task using the Drupal conventions.
  */
 class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
 {
     /**
-     * Tests different git messages against the predefined conventions.
+     * Tests Drupal code to make sure CodeSniffer triggers the appropriate errors.
      *
      * @param string $fixture
      *   Name of the fixture.
