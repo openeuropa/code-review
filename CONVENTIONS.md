@@ -1,6 +1,16 @@
 # Conventions
 
-List of conventions for OpenEuropa projects and components.
+Information about conventions for OpenEuropa projects and components.
+
+## Available conventions
+
+These conventions can be used in your projects:
+
+* [Library](dist/library-conventions.yml) for generic PHP projects.
+* [Drupal](dist/drupal-conventions.yml) for Drupal projects.
+
+There is also a [base conventions](dist/base-conventions.yml) file, this one is only meant to be extended and shouldn't be used directly.
+
 
 ## PHP Code Sniffer
 

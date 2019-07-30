@@ -18,6 +18,7 @@ In your project root create the following `grumphp.yml.dist`:
 imports:
   - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
 ```
+For Drupal projects, `drupal-conventions.yml` should be imported instead.
 
 ### Using Docker Compose
 

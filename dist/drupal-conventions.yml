@@ -28,7 +28,7 @@ parameters:
       metadata:
         priority: 300
 
-      # PHP Mess Detector.
+    # PHP Mess Detector.
     phpmd:
       exclude: '%tasks.phpmd.exclude%'
       ruleset: '%tasks.phpmd.ruleset%'

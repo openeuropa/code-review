@@ -25,7 +25,7 @@ class PhpMessDetectorTest extends AbstractTest
     {
         $collection = new FilesCollection([$this->getFixture($fixture)]);
         $context = new RunContext($collection);
-        $task = $this->getTask('phpmd', 'base-conventions');
+        $task = $this->getTask('phpmd', 'library-conventions');
         $result = $task->run($context);
         $this->assertEquals($expected, $result->getResultCode());
     }

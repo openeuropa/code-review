@@ -25,7 +25,7 @@ class GitCommitMessageTest extends AbstractTest
     {
         $collection = new FilesCollection();
         $context = new GitCommitMsgContext($collection, $message, '', '');
-        $task = $this->getTask('git_commit_message', 'base-conventions');
+        $task = $this->getTask('git_commit_message', 'library-conventions');
         $result = $task->run($context);
         $this->assertEquals($expected, $result->getResultCode());
     }
