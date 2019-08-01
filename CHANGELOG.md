@@ -1,5 +1,16 @@
 # Change Log
 
+## [1.0.0-beta4](https://github.com/openeuropa/code-review/tree/1.0.0-beta4) (2019-08-01)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta3...1.0.0-beta4)
+
+**Closed issues:**
+
+- Add grumphp parameters to drupal conventions. [\#77](https://github.com/openeuropa/code-review/issues/77)
+
+**Merged pull requests:**
+
+-  OPENEUROPA-2054: Use new phpcs parameter exclude [\#95](https://github.com/openeuropa/code-review/pull/95) ([dxvargas](https://github.com/dxvargas))
+
 ## [1.0.0-beta3](https://github.com/openeuropa/code-review/tree/1.0.0-beta3) (2019-06-26)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta2...1.0.0-beta3)
 
@@ -19,6 +30,7 @@
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 1.0.0-beta3. [\#93](https://github.com/openeuropa/code-review/pull/93) ([ademarco](https://github.com/ademarco))
 - Update pattern for numbers in jira projects [\#92](https://github.com/openeuropa/code-review/pull/92) ([haringsrob](https://github.com/haringsrob))
 - OPENEUROPA-1766: Update squizlabs/php\_codesniffer to 3.4.2 and remove patch [\#91](https://github.com/openeuropa/code-review/pull/91) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-1897: Use ci image. [\#87](https://github.com/openeuropa/code-review/pull/87) ([imanoleguskiza](https://github.com/imanoleguskiza))
