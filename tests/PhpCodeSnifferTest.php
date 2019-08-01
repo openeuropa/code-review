@@ -11,7 +11,7 @@ use GrumPHP\Task\Context\GitPreCommitContext;
 class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
 {
     /**
-     * Tests different git messages against the predefined conventions.
+     * Tests PHP code to make sure CodeSniffer triggers the appropriate errors.
      *
      * @param string $fixture
      *   Name of the fixture to use in the test.

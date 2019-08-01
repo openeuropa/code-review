@@ -4,7 +4,7 @@ namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Collection\FilesCollection;
-use GrumPHP\Task\Context\GitPreCommitContext;
+use GrumPHP\Task\Context\RunContext;
 
 /**
  * Tests for git commit message conventions.
@@ -19,13 +19,13 @@ class PhpMessDetectorTest extends AbstractTest
      * @param int    $expected
      *   Expected result after the test.
      *
-     * @dataProvider commitMessageProvider
+     * @dataProvider dataProvider
      */
     public function testPhpCodeMessage($fixture, $expected)
     {
         $collection = new FilesCollection([$this->getFixture($fixture)]);
-        $context = new GitPreCommitContext($collection);
-        $task = $this->getTask('phpmd', 'base-conventions');
+        $context = new RunContext($collection);
+        $task = $this->getTask('phpmd', 'library-conventions');
         $result = $task->run($context);
         $this->assertEquals($expected, $result->getResultCode());
     }
@@ -36,7 +36,7 @@ class PhpMessDetectorTest extends AbstractTest
      * @return array
      *      Test data.
      */
-    public function commitMessageProvider()
+    public function dataProvider()
     {
         return [
             ['phpmd/correct-code.php', TaskResult::PASSED],

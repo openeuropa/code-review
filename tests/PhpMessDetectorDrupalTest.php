@@ -4,12 +4,12 @@ namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Collection\FilesCollection;
-use GrumPHP\Task\Context\GitPreCommitContext;
+use GrumPHP\Task\Context\RunContext;
 
 /**
  * Tests for Drupal conventions.
  */
-class DrupalTest extends AbstractTest
+class PhpMessDetectorDrupalTest extends AbstractTest
 {
 
     /**
@@ -20,12 +20,12 @@ class DrupalTest extends AbstractTest
      * @param int    $expected
      *   Expected result after the test.
      *
-     * @dataProvider commitMessageProvider
+     * @dataProvider dataProvider
      */
     public function testPhpMessDetector($fixture, $expected)
     {
         $collection = new FilesCollection([$this->getFixture($fixture)]);
-        $context = new GitPreCommitContext($collection);
+        $context = new RunContext($collection);
         $task = $this->getTask('phpmd', 'drupal-conventions');
         $result = $task->run($context);
         $this->assertEquals($expected, $result->getResultCode());
@@ -39,7 +39,7 @@ class DrupalTest extends AbstractTest
      * @return array
      *      Test data.
      */
-    public function commitMessageProvider()
+    public function dataProvider()
     {
         return [
             ['phpmd/correct-code.inc', TaskResult::PASSED],

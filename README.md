@@ -18,6 +18,7 @@ In your project root create the following `grumphp.yml.dist`:
 imports:
   - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
 ```
+For Drupal projects, `drupal-conventions.yml` should be imported instead.
 
 ### Using Docker Compose
 
@@ -95,9 +96,11 @@ parameters:
 
 Below the list of task parameters can that be overridden on a per-project basis:
 
+- `tasks.phpcs.standard`
 - `tasks.phpcs.ignore_patterns`
 - `tasks.phpcs.triggered_by`
 - `tasks.phpcs.whitelist_patterns`
+- `tasks.phpcs.warning_severity`
 - `tasks.phpmd.exclude`
 - `tasks.phpmd.ruleset`
 - `tasks.phpmd.triggered_by`
