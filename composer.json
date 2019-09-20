@@ -5,6 +5,7 @@
   "require": {
     "cweagans/composer-patches": "^1.0",
     "drupal/coder": "^8.3.2",
+    "nikic/php-parser": "^4.0",
     "phpmd/phpmd" : "^2.6",
     "phpro/grumphp": "^0.15.2",
     "squizlabs/php_codesniffer": "3.4.2"
@@ -33,5 +34,8 @@
   },
   "scripts": {
     "changelog": "docker run --rm -v \"$(pwd):$(pwd)\" -w $(pwd) muccg/github-changelog-generator openeuropa/code-review -t $CHANGELOG_GITHUB_TOKEN --future-release=$CHANGELOG_FUTURE_RELEASE"
+  },
+  "config": {
+    "sort-packages": true
   }
 }

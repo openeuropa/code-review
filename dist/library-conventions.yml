@@ -24,6 +24,13 @@ parameters:
       ruleset: '%tasks.phpmd.ruleset%'
       triggered_by: '%tasks.phpmd.triggered_by%'
 
+    # PHP Parser.
+    phpparser:
+      ignore_patterns: '%tasks.phpcs.ignore_patterns%'
+      triggered_by: '%tasks.phpcs.triggered_by%'
+      visitors:
+        declare_strict_types: ~
+
     # Commit message format.
     git_commit_message:
       matchers: '%tasks.git_commit_message.matchers%'
