@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.0](https://github.com/openeuropa/code-review/tree/1.0.0) (2019-10-16)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta4...1.0.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-627: Update PhpCpdeSniffer to 3.5. [\#100](https://github.com/openeuropa/code-review/pull/100) ([dxvargas](https://github.com/dxvargas))
+
 ## [1.0.0-beta4](https://github.com/openeuropa/code-review/tree/1.0.0-beta4) (2019-08-01)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta3...1.0.0-beta4)
 
