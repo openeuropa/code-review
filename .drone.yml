@@ -4,46 +4,49 @@ workspace:
 
 services:
   web:
-    image: ${IMAGE_PHP=fpfis/httpd-php-ci:7.1}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=7.2}
     environment:
-    - DOCUMENT_ROOT=/test/code-review
+      - DOCUMENT_ROOT=/test/code-review
 
 pipeline:
   composer-install-lowest:
     group: prepare
-    image: ${IMAGE_PHP=fpfis/httpd-php-ci:7.1}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=7.2}
     volumes:
-    - /cache:/cache
+      - /cache:/cache
     commands:
-    - composer update --prefer-lowest --ansi
+      - composer update --prefer-lowest --ansi
     when:
       matrix:
         COMPOSER_BOUNDARY: lowest
 
   composer-install-highest:
     group: prepare
-    image: ${IMAGE_PHP=fpfis/httpd-php-ci:7.1}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=7.2}
     volumes:
-    - /cache:/cache
+      - /cache:/cache
     commands:
-    - composer install --ansi
+      - composer install --ansi
     when:
       matrix:
         COMPOSER_BOUNDARY: highest
 
   grumphp:
     group: test
-    image: ${IMAGE_PHP=fpfis/httpd-php-ci:7.1}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=7.2}
     commands:
-    - ./vendor/bin/grumphp run
+      - ./vendor/bin/grumphp run
 
   phpunit:
     group: test
-    image: ${IMAGE_PHP=fpfis/httpd-php-ci:7.1}
+    image: fpfis/httpd-php-ci:${PHP_VERSION=7.2}
     commands:
-    - ./vendor/bin/phpunit
+      - ./vendor/bin/phpunit
 
 matrix:
   COMPOSER_BOUNDARY:
-  - lowest
-  - highest
+    - lowest
+    - highest
+  PHP_VERSION:
+    - 7.1
+    - 7.2
