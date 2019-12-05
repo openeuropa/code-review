@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenEuropa\CodeReview;
+namespace OpenEuropa\CodeReview\Tests;
 
 use Symfony\Component\Console\Output\BufferedOutput;
 

@@ -4,7 +4,7 @@ namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Configuration\ContainerBuilder;
 use Symfony\Component\Console\Input\ArgvInput;
-use OpenEuropa\CodeReview\DummyOutput;
+use OpenEuropa\CodeReview\Tests\DummyOutput;
 use PHPUnit\Framework\TestCase;
 
 /**
