@@ -3,7 +3,6 @@
 namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Configuration\ContainerBuilder;
-use GrumPHP\Configuration\ContainerFactory;
 use Symfony\Component\Console\Input\ArgvInput;
 use OpenEuropa\CodeReview\DummyOutput;
 use PHPUnit\Framework\TestCase;
