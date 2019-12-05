@@ -2,9 +2,10 @@
 
 namespace OpenEuropa\CodeReview\Tests;
 
+use GrumPHP\Configuration\ContainerBuilder;
 use GrumPHP\Configuration\ContainerFactory;
 use Symfony\Component\Console\Input\ArgvInput;
-use Symfony\Component\Console\Tests\Fixtures\DummyOutput;
+use OpenEuropa\CodeReview\DummyOutput;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -48,7 +49,7 @@ abstract class AbstractTest extends TestCase
         $content = str_replace("{configuration}", $configuration, $content);
         file_put_contents(__DIR__."/grumphp.yml", $content);
 
-        $container = ContainerFactory::buildFromConfiguration(__DIR__.'/grumphp.yml');
+        $container = ContainerBuilder::buildFromConfiguration(__DIR__.'/grumphp.yml');
         $container->set('console.input', new ArgvInput());
         $container->set('console.output', new DummyOutput());
 
