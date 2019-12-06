@@ -5,7 +5,7 @@ namespace OpenEuropa\CodeReview\Tests;
 use Symfony\Component\Console\Output\BufferedOutput;
 
 /**
- * Dummy output.
+ * Dummy output (originally from Symfony\Component).
  */
 class DummyOutput extends BufferedOutput
 {
