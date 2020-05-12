@@ -1,5 +1,21 @@
 # Change Log
 
+## [1.1.0](https://github.com/openeuropa/code-review/tree/1.1.0) (2020-05-12)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0...1.1.0)
+
+**Closed issues:**
+
+- Test if all use statements are used. [\#96](https://github.com/openeuropa/code-review/issues/96)
+
+**Merged pull requests:**
+
+- OPENEUROPA-0000: Coder version 8.3.9 introduces issues with coding standard discovery. [\#110](https://github.com/openeuropa/code-review/pull/110) ([brummbar](https://github.com/brummbar))
+- OPENEUROPA-2943: Update composer.json. [\#107](https://github.com/openeuropa/code-review/pull/107) ([sergepavle](https://github.com/sergepavle))
+- OPENEUROPA-2936: PHP 7.3. - Update Code Review component. [\#106](https://github.com/openeuropa/code-review/pull/106) ([sergepavle](https://github.com/sergepavle))
+- OPENEUROPA-2258: Undo use of PHP 7.2. [\#103](https://github.com/openeuropa/code-review/pull/103) ([dxvargas](https://github.com/dxvargas))
+- OPENEUROPA-2464: Use again PHP 7.1 in docker-compose. [\#102](https://github.com/openeuropa/code-review/pull/102) ([dxvargas](https://github.com/dxvargas))
+- OPENEUROPA-2258: Use PHP 7.2 in drone and docker image. [\#98](https://github.com/openeuropa/code-review/pull/98) ([dxvargas](https://github.com/dxvargas))
+
 ## [1.0.0](https://github.com/openeuropa/code-review/tree/1.0.0) (2019-10-16)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta4...1.0.0)
 
