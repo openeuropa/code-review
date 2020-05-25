@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
+
+## [1.2.0](https://github.com/openeuropa/code-review/tree/1.2.0) (2020-05-25)
+
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.1.0...1.2.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-3216: Unlock coder version. [\#112](https://github.com/openeuropa/code-review/pull/112) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.1.0](https://github.com/openeuropa/code-review/tree/1.1.0) (2020-05-12)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0...1.1.0)
 
 **Closed issues:**
@@ -9,6 +18,7 @@
 
 **Merged pull requests:**
 
+- Update changelog for release 1.1.0. [\#111](https://github.com/openeuropa/code-review/pull/111) ([brummbar](https://github.com/brummbar))
 - OPENEUROPA-0000: Coder version 8.3.9 introduces issues with coding standard discovery. [\#110](https://github.com/openeuropa/code-review/pull/110) ([brummbar](https://github.com/brummbar))
 - OPENEUROPA-2943: Update composer.json. [\#107](https://github.com/openeuropa/code-review/pull/107) ([sergepavle](https://github.com/sergepavle))
 - OPENEUROPA-2936: PHP 7.3. - Update Code Review component. [\#106](https://github.com/openeuropa/code-review/pull/106) ([sergepavle](https://github.com/sergepavle))
@@ -17,6 +27,7 @@
 - OPENEUROPA-2258: Use PHP 7.2 in drone and docker image. [\#98](https://github.com/openeuropa/code-review/pull/98) ([dxvargas](https://github.com/dxvargas))
 
 ## [1.0.0](https://github.com/openeuropa/code-review/tree/1.0.0) (2019-10-16)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta4...1.0.0)
 
 **Merged pull requests:**
@@ -32,9 +43,11 @@
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 1.0.0-beta4. [\#97](https://github.com/openeuropa/code-review/pull/97) ([dxvargas](https://github.com/dxvargas))
 -  OPENEUROPA-2054: Use new phpcs parameter exclude [\#95](https://github.com/openeuropa/code-review/pull/95) ([dxvargas](https://github.com/dxvargas))
 
 ## [1.0.0-beta3](https://github.com/openeuropa/code-review/tree/1.0.0-beta3) (2019-06-26)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta2...1.0.0-beta3)
 
 **Closed issues:**
@@ -60,6 +73,7 @@
 - OPENEUROPA-1766 - Fix issues \#82 and \#84. [\#85](https://github.com/openeuropa/code-review/pull/85) ([dxvargas](https://github.com/dxvargas))
 
 ## [1.0.0-beta2](https://github.com/openeuropa/code-review/tree/1.0.0-beta2) (2019-03-19)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta1...1.0.0-beta2)
 
 **Closed issues:**
@@ -82,6 +96,7 @@
 - OPENEUROPA-1521: Use PHP CS Fixer. [\#50](https://github.com/openeuropa/code-review/pull/50) ([drupol](https://github.com/drupol))
 
 ## [1.0.0-beta1](https://github.com/openeuropa/code-review/tree/1.0.0-beta1) (2019-01-29)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha5...1.0.0-beta1)
 
 **Closed issues:**
@@ -98,6 +113,7 @@
 - OPENEUROPA-1535: Coding style, fix indentation and concatenation. [\#51](https://github.com/openeuropa/code-review/pull/51) ([pfrenssen](https://github.com/pfrenssen))
 
 ## [1.0.0-alpha5](https://github.com/openeuropa/code-review/tree/1.0.0-alpha5) (2018-09-27)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha4...1.0.0-alpha5)
 
 **Merged pull requests:**
@@ -106,6 +122,7 @@
 - Openeuropa 1218 Update to include coder-3.0 [\#41](https://github.com/openeuropa/code-review/pull/41) ([richardcanoe](https://github.com/richardcanoe))
 
 ## [1.0.0-alpha4](https://github.com/openeuropa/code-review/tree/1.0.0-alpha4) (2018-09-18)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha3...1.0.0-alpha4)
 
 **Merged pull requests:**
@@ -114,6 +131,7 @@
 - OPENEUROPA-781: Update php\_codesniffer version in composer [\#39](https://github.com/openeuropa/code-review/pull/39) ([dxvargas](https://github.com/dxvargas))
 
 ## [1.0.0-alpha3](https://github.com/openeuropa/code-review/tree/1.0.0-alpha3) (2018-09-17)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha2...1.0.0-alpha3)
 
 **Closed issues:**
@@ -126,6 +144,7 @@
 - OPENEUROPA-1218: Fix PHPMD ruleset path [\#37](https://github.com/openeuropa/code-review/pull/37) ([ademarco](https://github.com/ademarco))
 
 ## [1.0.0-alpha2](https://github.com/openeuropa/code-review/tree/1.0.0-alpha2) (2018-09-14)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-alpha1...1.0.0-alpha2)
 
 **Merged pull requests:**
@@ -139,6 +158,7 @@
 - OPENEUROPA-792: Remove phpmd rules that enforce bad practices [\#30](https://github.com/openeuropa/code-review/pull/30) ([imanoleguskiza](https://github.com/imanoleguskiza))
 
 ## [1.0.0-alpha1](https://github.com/openeuropa/code-review/tree/1.0.0-alpha1) (2018-08-20)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/0.3.0...1.0.0-alpha1)
 
 **Merged pull requests:**
@@ -147,6 +167,7 @@
 - Use the PSR-2 standard for PHP libraries. [\#27](https://github.com/openeuropa/code-review/pull/27) ([pfrenssen](https://github.com/pfrenssen))
 
 ## [0.3.0](https://github.com/openeuropa/code-review/tree/0.3.0) (2018-07-13)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/0.2.0...0.3.0)
 
 **Closed issues:**
@@ -163,6 +184,7 @@
 - OPENEUROPA-623: Update to Phpunit 6. [\#21](https://github.com/openeuropa/code-review/pull/21) ([imanoleguskiza](https://github.com/imanoleguskiza))
 
 ## [0.2.0](https://github.com/openeuropa/code-review/tree/0.2.0) (2018-02-21)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/0.1.1...0.2.0)
 
 **Merged pull requests:**
@@ -171,6 +193,7 @@
 - OPENEUROPA-197: Use OpenEuropa namespace to avoid redundant prefixes [\#19](https://github.com/openeuropa/code-review/pull/19) ([ademarco](https://github.com/ademarco))
 
 ## [0.1.1](https://github.com/openeuropa/code-review/tree/0.1.1) (2018-02-09)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/0.1.0...0.1.1)
 
 **Closed issues:**
@@ -182,6 +205,7 @@
 - Issue \#17: Add theme files to conventions. [\#18](https://github.com/openeuropa/code-review/pull/18) ([dxvargas](https://github.com/dxvargas))
 
 ## [0.1.0](https://github.com/openeuropa/code-review/tree/0.1.0) (2017-12-14)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/0.0.2...0.1.0)
 
 **Closed issues:**
@@ -194,6 +218,7 @@
 - Issue \#13: Create CHANGELOG.md [\#14](https://github.com/openeuropa/code-review/pull/14) ([richardcanoe](https://github.com/richardcanoe))
 
 ## [0.0.2](https://github.com/openeuropa/code-review/tree/0.0.2) (2017-08-23)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/0.0.1...0.0.2)
 
 **Closed issues:**
@@ -209,6 +234,9 @@
 - Issue \#8: Do not use a fixed version for GrumPHP. [\#9](https://github.com/openeuropa/code-review/pull/9) ([drupol](https://github.com/drupol))
 
 ## [0.0.1](https://github.com/openeuropa/code-review/tree/0.0.1) (2017-06-09)
+
+[Full Changelog](https://github.com/openeuropa/code-review/compare/e541c64153f303c53ed49b39b12cf9b93ec05e7f...0.0.1)
+
 **Closed issues:**
 
 - Add PHPUnit testing coverage [\#3](https://github.com/openeuropa/code-review/issues/3)
@@ -222,4 +250,4 @@
 
 
 
-\* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
