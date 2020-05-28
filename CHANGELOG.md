@@ -1,11 +1,20 @@
 # Changelog
 
+## [1.3.0](https://github.com/openeuropa/code-review/tree/1.3.0) (2020-05-28)
+
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.2.0...1.3.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-3216: Raise minimum version of coder. [\#115](https://github.com/openeuropa/code-review/pull/115) ([nagyad](https://github.com/nagyad))
+
 ## [1.2.0](https://github.com/openeuropa/code-review/tree/1.2.0) (2020-05-25)
 
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.1.0...1.2.0)
 
 **Merged pull requests:**
 
+- Release-1.2.0: Update changelog. [\#114](https://github.com/openeuropa/code-review/pull/114) ([nagyad](https://github.com/nagyad))
 - OPENEUROPA-3216: Unlock coder version. [\#112](https://github.com/openeuropa/code-review/pull/112) ([22Alexandra](https://github.com/22Alexandra))
 
 ## [1.1.0](https://github.com/openeuropa/code-review/tree/1.1.0) (2020-05-12)
@@ -32,9 +41,11 @@
 
 **Merged pull requests:**
 
+- OPENEUROPA-0000: Update CHANGELOG.md for release 1.0.0. [\#101](https://github.com/openeuropa/code-review/pull/101) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-627: Update PhpCpdeSniffer to 3.5. [\#100](https://github.com/openeuropa/code-review/pull/100) ([dxvargas](https://github.com/dxvargas))
 
 ## [1.0.0-beta4](https://github.com/openeuropa/code-review/tree/1.0.0-beta4) (2019-08-01)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.0.0-beta3...1.0.0-beta4)
 
 **Closed issues:**
