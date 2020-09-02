@@ -1,11 +1,20 @@
 # Changelog
 
+## [1.4.0](https://github.com/openeuropa/code-review/tree/1.4.0) (2020-09-02)
+
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.3.0...1.4.0)
+
+**Merged pull requests:**
+
+- OPENEUROPA-0000: Add LongClassName in exclude list. [\#118](https://github.com/openeuropa/code-review/pull/118) ([sergepavle](https://github.com/sergepavle))
+
 ## [1.3.0](https://github.com/openeuropa/code-review/tree/1.3.0) (2020-05-28)
 
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.2.0...1.3.0)
 
 **Merged pull requests:**
 
+- Release-1.3.0: Update changelog. [\#116](https://github.com/openeuropa/code-review/pull/116) ([nagyad](https://github.com/nagyad))
 - OPENEUROPA-3216: Raise minimum version of coder. [\#115](https://github.com/openeuropa/code-review/pull/115) ([nagyad](https://github.com/nagyad))
 
 ## [1.2.0](https://github.com/openeuropa/code-review/tree/1.2.0) (2020-05-25)
@@ -43,6 +52,7 @@
 
 - OPENEUROPA-0000: Update CHANGELOG.md for release 1.0.0. [\#101](https://github.com/openeuropa/code-review/pull/101) ([ademarco](https://github.com/ademarco))
 - OPENEUROPA-627: Update PhpCpdeSniffer to 3.5. [\#100](https://github.com/openeuropa/code-review/pull/100) ([dxvargas](https://github.com/dxvargas))
+- OPENEUROPA-1897: Use ci image. [\#87](https://github.com/openeuropa/code-review/pull/87) ([imanoleguskiza](https://github.com/imanoleguskiza))
 
 ## [1.0.0-beta4](https://github.com/openeuropa/code-review/tree/1.0.0-beta4) (2019-08-01)
 
@@ -129,6 +139,7 @@
 
 **Merged pull requests:**
 
+- OPENEUROPA-1564: Follow-up - Remove forgotten file. [\#53](https://github.com/openeuropa/code-review/pull/53) ([drupol](https://github.com/drupol))
 - OPENEUROPA-1241: Update CHANGELOG.md. [\#42](https://github.com/openeuropa/code-review/pull/42) ([voidtek](https://github.com/voidtek))
 - Openeuropa 1218 Update to include coder-3.0 [\#41](https://github.com/openeuropa/code-review/pull/41) ([richardcanoe](https://github.com/richardcanoe))
 
