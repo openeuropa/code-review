@@ -11,6 +11,7 @@
         <exclude name="ShortVariable" />
         <exclude name="LongVariable" />
         <exclude name="ConstructorWithNameAsEnclosingClass" />
+        <exclude name="LongClassName" />
     </rule>
 
     <!-- Import entire codesize rule set and exclude rules that don't apply -->
