@@ -1,11 +1,20 @@
 # Changelog
 
+## [1.5.0](https://github.com/openeuropa/code-review/tree/1.5.0) (2020-09-07)
+
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.4.0...1.5.0)
+
+**Merged pull requests:**
+
+- EWPP: Lock drupal/coder version to 8.3.9. [\#120](https://github.com/openeuropa/code-review/pull/120) ([nagyad](https://github.com/nagyad))
+
 ## [1.4.0](https://github.com/openeuropa/code-review/tree/1.4.0) (2020-09-02)
 
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.3.0...1.4.0)
 
 **Merged pull requests:**
 
+- Release-1.4.0: Update CHANGELOG.md for release 1.4.0. [\#119](https://github.com/openeuropa/code-review/pull/119) ([sergepavle](https://github.com/sergepavle))
 - OPENEUROPA-0000: Add LongClassName in exclude list. [\#118](https://github.com/openeuropa/code-review/pull/118) ([sergepavle](https://github.com/sergepavle))
 
 ## [1.3.0](https://github.com/openeuropa/code-review/tree/1.3.0) (2020-05-28)
