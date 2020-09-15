@@ -43,20 +43,14 @@ parameters:
         ordered_class_elements:
             order:
                 - use_trait
-                - constant_public
-                - constant_protected
-                - constant_private
-                - property_public
-                - property_protected
-                - property_private
+                - constant
+                - property
                 - construct
                 - destruct
                 - magic
                 - phpunit
-                - method_public
-                - method_protected
-                - method_private
-            sortAlgorithm: alpha
+                - method
+            sortAlgorithm: none
         ordered_imports: ~
         phpdoc_align: false
         phpdoc_annotation_without_dot: false
