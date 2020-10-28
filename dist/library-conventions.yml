@@ -1,7 +1,7 @@
 imports:
   - { resource: base-conventions.yml }
 
-parameters:
+grumphp:
   tasks.phpcs.standard: ./vendor/openeuropa/code-review/resources/library-phpcs-ruleset.xml
   tasks.phpcs.warning_severity: 0
 

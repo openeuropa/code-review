@@ -1,7 +1,7 @@
 imports:
   - { resource: ./dist/library-conventions.yml }
 
-parameters:
+grumphp:
   tasks.phpcs.ignore_patterns:
     - vendor/
     - tests/fixtures/
