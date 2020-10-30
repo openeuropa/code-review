@@ -1,8 +1,9 @@
-parameters:
+grumphp:
   ascii:
     failed: ~
     succeeded: ~
 
+parameters:
   # PHP Code Sniffer parameters.
   tasks.phpcs.ignore_patterns:
     - vendor/
