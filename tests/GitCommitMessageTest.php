@@ -2,10 +2,6 @@
 
 namespace OpenEuropa\CodeReview\Tests;
 
-use GrumPHP\Runner\TaskResult;
-use GrumPHP\Task\Context\GitCommitMsgContext;
-use GrumPHP\Collection\FilesCollection;
-
 /**
  * Tests for git commit message conventions.
  */
@@ -16,18 +12,24 @@ class GitCommitMessageTest extends AbstractTest
      *
      * @param string $message
      *   Commit message to test.
-     * @param int    $expected
+     * @param int $expectedExitCode
      *   Expected result after the test.
      *
      * @dataProvider commitMessageProvider
      */
-    public function testCommitMessage($message, $expected)
+    public function testCommitMessage(string $message, int $expectedExitCode): void
     {
-        $collection = new FilesCollection();
-        $context = new GitCommitMsgContext($collection, $message, '', '');
-        $task = $this->getTask('git_commit_message', 'library-conventions');
-        $result = $task->run($context);
-        $this->assertEquals($expected, $result->getResultCode());
+        $application = $this->getApplication('library-conventions');
+
+
+        // Prepare the commit message in a file to be read.
+        file_put_contents($this->filesDirectory . '/COMMIT_MSG', $message);
+
+        $exitCode = $this->runApplicationCommand($application, 'git:commit-msg', [
+            'commit-msg-file' => $this->filesDirectory . '/COMMIT_MSG',
+        ]);
+
+        $this->assertEquals($expectedExitCode, $exitCode);
     }
 
     /**
@@ -36,14 +38,14 @@ class GitCommitMessageTest extends AbstractTest
      * @return array
      *      Test data.
      */
-    public function commitMessageProvider()
+    public function commitMessageProvider(): array
     {
         return [
-            ['Issue #3: Nice GitHub commit message.', TaskResult::PASSED],
-            ['#3: Not nice GitHub commit message.', TaskResult::FAILED],
-            ['NEPT-123: Nice Jira commit message.', TaskResult::PASSED],
-            ['NEPT2-123: Jira with number in project.', TaskResult::PASSED],
-            ['Failed message', TaskResult::FAILED],
+            ['Issue #3: Nice GitHub commit message.', 0],
+            ['#3: Not nice GitHub commit message.', 1],
+            ['NEPT-123: Nice Jira commit message.', 0],
+            ['NEPT2-123: Jira with number in project.', 0],
+            ['Failed message', 1],
         ];
     }
 }

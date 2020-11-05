@@ -15,20 +15,22 @@ class PhpMessDetectorDrupalTest extends AbstractTest
     /**
      * Tests different git messages against the predefined conventions.
      *
-     * @param string $fixture
+     * @param string $file
      *   Name of the fixture.
-     * @param int    $expected
+     * @param int    $expectedResultCode
      *   Expected result after the test.
      *
      * @dataProvider dataProvider
      */
-    public function testPhpMessDetector($fixture, $expected)
+    public function testPhpMessDetector(string $file, int $expectedResultCode): void
     {
-        $collection = new FilesCollection([$this->getFixture($fixture)]);
+        $application = $this->getApplication('drupal-conventions');
+
+        $collection = new FilesCollection([$this->getFixture($file)]);
         $context = new RunContext($collection);
-        $task = $this->getTask('phpmd', 'drupal-conventions');
-        $result = $task->run($context);
-        $this->assertEquals($expected, $result->getResultCode());
+
+        $result = $this->runTask($application, 'phpmd', $context);
+        $this->assertEquals($expectedResultCode, $result->getResultCode());
     }
 
     /**
@@ -39,7 +41,7 @@ class PhpMessDetectorDrupalTest extends AbstractTest
      * @return array
      *      Test data.
      */
-    public function dataProvider()
+    public function dataProvider(): array
     {
         return [
             ['phpmd/correct-code.inc', TaskResult::PASSED],
