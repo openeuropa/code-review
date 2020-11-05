@@ -24,12 +24,10 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
      */
     public function testDrupalPhpCodeSnifferDetector(string $file, string $configuration, array $expectedFailures): void
     {
-        $application = $this->getApplication($configuration);
-
         $collection = new FilesCollection([$this->getFixture($file)]);
         $context = new RunContext($collection);
 
-        $result = $this->runTask($application, 'phpcs', $context);
+        $result = $this->runTask($configuration, 'phpcs', $context);
         $this->assertEquals($expectedFailures, $this->getFailures($result->first()));
     }
 

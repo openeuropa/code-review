@@ -55,58 +55,24 @@ abstract class AbstractTest extends TestCase
     }
 
     /**
-     * Returns the GrumPHP console application instantiated with the specified configuration.
-     *
-     * @param string $configuration
-     *   The file name of the configuration to use.
-     * @return Application
-     *   The GrumPHP console application.
-     */
-    protected function getApplication(string $configuration): Application
-    {
-        $container = $this->getContainer($configuration);
-        $application = $container->get('GrumPHP\Console\Application');
-        $application->setAutoExit(false);
-
-        return $application;
-    }
-
-    /**
-     * Runs an application command.
-     *
-     * @param Application $application
-     *   The GrumPHP console application.
-     * @param string $name
-     *   The command name.
-     * @param array $input
-     *   The input for the command.
-     * @return int
-     *   The executed command exit code.
-     */
-    protected function runApplicationCommand(Application $application, string $name, array $input = []): int
-    {
-        $command = $application->find($name);
-        $commandTester = new CommandTester($command);
-        return $commandTester->execute($input);
-    }
-
-    /**
      * Runs a specific GrumPHP task.
      *
-     * @param Application $application
-     *   The GrumPHP console application.
+     * @param string $configuration
+     *   The configuration to use.
      * @param string $task
      *   The task name.
-     * @param $context
+     * @param ContextInterface $context
      *   The task context. Contains the parameters necessaries for the context to run.
      * @return TaskResultCollection
      *   The results of the task execution.
      */
-    protected function runTask(Application $application, string $task, ContextInterface $context): TaskResultCollection
+    protected function runTask(string $configuration, string $task, ContextInterface $context): TaskResultCollection
     {
+        $container = $this->getContainer($configuration);
+        $application = $container->get('GrumPHP\Console\Application');
+
         // Retrieve the run command from the application.
         $command = $application->find('run');
-
         // The run command has the GrumPHP task runner injected as dependency.
         // Since the task runner is not a public service, it cannot be accessed from the container.
         // We force the access to it by using reflections and extracting the property.

@@ -23,12 +23,10 @@ class PhpMessDetectorTest extends AbstractTest
      */
     public function testPhpCodeMessage(string $file, int $expectedResultCode): void
     {
-        $application = $this->getApplication('library-conventions');
-
         $collection = new FilesCollection([$this->getFixture($file)]);
         $context = new RunContext($collection);
 
-        $result = $this->runTask($application, 'phpmd', $context);
+        $result = $this->runTask('library-conventions', 'phpmd', $context);
         $this->assertEquals($expectedResultCode, $result->getResultCode());
     }
 

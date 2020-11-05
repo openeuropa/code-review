@@ -25,12 +25,10 @@ class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
      */
     public function testPhpCodeSnifferTask(string $file, string $configuration, array $expectedFailures): void
     {
-        $application = $this->getApplication($configuration);
-
         $collection = new FilesCollection([$this->getFixture($file)]);
         $context = new RunContext($collection);
 
-        $result = $this->runTask($application, 'phpcs', $context);
+        $result = $this->runTask($configuration, 'phpcs', $context);
         $this->assertEquals($expectedFailures, $this->getFailures($result->first()));
     }
 
