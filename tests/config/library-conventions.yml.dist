@@ -1,10 +1,6 @@
 imports:
   - { resource: ../../dist/{configuration}.yml }
 
-grumphp:
-  fixer:
-    enabled: false
-
 parameters:
   tasks.phpmd.ruleset:
   - ./resources/phpmd-ruleset.xml

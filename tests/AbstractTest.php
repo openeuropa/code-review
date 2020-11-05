@@ -44,6 +44,8 @@ abstract class AbstractTest extends TestCase
         $input = new ArrayInput([
             '--config' => __DIR__ . '/config/grumphp.yml',
         ]);
+        // Mark the application as non-interactive, so turn off any request for input during task execution.
+        $input->setInteractive(false);
 
         // Capture the console output. Since GrumPHP requires an output that implements ConsoleOutputInterface,
         // we need to ask a separate stderr so the test trait will create the proper classes.
