@@ -1,5 +1,5 @@
 imports:
-  - { resource: ../dist/{configuration}.yml }
+  - { resource: ../../dist/{configuration}.yml }
 
 parameters:
   tasks.phpmd.ruleset:
