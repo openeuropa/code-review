@@ -14,20 +14,20 @@ class PhpMessDetectorTest extends AbstractTest
     /**
      * Tests different git messages against the predefined conventions.
      *
-     * @param string $fixture
+     * @param string $file
      *   Name of the fixture.
-     * @param int    $expected
+     * @param int $expectedResultCode
      *   Expected result after the test.
      *
      * @dataProvider dataProvider
      */
-    public function testPhpCodeMessage($fixture, $expected)
+    public function testPhpCodeMessage(string $file, int $expectedResultCode): void
     {
-        $collection = new FilesCollection([$this->getFixture($fixture)]);
+        $collection = new FilesCollection([$this->getFixture($file)]);
         $context = new RunContext($collection);
-        $task = $this->getTask('phpmd', 'library-conventions');
-        $result = $task->run($context);
-        $this->assertEquals($expected, $result->getResultCode());
+
+        $result = $this->runTask('library-conventions', 'phpmd', $context);
+        $this->assertEquals($expectedResultCode, $result->getResultCode());
     }
 
     /**
@@ -36,7 +36,7 @@ class PhpMessDetectorTest extends AbstractTest
      * @return array
      *      Test data.
      */
-    public function dataProvider()
+    public function dataProvider(): array
     {
         return [
             ['phpmd/correct-code.php', TaskResult::PASSED],

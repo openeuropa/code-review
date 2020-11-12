@@ -13,22 +13,22 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
     /**
      * Tests Drupal code to make sure CodeSniffer triggers the appropriate errors.
      *
-     * @param string $fixture
+     * @param string $file
      *   Name of the fixture.
      * @param string $configuration
      *   The name of the configuration to use in the task
-     * @param int    $expected
+     * @param int $expectedFailures
      *   Expected result after the test.
      *
      * @dataProvider dataProvider
      */
-    public function testDrupalPhpCodeSnifferDetector($fixture, $configuration, $expected)
+    public function testDrupalPhpCodeSnifferDetector(string $file, string $configuration, array $expectedFailures): void
     {
-        $collection = new FilesCollection([$this->getFixture($fixture)]);
+        $collection = new FilesCollection([$this->getFixture($file)]);
         $context = new RunContext($collection);
-        $task = $this->getTask('phpcs', $configuration);
-        $result = $task->run($context);
-        $this->assertFailures($expected, $this->getFailures($result));
+
+        $result = $this->runTask($configuration, 'phpcs', $context);
+        $this->assertEquals($expectedFailures, $this->getFailures($result->first()));
     }
 
     /**

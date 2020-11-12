@@ -11,10 +11,11 @@ use Symfony\Component\DependencyInjection\Exception\RuntimeException;
  */
 class ExtraTasksExtension implements ExtensionInterface
 {
+    
     /**
      * {@inheritdoc}
      */
-    public function load(ContainerBuilder $container)
+    public function load(ContainerBuilder $container): void
     {
         if ($container->hasParameter('extra_tasks')) {
             $tasks = $container->getParameter('tasks');

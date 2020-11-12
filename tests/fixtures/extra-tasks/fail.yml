@@ -1,8 +1,10 @@
 imports:
   - { resource: base.yml }
 
+grumphp:
+    extensions:
+        - OpenEuropa\CodeReview\ExtraTasksExtension
+
 parameters:
     extra_tasks:
         phpcs: ~
-    extensions:
-        - OpenEuropa\CodeReview\ExtraTasksExtension
