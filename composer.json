@@ -14,7 +14,7 @@
     "phpunit/phpunit": "^5.5|^6.0"
   },
   "_readme": [
-    "We explicitly require phpro/grumphp 0.15.2 or else the patch suplied for grumphp might work."
+    "We explicitly require phpro/grumphp 0.15.2 or else the patch supplied for grumphp might not apply anymore."
   ],
   "autoload": {
     "psr-4": {

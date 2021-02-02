@@ -3,4 +3,11 @@ imports:
 
 parameters:
   tasks.phpmd.ruleset:
-  - ./resources/phpmd-ruleset.xml
+    - ./resources/phpmd-ruleset.xml
+  tasks.phpcs.triggered_by:
+    - php
+    - module
+    - inc
+    - theme
+    - install
+    - profile
