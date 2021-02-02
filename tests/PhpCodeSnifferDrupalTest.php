@@ -49,6 +49,71 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
                     ],
                 ],
             ],
+            [
+                'phpcs/drupal.inc',
+                'drupal-conventions',
+                [
+                    'error' => [
+                        1 => 1,
+                        9 => 2,
+                    ],
+                    'warning' => [
+                        3 => 1,
+                    ],
+                ],
+            ],
+            [
+                'phpcs/drupal.install',
+                'drupal-conventions',
+                [
+                    'error' => [
+                        1 => 1,
+                        9 => 2,
+                    ],
+                    'warning' => [
+                        3 => 1,
+                    ],
+                ],
+            ],
+            [
+                'phpcs/drupal.module',
+                'drupal-conventions',
+                [
+                    'error' => [
+                        1 => 1,
+                        9 => 2,
+                    ],
+                    'warning' => [
+                        3 => 1,
+                    ],
+                ],
+            ],
+            [
+                'phpcs/drupal.profile',
+                'drupal-conventions',
+                [
+                    'error' => [
+                        1 => 1,
+                        9 => 2,
+                    ],
+                    'warning' => [
+                        3 => 1,
+                    ],
+                ],
+            ],
+            [
+                'phpcs/drupal.theme',
+                'drupal-conventions',
+                [
+                    'error' => [
+                        1 => 1,
+                        9 => 2,
+                    ],
+                    'warning' => [
+                        3 => 1,
+                    ],
+                ],
+            ],
         ];
     }
 }
