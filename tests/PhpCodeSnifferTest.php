@@ -3,7 +3,7 @@
 namespace OpenEuropa\CodeReview\Tests;
 
 use GrumPHP\Collection\FilesCollection;
-use GrumPHP\Task\Context\GitPreCommitContext;
+use GrumPHP\Task\Context\RunContext;
 
 /**
  * Tests the PHP_CodeSniffer task using the library conventions.
@@ -22,13 +22,12 @@ class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
      *
      * @dataProvider phpCodeSnifferTaskProvider
      */
-    public function testPhpCodeSnifferTask($fixture, $configuration, array $expected_failures)
+    public function testPhpCodeSnifferTask(string $fixture, string $configuration, array $expected_failures): void
     {
         $collection = new FilesCollection([$this->getFixture($fixture)]);
-        $context = new GitPreCommitContext($collection);
-        $task = $this->getTask('phpcs', $configuration);
-        $result = $task->run($context);
-        $this->assertFailures($expected_failures, $this->getFailures($result));
+        $context = new RunContext($collection);
+        $result = $this->runTask($configuration, 'phpcs', $context);
+        $this->assertEquals($expected_failures, $this->getFailures($result->first()));
     }
 
     /**

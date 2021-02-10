@@ -22,12 +22,11 @@ class PhpMessDetectorDrupalTest extends AbstractTest
      *
      * @dataProvider dataProvider
      */
-    public function testPhpMessDetector($fixture, $expected)
+    public function testPhpMessDetector(string $fixture, int $expected): void
     {
         $collection = new FilesCollection([$this->getFixture($fixture)]);
         $context = new RunContext($collection);
-        $task = $this->getTask('phpmd', 'drupal-conventions');
-        $result = $task->run($context);
+        $result = $this->runTask('drupal-conventions', 'phpmd', $context);
         $this->assertEquals($expected, $result->getResultCode());
     }
 

@@ -17,18 +17,17 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
      *   Name of the fixture.
      * @param string $configuration
      *   The name of the configuration to use in the task
-     * @param int    $expected
+     * @param array  $expected
      *   Expected result after the test.
      *
      * @dataProvider dataProvider
      */
-    public function testDrupalPhpCodeSnifferDetector($fixture, $configuration, $expected)
+    public function testDrupalPhpCodeSnifferDetector(string $fixture, string $configuration, array $expected): void
     {
         $collection = new FilesCollection([$this->getFixture($fixture)]);
         $context = new RunContext($collection);
-        $task = $this->getTask('phpcs', $configuration);
-        $result = $task->run($context);
-        $this->assertFailures($expected, $this->getFailures($result));
+        $result = $this->runTask($configuration, 'phpcs', $context);
+        $this->assertEquals($expected, $this->getFailures($result->first()));
     }
 
     /**

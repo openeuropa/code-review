@@ -21,12 +21,11 @@ class GitCommitMessageTest extends AbstractTest
      *
      * @dataProvider commitMessageProvider
      */
-    public function testCommitMessage($message, $expected)
+    public function testCommitMessage(string $message, int $expected): void
     {
         $collection = new FilesCollection();
-        $context = new GitCommitMsgContext($collection, $message, '', '');
-        $task = $this->getTask('git_commit_message', 'library-conventions');
-        $result = $task->run($context);
+        $context = new GitCommitMsgContext($collection, $message, 'test_user', 'test_user@example.org');
+        $result = $this->runTask('library-conventions', 'git_commit_message', $context);
         $this->assertEquals($expected, $result->getResultCode());
     }
 
@@ -36,7 +35,7 @@ class GitCommitMessageTest extends AbstractTest
      * @return array
      *      Test data.
      */
-    public function commitMessageProvider()
+    public function commitMessageProvider(): array
     {
         return [
             ['Issue #3: Nice GitHub commit message.', TaskResult::PASSED],
