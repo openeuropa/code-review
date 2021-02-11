@@ -4,7 +4,7 @@ namespace OpenEuropa\CodeReview\Tests;
 
 use PHPUnit\Framework\TestCase;
 use GrumPHP\Task\Context\ContextInterface;
-use Symfony\Component\Console\Tester\TesterTrait as ConsoleTesterTrait;
+use Symfony\Component\Console\Output\ConsoleOutput;
 use GrumPHP\Collection\TaskResultCollection;
 use GrumPHP\Configuration\ContainerFactory;
 use GrumPHP\Runner\TaskRunnerContext;
@@ -16,8 +16,6 @@ use Symfony\Component\DependencyInjection\Container;
  */
 abstract class AbstractTest extends TestCase
 {
-    use ConsoleTesterTrait;
-
     /**
      * Get fixture file object.
      *
@@ -62,13 +60,7 @@ abstract class AbstractTest extends TestCase
         // Mark the application as non-interactive, so turn off any request for input during task execution.
         $input->setInteractive(false);
 
-        // Capture the console output. Since GrumPHP requires an output that implements ConsoleOutputInterface,
-        // we need to ask a separate stderr so the test trait will create the proper classes.
-        // @see \Symfony\Component\Console\Output\ConsoleOutputInterface
-        // @see \GrumPHP\IO\ConsoleIO::section()
-        $this->initOutput(['capture_stderr_separately' => true]);
-
-        return ContainerFactory::build($input, $this->getOutput());
+        return ContainerFactory::build($input, new ConsoleOutput());
     }
 
     /**
