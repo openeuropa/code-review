@@ -1,0 +1,13 @@
+imports:
+  - { resource: ../../dist/{configuration}.yml }
+
+parameters:
+  tasks.phpmd.ruleset:
+    - ./resources/phpmd-ruleset.xml
+  tasks.phpcs.triggered_by:
+    - php
+    - module
+    - inc
+    - theme
+    - install
+    - profile

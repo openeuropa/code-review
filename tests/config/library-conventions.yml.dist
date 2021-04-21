@@ -1,7 +1,7 @@
 imports:
-  - { resource: ../dist/{configuration}.yml }
+  - { resource: ../../dist/{configuration}.yml }
 
 parameters:
   tasks.phpmd.ruleset:
-  - ./resources/phpmd-ruleset.xml
+    - ./resources/phpmd-ruleset.xml
   tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml
