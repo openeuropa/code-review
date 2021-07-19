@@ -1,10 +1,20 @@
 # Changelog
 
-## [1.6.0](https://github.com/openeuropa/code-review/tree/) (2021-04-21)
+## [1.7.0](https://github.com/openeuropa/code-review/tree/1.7.0) (2021-07-19)
+
+[Full Changelog](https://github.com/openeuropa/code-review/compare/1.6.0...1.7.0)
+
+**Merged pull requests:**
+
+- EWPP-1288: Unlock drupal/coder package. [\#135](https://github.com/openeuropa/code-review/pull/135) ([sergepavle](https://github.com/sergepavle))
+
+## [1.6.0](https://github.com/openeuropa/code-review/tree/1.6.0) (2021-04-21)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/1.5.0...1.6.0)
 
 **Merged pull requests:**
 
+- Update CHANGELOG.md for release 1.6.0. [\#133](https://github.com/openeuropa/code-review/pull/133) ([ademarco](https://github.com/ademarco))
 - EWPP-721: Update xdebug configuration. [\#130](https://github.com/openeuropa/code-review/pull/130) ([22Alexandra](https://github.com/22Alexandra))
 - EWPP-372: Fix drupal type file extensions to be checked. [\#129](https://github.com/openeuropa/code-review/pull/129) ([nagyad](https://github.com/nagyad))
 - EWPP-516: Update docker images. [\#125](https://github.com/openeuropa/code-review/pull/125) ([22Alexandra](https://github.com/22Alexandra))
@@ -15,6 +25,7 @@
 
 **Merged pull requests:**
 
+- Release-1.5.0: Update changelog. [\#121](https://github.com/openeuropa/code-review/pull/121) ([nagyad](https://github.com/nagyad))
 - EWPP: Lock drupal/coder version to 8.3.9. [\#120](https://github.com/openeuropa/code-review/pull/120) ([nagyad](https://github.com/nagyad))
 
 ## [1.4.0](https://github.com/openeuropa/code-review/tree/1.4.0) (2020-09-02)
