@@ -36,6 +36,7 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
+      - composer self-update --2
       - composer install --ansi
     when:
       matrix:
