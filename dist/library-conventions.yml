@@ -5,6 +5,7 @@ parameters:
   tasks.phpcs.standard: ./vendor/openeuropa/code-review/resources/library-phpcs-ruleset.xml
   tasks.phpcs.warning_severity: 0
 
+grumphp:
   # Tasks.
   tasks:
 
