@@ -2,7 +2,9 @@ imports:
   - { resource: base.yml }
 
 parameters:
-    extra_tasks:
-        phpcs: ~
-    extensions:
-        - OpenEuropa\CodeReview\ExtraTasksExtension
+  extra_tasks:
+    phpcs: ~
+
+grumphp:
+  extensions:
+    - OpenEuropa\CodeReview\ExtraTasksExtension

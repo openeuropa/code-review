@@ -1,7 +1,7 @@
-parameters:
-    ascii:
-        failed: ~
-        succeeded: ~
-    tasks:
-        phpcs: ~
-        phpmd: ~
+grumphp:
+  ascii:
+    failed: ~
+    succeeded: ~
+  tasks:
+    phpcs: ~
+    phpmd: ~
