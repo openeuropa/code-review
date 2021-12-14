@@ -60,7 +60,7 @@ abstract class AbstractTest extends TestCase
         // Mark the application as non-interactive, so turn off any request for input during task execution.
         $input->setInteractive(false);
 
-        return ContainerFactory::build($input, new ConsoleOutput());
+        return ContainerFactory::build($input, new ConsoleOutput(ConsoleOutput::VERBOSITY_QUIET));
     }
 
     /**
