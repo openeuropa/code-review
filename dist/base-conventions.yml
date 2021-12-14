@@ -26,8 +26,3 @@ grumphp:
   ascii:
     failed: ~
     succeeded: ~
-
-services:
-  task_runner:
-    alias: GrumPHP\Runner\TaskRunner
-    public: true

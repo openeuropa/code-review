@@ -5,3 +5,8 @@ parameters:
   tasks.phpmd.ruleset:
     - ./resources/phpmd-ruleset.xml
   tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml
+
+services:
+  task_runner:
+    alias: GrumPHP\Runner\TaskRunner
+    public: true
