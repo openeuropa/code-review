@@ -11,3 +11,8 @@ parameters:
     - theme
     - install
     - profile
+
+services:
+  task_runner:
+    alias: GrumPHP\Runner\TaskRunner
+    public: true
