@@ -29,6 +29,9 @@ pipeline:
       - /cache:/cache
     commands:
       - printenv | grep COMPOSER
+      - echo $0
+      - echo $1
+      - echo $2
       -  for i; do echo $i; done
       - composer -vvv about
       - composer update --prefer-lowest --ansi
