@@ -17,6 +17,7 @@ services:
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     environment:
       - DOCUMENT_ROOT=/test/code-review
+      - COMPOSERVER=--2
 
 pipeline:
   composer-install-lowest:
@@ -25,6 +26,7 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
+      - composer self-update --2
       - composer update --prefer-lowest --ansi
     when:
       matrix:
@@ -36,6 +38,7 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
+      - composer self-update --2
       - composer install --ansi
     when:
       matrix:
