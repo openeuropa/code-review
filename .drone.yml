@@ -29,6 +29,7 @@ pipeline:
       - /cache:/cache
     commands:
       - printenv | grep COMPOSER
+      - echo $@
       - composer -vvv about
       - composer update --prefer-lowest --ansi
     when:
