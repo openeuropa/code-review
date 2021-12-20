@@ -23,7 +23,8 @@ pipeline:
   composer-install-lowest:
     group: prepare
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
-    environment: *web-environment
+    environment:
+      - COMPOSERVER="--2"
     volumes:
       - /cache:/cache
     commands:
