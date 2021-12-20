@@ -28,6 +28,7 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
+      - printenv | grep COMPOSER
       - composer -vvv about
       - composer update --prefer-lowest --ansi
     when:
