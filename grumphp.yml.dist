@@ -11,3 +11,7 @@ parameters:
   tasks.phpmd.ruleset:
   - ./resources/phpmd-ruleset.xml
   tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml
+
+grumphp:
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: 'docker-compose exec -T web'
