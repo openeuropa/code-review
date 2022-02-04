@@ -1,5 +1,12 @@
 # Change Log
 
+## [2.0.0-alpha3](https://github.com/openeuropa/code-review/tree/2.0.0-alpha3) (2022-02-04)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha2...2.0.0-alpha3)
+
+**Merged pull requests:**
+
+- EWPP-0000: Require amphp/parallel-functions as hard dependency. [\#149](https://github.com/openeuropa/code-review/pull/149) ([22Alexandra](https://github.com/22Alexandra))
+
 ## [2.0.0-alpha2](https://github.com/openeuropa/code-review/tree/2.0.0-alpha2) (2022-02-04)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha1...2.0.0-alpha2)
 
