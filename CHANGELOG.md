@@ -1,5 +1,13 @@
 # Change Log
 
+## [2.0.0-alpha4](https://github.com/openeuropa/code-review/tree/2.0.0-alpha3) (2022-03-07)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha3...2.0.0-alpha4)
+
+**Merged pull requests:**
+
+- EWPP-2035: Fix xdebug-handler version until phpmd 2.12 is released. [\#151](https://github.com/openeuropa/code-review/pull/151) ([imanoleguskiza](https://github.com/imanoleguskiza))
+
+
 ## [2.0.0-alpha3](https://github.com/openeuropa/code-review/tree/2.0.0-alpha3) (2022-02-04)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha2...2.0.0-alpha3)
 
