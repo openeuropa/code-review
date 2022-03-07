@@ -4,6 +4,7 @@
   "license": "EUPL-1.2",
   "require": {
     "php": ">=7.4",
+    "composer/xdebug-handler": "^2.0",
     "cweagans/composer-patches": "^1.0",
     "drupal/coder": "^8.3.13",
     "phpmd/phpmd" : "^2.6",
@@ -28,7 +29,8 @@
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
     "_readme": [
-        "Explicit requirement for amphp/parallel-functions because release 1.1.0 causes serialisation errors."
+        "Explicit requirement for amphp/parallel-functions because release 1.1.0 causes serialisation errors.",
+        "Requiring composer/xdebug-handler until PHPMD 2.12 is released."
     ]
   },
   "scripts": {
