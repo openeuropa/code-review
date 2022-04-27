@@ -4,10 +4,8 @@
   "license": "EUPL-1.2",
   "require": {
     "php": ">=7.4",
-    "composer/xdebug-handler": "^2.0",
-    "cweagans/composer-patches": "^1.0",
     "drupal/coder": "^8.3.13",
-    "phpmd/phpmd" : "^2.6",
+    "phpmd/phpmd" : "^2.12",
     "phpro/grumphp": "^1.1",
     "squizlabs/php_codesniffer": "^3.6",
     "amphp/parallel-functions": "~1.0.0"
@@ -26,11 +24,8 @@
     }
   },
   "extra": {
-    "enable-patching": true,
-    "composer-exit-on-patch-failure": true,
     "_readme": [
-        "Explicit requirement for amphp/parallel-functions because release 1.1.0 causes serialisation errors.",
-        "Requiring composer/xdebug-handler until PHPMD 2.12 is released."
+        "Explicit requirement for amphp/parallel-functions because release 1.1.0 causes serialisation errors."
     ]
   },
   "scripts": {
@@ -38,7 +33,6 @@
   },
   "config": {
     "allow-plugins": {
-      "cweagans/composer-patches": true,
       "phpro/grumphp": true,
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
