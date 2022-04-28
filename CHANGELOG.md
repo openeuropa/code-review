@@ -1,6 +1,13 @@
 # Change Log
 
-## [2.0.0-alpha4](https://github.com/openeuropa/code-review/tree/2.0.0-alpha3) (2022-03-07)
+## [2.0.0-alpha5](https://github.com/openeuropa/code-review/tree/2.0.0-alpha5) (2022-04-28)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha4...2.0.0-alpha5)
+
+**Merged pull requests:**
+
+- EWPP-2180: Fix dependency from composer patches. [\#153](https://github.com/openeuropa/code-review/pull/153) ([yenyasinn](https://github.com/yenyasinn))
+
+## [2.0.0-alpha4](https://github.com/openeuropa/code-review/tree/2.0.0-alpha4) (2022-03-07)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha3...2.0.0-alpha4)
 
 **Merged pull requests:**
