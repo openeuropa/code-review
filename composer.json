@@ -8,10 +8,10 @@
     "phpmd/phpmd" : "^2.12",
     "phpro/grumphp": "^1.1",
     "squizlabs/php_codesniffer": "^3.6",
-    "amphp/parallel-functions": "~1.0.0"
+    "amphp/parallel": "^1.4.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.4"
+    "phpunit/phpunit": "^9.5.5"
   },
   "autoload": {
     "psr-4": {
@@ -25,7 +25,8 @@
   },
   "extra": {
     "_readme": [
-        "Explicit requirement for amphp/parallel-functions because release 1.1.0 causes serialisation errors."
+        "Explicit minimum version requirement for phpunit/phpunit due to lower versions using deprecated Serializable interface.",
+        "Explicit minimum version requirement for amphp/parallel due to lower versions missing return type on BasicEnvironment::offsetGet method."
     ]
   },
   "scripts": {
