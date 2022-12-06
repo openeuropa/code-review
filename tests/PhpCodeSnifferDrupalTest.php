@@ -46,6 +46,8 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
                 [
                     'error' => [
                         18 => 1,
+                        21 => 1,
+                        24 => 1,
                     ],
                 ],
             ],
