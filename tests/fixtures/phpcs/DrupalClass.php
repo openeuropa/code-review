@@ -18,4 +18,11 @@ class DrupalClass extends BlockBase {
     return true;
   }
 
+    /**
+     * Tests method with docblock and PHP attribute.
+     */
+    #[\ReturnTypeWillChange]
+    public function aMethodWithDocblockAndPhpAttribute(): void {
+    }
+
 }
