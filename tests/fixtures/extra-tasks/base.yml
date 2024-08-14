@@ -1,7 +1,0 @@
-grumphp:
-    ascii:
-        failed: ~
-        succeeded: ~
-    tasks:
-        phpcs: ~
-        phpmd: ~

@@ -124,24 +124,21 @@ Below the list of task parameters can that be overridden on a per-project basis:
 
 More on how to import and override configuration files [here](http://symfony.com/doc/current/service_container/import.html).
 
-It is also possible to extend the list of tasks to be run by loading the extra tasks extension and adding tasks under
-the `extra_tasks:` parameter as shown below:
+It is also possible to extend the list of tasks to be run by adding tasks under the `tasks:` tree as shown below:
 
 ```yaml
 imports:
   - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
 
-parameters:
-  extra_tasks:
+grumphph:
+  tasks:
     phpparser: ~
-  extensions:
-    - OpenEuropa\CodeReview\ExtraTasksExtension
 ```
 
 GrumPHP already has a series of tasks that can be used out of the box, you can find the complete list in the
-[GrumPHP tasks page](https://github.com/phpro/grumphp/blob/master/doc/tasks.md).
+[GrumPHP tasks page](https://github.com/phpro/grumphp/blob/v2.x/doc/tasks.md).
 
-It is also possible to create your own tasks as explained in the [GrumPHP extensions page](https://github.com/phpro/grumphp/blob/master/doc/extensions.md).
+It is also possible to create your own tasks as explained in the [GrumPHP extensions page](https://github.com/phpro/grumphp/blob/v2.x/doc/extensions.md).
 
 ## Usage
 
