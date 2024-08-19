@@ -11,6 +11,7 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5.5",
+    "wikimedia/composer-merge-plugin": "^2.1",
     "phpro/grumphp": "^2.6"
   },
   "autoload": {
@@ -27,7 +28,10 @@
     "_readme": [
         "Explicit minimum version requirement for phpunit/phpunit due to lower versions using deprecated Serializable interface.",
         "Explicit minimum version requirement for amphp/parallel due to lower versions missing return type on BasicEnvironment::offsetGet method."
-    ]
+    ],
+    "merge-plugin": {
+      "require": "./composer.dev.json"
+    }
   },
   "scripts": {
     "changelog": "docker run --rm -v \"$(pwd):$(pwd)\" -w $(pwd) muccg/github-changelog-generator openeuropa/code-review -t $CHANGELOG_GITHUB_TOKEN --future-release=$CHANGELOG_FUTURE_RELEASE --release-branch=1.x"
@@ -36,7 +40,8 @@
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "phpro/grumphp": true,
-      "phpro/grumphp-shim": true
+      "phpro/grumphp-shim": true,
+      "wikimedia/composer-merge-plugin": true
     }
   }
 }

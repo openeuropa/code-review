@@ -1,0 +1,5 @@
+{
+  "replace": {
+    "phpro/grumphp-shim": "v2.x"
+  }
+}

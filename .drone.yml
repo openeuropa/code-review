@@ -54,8 +54,6 @@ pipeline:
     group: test
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     commands:
-      # Remove shim to bring all test dependencies.
-      - composer remove phpro/grumphp-shim
       - ./vendor/bin/phpunit
 
 matrix:
