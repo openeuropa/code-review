@@ -18,7 +18,6 @@ services:
     environment:
       - DOCUMENT_ROOT=/test/code-review
       - COMPOSERVER=--2
-      - COMPOSER=./composer.dev.json
 
 pipeline:
   composer-install-lowest:
@@ -27,6 +26,7 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
+      - export COMPOSER=composer.dev.json
       - composer self-update --2
       - composer update --prefer-lowest --ansi
     when:
@@ -39,6 +39,7 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
+      - export COMPOSER=composer.dev.json
       - composer self-update --2
       - composer install --ansi
     when:
