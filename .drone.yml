@@ -18,6 +18,7 @@ services:
     environment:
       - DOCUMENT_ROOT=/test/code-review
       - COMPOSERVER=--2
+      - COMPOSER=composer.dev.json
 
 pipeline:
   composer-install-lowest:
