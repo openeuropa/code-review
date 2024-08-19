@@ -33,7 +33,8 @@
   "config": {
     "allow-plugins": {
       "phpro/grumphp": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpro/grumphp-shim": true
     }
   }
 }
