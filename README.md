@@ -25,7 +25,7 @@ OE Components should use `oe-components-conventions.yml`
 
 ### Commands
 
-GrumPHP tasks will be ran at every commit, if you with to run them without performing a commit use the following command:
+GrumPHP tasks will be run at every commit, if you wish to run them without performing a commit use the following command:
 
 ```bash
 ./vendor/bin/grumphp run
