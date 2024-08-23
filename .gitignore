@@ -1,6 +1,7 @@
 /vendor/
 /tests/config/grumphp.yml
 composer.lock
+composer.dev.lock
 grumphp.yml
 phpunit.xml
 .idea

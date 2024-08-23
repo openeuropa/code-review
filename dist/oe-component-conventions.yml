@@ -1,0 +1,15 @@
+imports:
+  - { resource: drupal-conventions.yml }
+
+parameters:
+  tasks.phpcs.triggered_by:
+    - inc
+    - install
+    - module
+    - php
+    - theme
+    - yml
+  tasks.phpcs.ignore_patterns:
+    - build/
+    - vendor/
+    - node_modules/

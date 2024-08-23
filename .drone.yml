@@ -26,6 +26,7 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
+      - export COMPOSER=composer.dev.json
       - composer self-update --2
       - composer update --prefer-lowest --ansi
     when:
@@ -38,6 +39,7 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
+      - export COMPOSER=composer.dev.json
       - composer self-update --2
       - composer install --ansi
     when:
@@ -61,5 +63,6 @@ matrix:
     - lowest
     - highest
   PHP_VERSION:
-    - 8.0
     - 8.1
+    - 8.2
+    - 8.3

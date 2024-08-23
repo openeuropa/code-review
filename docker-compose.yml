@@ -11,6 +11,7 @@ services:
     environment:
       # Use Composer 2.
       COMPOSERVER: "--2"
+      COMPOSER: composer.dev.json
       XDEBUG_CONFIG: "client_host=172.17.0.1" # Non-Mac users.
       # XDEBUG_CONFIG: "client_host=host.docker.internal" # Mac users.
       XDEBUG_MODE: "develop, debug"
