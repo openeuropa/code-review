@@ -5,12 +5,12 @@ namespace OpenEuropa\CodeReview\Tests;
 use GrumPHP\Runner\TaskResult;
 
 /**
- * Tests the PHP_CodeSniffer task using the Drupal conventions.
+ * Tests the PHP_CodeSniffer task using the OE component conventions.
  */
-class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
+class PhpCodeSnifferComponentTest extends PhpCodeSnifferTestBase
 {
     /**
-     * Provides test cases for testing the PHP_CodeSniffer task for Drupal.
+     * Provides test cases for testing the PHP_CodeSniffer task for OE Component.
      *
      * @return array
      *      Test data.
@@ -20,7 +20,7 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
         return [
             [
                 'phpcs/DrupalClassIncorrect.php',
-                'drupal-conventions',
+                'oe-component-conventions',
                 TaskResult::FAILED,
                 [
                     'error' => [
@@ -32,43 +32,43 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
             ],
             [
                 'phpcs/DrupalClassCorrect.php',
-                'drupal-conventions',
+                'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
                 'phpcs/correct-code.inc',
-                'drupal-conventions',
+                'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
                 'phpcs/correct-code.module',
-                'drupal-conventions',
+                'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
                 'phpcs/correct-code.theme',
-                'drupal-conventions',
+                'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
                 'phpcs/correct-code.install',
-                'drupal-conventions',
-                TaskResult::SKIPPED,
+                'oe-component-conventions',
+                TaskResult::PASSED,
                 [],
             ],
             [
                 'phpcs/correct-code.yml',
-                'drupal-conventions',
-                TaskResult::SKIPPED,
+                'oe-component-conventions',
+                TaskResult::PASSED,
                 [],
             ],
             [
                 'phpcs/correct-code.xxx',
-                'drupal-conventions',
+                'oe-component-conventions',
                 TaskResult::SKIPPED,
                 [],
             ],

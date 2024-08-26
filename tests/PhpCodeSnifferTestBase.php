@@ -2,7 +2,9 @@
 
 namespace OpenEuropa\CodeReview\Tests;
 
+use GrumPHP\Collection\FilesCollection;
 use GrumPHP\Runner\TaskResultInterface;
+use GrumPHP\Task\Context\RunContext;
 
 /**
  * Base class for testing the PHP_CodeSniffer task.
@@ -68,5 +70,39 @@ abstract class PhpCodeSnifferTestBase extends AbstractTest
         }
 
         return $failures;
+    }
+
+    /**
+     * Tests code to make sure CodeSniffer triggers the appropriate results.
+     *
+     * @param string $file
+     *   Name of the fixture.
+     * @param string $configuration
+     *   The name of the configuration to use in the task
+     * @param int $expectedFailures
+     *   Expected result after the test.
+     *
+     * @dataProvider dataProvider
+     */
+    public function testPhpCodeSnifferDetector(string $file, string $configuration, int $expectedResultCode, array $expectedFailures): void
+    {
+        $collection = new FilesCollection([$this->getFixture($file)]);
+        $context = new RunContext($collection);
+
+        $result = $this->runTask($configuration, 'phpcs', $context);
+        // Check the result code and possible errors.
+        $this->assertEquals($expectedResultCode, $result->getResultCode());
+        $this->assertEquals($expectedFailures, $this->getFailures($result->first()));
+    }
+
+    /**
+     * Provides test cases for testing the PHP_CodeSniffer task.
+     *
+     * @return array
+     *      Test data.
+     */
+    public function dataProvider()
+    {
+        return [];
     }
 }

@@ -6,10 +6,8 @@ use GrumPHP\Collection\TaskResultCollection;
 use GrumPHP\Configuration\ContainerFactory;
 use GrumPHP\Runner\TaskRunnerContext;
 use GrumPHP\Task\Context\ContextInterface;
-use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Component\Console\Tester\TesterTrait as ConsoleTesterTrait;
 use Symfony\Component\DependencyInjection\Container;
 

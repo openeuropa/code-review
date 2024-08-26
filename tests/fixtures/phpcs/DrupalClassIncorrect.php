@@ -7,7 +7,7 @@ use Drupal\BlockBase;
 /**
  * Some service.
  */
-class DrupalClass extends BlockBase {
+class DrupalClassIncorrect extends BlockBase {
 
   /**
    * Using \Drupal here but it should be injected instead.
