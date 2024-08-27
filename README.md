@@ -121,7 +121,7 @@ Parameters available from base-conventions in new version are the same, no chang
 
 ### Installation
 
-The library is provides docker-compose configuration file to be used for development.
+The library provides docker-compose configuration file to be used for development.
 
 #### Requirements:
 
