@@ -99,7 +99,7 @@ abstract class PhpCodeSnifferTestBase extends AbstractTest
      * Provides test cases for testing the PHP_CodeSniffer task.
      *
      * @return array
-     *      Test data.
+     *   Test data.
      */
     public function dataProvider()
     {

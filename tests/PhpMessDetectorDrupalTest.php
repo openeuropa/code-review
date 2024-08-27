@@ -36,7 +36,7 @@ class PhpMessDetectorDrupalTest extends AbstractTest
      * Test file extensions.
      *
      * @return array
-     *      Test data.
+     *   Test data.
      */
     public function dataProvider(): array
     {

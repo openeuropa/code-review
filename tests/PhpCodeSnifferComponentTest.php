@@ -13,7 +13,7 @@ class PhpCodeSnifferComponentTest extends PhpCodeSnifferTestBase
      * Provides test cases for testing the PHP_CodeSniffer task for OE Component.
      *
      * @return array
-     *      Test data.
+     *   Test data.
      */
     public function dataProvider()
     {

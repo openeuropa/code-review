@@ -34,7 +34,7 @@ class GitCommitMessageTest extends AbstractTest
      * Test case provider function.
      *
      * @return array
-     *      Test data.
+     *   Test data.
      */
     public function commitMessageProvider(): array
     {

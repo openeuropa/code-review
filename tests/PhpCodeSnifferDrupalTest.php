@@ -13,7 +13,7 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
      * Provides test cases for testing the PHP_CodeSniffer task for Drupal.
      *
      * @return array
-     *      Test data.
+     *   Test data.
      */
     public function dataProvider()
     {
