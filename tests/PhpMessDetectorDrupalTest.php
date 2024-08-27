@@ -11,7 +11,6 @@ use GrumPHP\Task\Context\RunContext;
  */
 class PhpMessDetectorDrupalTest extends AbstractTest
 {
-
     /**
      * Tests different git messages against the predefined conventions.
      *

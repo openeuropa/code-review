@@ -4,7 +4,7 @@
 <ruleset name="OpenEuropa PHP library">
     <description>Coding standard for OpenEuropa PHP libraries.</description>
 
-    <rule ref="./vendor/squizlabs/php_codesniffer/src/Standards/PSR2" />
+    <rule ref="./vendor/squizlabs/php_codesniffer/src/Standards/PSR12" />
 
     <!-- Comments and multi-line statements should be indented with 4 spaces. -->
     <rule ref="Generic.WhiteSpace.ScopeIndent">

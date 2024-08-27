@@ -14,7 +14,7 @@ There is also a [base conventions](dist/base-conventions.yml) file, this one is 
 
 ## PHP Code Sniffer
 
-- For generic PHP projects: [PSR-2 coding standards](https://www.php-fig.org/psr/psr-2)
+- For generic PHP projects: [PSR-12 coding standards](https://www.php-fig.org/psr/psr-12)
   with the following additions:
   - Comments, array declarations and code that is split over multiple lines also
     need to be indented with 4 characters.

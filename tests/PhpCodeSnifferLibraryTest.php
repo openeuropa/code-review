@@ -9,7 +9,6 @@ use GrumPHP\Runner\TaskResult;
  */
 class PhpCodeSnifferLibraryTest extends PhpCodeSnifferTestBase
 {
-
     /**
      * Provides test cases for testing the PHP_CodeSniffer task.
      *

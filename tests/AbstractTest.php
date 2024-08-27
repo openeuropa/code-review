@@ -103,7 +103,7 @@ abstract class AbstractTest extends TestCase
      */
     public function getFixture($fixture)
     {
-        $file = new \SplFileInfo(__DIR__.'/fixtures/'.$fixture);
+        $file = new \SplFileInfo(__DIR__ . '/fixtures/' . $fixture);
         if (!$file->isReadable()) {
             throw new \RuntimeException(sprintf('The fixture %s could not be loaded!', $fixture));
         }
