@@ -10,11 +10,6 @@
     "drupal/coder": "^8.3.16",
     "phpmd/phpmd": "^2.15"
   },
-  "autoload": {
-    "psr-4": {
-      "OpenEuropa\\CodeReview\\": "./src/"
-    }
-  },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
