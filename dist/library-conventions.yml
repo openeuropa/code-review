@@ -32,5 +32,5 @@ grumphp:
       max_subject_width: 0
 
 parameters:
-    tasks.phpcs.standard: ./vendor/openeuropa/code-review/resources/library-phpcs-ruleset.xml
-    tasks.phpcs.warning_severity: 0
+  tasks.phpcs.standard: ./vendor/openeuropa/code-review/resources/library-phpcs-ruleset.xml
+  tasks.phpcs.warning_severity: 0

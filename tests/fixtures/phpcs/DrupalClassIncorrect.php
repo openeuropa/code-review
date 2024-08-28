@@ -10,7 +10,7 @@ use Drupal\BlockBase;
 class DrupalClassIncorrect extends BlockBase {
 
   /**
-   * Using \Drupal here but it should be injected instead.
+   * Test method.
    *
    * @deprecated Test.
    */
