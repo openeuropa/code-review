@@ -31,16 +31,16 @@ abstract class AbstractTest extends TestCase
     {
         // Create a GrumPHP configuration file to use in the test. Check if a configuration specific file exists, or
         // fall back to a generic template file.
-        $filename = file_exists(__DIR__ . "/config/$configuration.yml.dist")
-        ? __DIR__ . "/config/$configuration.yml.dist"
-        : __DIR__ . '/config/grumphp.yml.dist';
+        $filename = file_exists(realpath(__DIR__ . "/../config/$configuration.yml.dist"))
+        ?  realpath(__DIR__ . "/../config/$configuration.yml.dist")
+        :  realpath(__DIR__ . '/../config/grumphp.yml.dist');
         $content = file_get_contents($filename);
         $content = str_replace("{configuration}", $configuration, $content);
-        file_put_contents(__DIR__ . '/config/grumphp.yml', $content);
+        file_put_contents(realpath(__DIR__ . '/../config/grumphp.yml'), $content);
 
         // Initialise the application with the provided config.
         $input = new ArrayInput([
-            '--config' => __DIR__ . '/config/grumphp.yml',
+            '--config' => realpath(__DIR__ . '/../config/grumphp.yml'),
         ]);
         // Mark the application as non-interactive, so turn off any request for input during task execution.
         $input->setInteractive(false);
@@ -103,7 +103,7 @@ abstract class AbstractTest extends TestCase
      */
     public function getFixture($fixture)
     {
-        $file = new \SplFileInfo(__DIR__ . '/fixtures/' . $fixture);
+        $file = new \SplFileInfo(realpath(__DIR__ . '/../fixtures/' . $fixture));
         if (!$file->isReadable()) {
             throw new \RuntimeException(sprintf('The fixture %s could not be loaded!', $fixture));
         }
