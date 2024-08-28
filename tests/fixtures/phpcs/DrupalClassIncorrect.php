@@ -5,7 +5,7 @@ namespace Drupal\testmodule;
 use Drupal\BlockBase;
 
 /**
- * Some service.
+ * Some Drupal class.
  */
 class DrupalClassIncorrect extends BlockBase {
 

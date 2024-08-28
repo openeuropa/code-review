@@ -5,12 +5,12 @@ namespace Drupal\testmodule;
 use Drupal\BlockBase;
 
 /**
- * Some service.
+ * Some Drupal class.
  */
 class DrupalClassCorrect extends BlockBase {
 
   /**
-   * Using \Drupal here but it should be injected instead.
+   * Test method.
    */
   public function test(): bool {
     return TRUE;
@@ -19,6 +19,7 @@ class DrupalClassCorrect extends BlockBase {
   /**
    * Tests method with docblock and PHP attribute.
    */
+  #[\ReturnTypeWillChange]
   public function aMethodWithDocblockAndPhpAttribute(): void {
   }
 
