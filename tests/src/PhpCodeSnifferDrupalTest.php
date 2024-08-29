@@ -15,59 +15,60 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
      * @return array
      *   Test data.
      */
-    public function dataProvider()
+    public function dataProvider(): array
     {
         return [
             [
-                'phpcs/DrupalClassIncorrect.php',
+                'DrupalClassIncorrect.php',
                 'drupal-conventions',
                 TaskResult::FAILED,
                 [
                     'error' => [
-                        18 => 1,
-                        21 => 1,
-                        24 => 1,
+                        16 => 1,
+                        17 => 1,
+                        20 => 1,
+                        23 => 1,
                     ],
                 ],
             ],
             [
-                'phpcs/DrupalClassCorrect.php',
+                'DrupalClassCorrect.php',
                 'drupal-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.inc',
+                'correct-code.inc',
                 'drupal-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.module',
+                'correct-code.module',
                 'drupal-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.theme',
+                'correct-code.theme',
                 'drupal-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.install',
+                'correct-code.install',
                 'drupal-conventions',
                 TaskResult::SKIPPED,
                 [],
             ],
             [
-                'phpcs/correct-code.yml',
+                'correct-code.yml',
                 'drupal-conventions',
                 TaskResult::SKIPPED,
                 [],
             ],
             [
-                'phpcs/correct-code.xxx',
+                'correct-code.xxx',
                 'drupal-conventions',
                 TaskResult::SKIPPED,
                 [],

@@ -15,59 +15,60 @@ class PhpCodeSnifferComponentTest extends PhpCodeSnifferTestBase
      * @return array
      *   Test data.
      */
-    public function dataProvider()
+    public function dataProvider(): array
     {
         return [
             [
-                'phpcs/DrupalClassIncorrect.php',
+                'DrupalClassIncorrect.php',
                 'oe-component-conventions',
                 TaskResult::FAILED,
                 [
                     'error' => [
-                        18 => 1,
-                        21 => 1,
-                        24 => 1,
+                        16 => 1,
+                        17 => 1,
+                        20 => 1,
+                        23 => 1,
                     ],
                 ],
             ],
             [
-                'phpcs/DrupalClassCorrect.php',
+                'DrupalClassCorrect.php',
                 'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.inc',
+                'correct-code.inc',
                 'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.module',
+                'correct-code.module',
                 'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.theme',
+                'correct-code.theme',
                 'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.install',
+                'correct-code.install',
                 'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.yml',
+                'correct-code.yml',
                 'oe-component-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.xxx',
+                'correct-code.xxx',
                 'oe-component-conventions',
                 TaskResult::SKIPPED,
                 [],

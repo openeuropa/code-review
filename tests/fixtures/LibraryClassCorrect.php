@@ -2,8 +2,10 @@
 
 namespace OpenEuropa\CodeReview\Tests\Fixtures\PhpCs;
 
-class IncorrectLibraryCode
+class LibraryClassCorrect
 {
+    private $userManager;
+
     /**
      * A correctly indented docblock.
      */

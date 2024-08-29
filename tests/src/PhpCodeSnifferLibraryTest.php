@@ -23,11 +23,11 @@ class PhpCodeSnifferLibraryTest extends PhpCodeSnifferTestBase
      *
      * @see testPhpCodeSnifferTask()
      */
-    public function dataProvider()
+    public function dataProvider(): array
     {
         return [
             [
-                'phpcs/incorrect-library-code.php',
+                'LibraryClassIncorrect.php',
                 'library-conventions',
                 TaskResult::FAILED,
                 [
@@ -41,13 +41,13 @@ class PhpCodeSnifferLibraryTest extends PhpCodeSnifferTestBase
                 ],
             ],
             [
-                'phpcs/correct-library-code.php',
+                'LibraryClassCorrect.php',
                 'library-conventions',
                 TaskResult::PASSED,
                 [],
             ],
             [
-                'phpcs/correct-code.xxx',
+                'correct-code.xxx',
                 'library-conventions',
                 TaskResult::SKIPPED,
                 [],

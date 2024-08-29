@@ -17,6 +17,17 @@ grumphp:
       metadata:
         priority: 300
 
+    # PHP Stan.
+    phpstan:
+      autoload_file: '%tasks.phpstan.autoload_file%'
+      configuration: '%tasks.phpstan.configuration%'
+      level: '%tasks.phpstan.level%'
+      force_patterns: '%tasks.phpstan.force_patterns%'
+      ignore_patterns: '%tasks.phpstan.ignore_patterns%'
+      triggered_by: '%tasks.phpstan.triggered_by%'
+      memory_limit: "-1"
+      use_grumphp_paths: true
+
     # Commit message format.
     git_commit_message:
       matchers: '%tasks.git_commit_message.matchers%'
@@ -27,9 +38,11 @@ grumphp:
       max_subject_width: 0
 
 parameters:
-  tasks.phpcs.standard: ./vendor/drupal/coder/coder_sniffer/Drupal
-  tasks.phpcs.triggered_by:
+  drupal-conventions.triggered_by:
     - php
     - module
     - inc
     - theme
+  tasks.phpcs.standard: ./vendor/drupal/coder/coder_sniffer/Drupal
+  tasks.phpcs.triggered_by: '%drupal-conventions.triggered_by%'
+  tasks.phpstan.triggered_by: '%drupal-conventions.triggered_by%'

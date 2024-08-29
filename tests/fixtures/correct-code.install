@@ -2,12 +2,10 @@
 
 namespace Drupal\testmodule;
 
-use Drupal\BlockBase;
-
 /**
  * Some service.
  */
-class DrupalClassCorrect extends BlockBase {
+class DrupalClassCorrect {
 
   /**
    * Test method.

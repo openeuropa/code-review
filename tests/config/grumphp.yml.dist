@@ -1,2 +1,6 @@
 imports:
   - { resource: ../../dist/{configuration}.yml }
+
+parameters:
+  tasks.phpstan.configuration: ./resources/phpstan.neon
+

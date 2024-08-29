@@ -1,5 +1,6 @@
 /vendor/
 /tests/config/grumphp.yml
+/tests/fixtures/build/
 composer.lock
 composer.dev.lock
 grumphp.yml

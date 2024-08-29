@@ -2,12 +2,10 @@
 
 namespace Drupal\testmodule;
 
-use Drupal\BlockBase;
-
 /**
  * Some service.
  */
-class DrupalClassCorrect extends BlockBase {
+class DrupalClassCorrect {
 
   /**
    * Test method.
@@ -19,7 +17,7 @@ class DrupalClassCorrect extends BlockBase {
   /**
    * Tests method with docblock and PHP attribute.
    */
-  #[\ReturnTypeWillChange]
+   #[\ReturnTypeWillChange]
   public function aMethodWithDocblockAndPhpAttribute(): void {
   }
 

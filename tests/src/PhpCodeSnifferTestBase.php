@@ -101,7 +101,7 @@ abstract class PhpCodeSnifferTestBase extends AbstractTest
      * @return array
      *   Test data.
      */
-    public function dataProvider()
+    public function dataProvider(): array
     {
         return [];
     }

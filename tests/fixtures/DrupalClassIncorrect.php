@@ -2,8 +2,6 @@
 
 namespace Drupal\testmodule;
 
-use Drupal\BlockBase;
-
 /**
  * Some Drupal class.
  */
@@ -15,6 +13,7 @@ class DrupalClassIncorrect extends BlockBase {
    * @deprecated Test.
    */
   public function test() {
+      \Drupal::service('transliteration');
     return true;
   }
 

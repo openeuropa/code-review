@@ -16,6 +16,17 @@ grumphp:
       metadata:
         priority: 300
 
+    # PHP Stan.
+    phpstan:
+      autoload_file: '%tasks.phpstan.autoload_file%'
+      configuration: '%tasks.phpstan.configuration%'
+      level: '%tasks.phpstan.level%'
+      force_patterns: '%tasks.phpstan.force_patterns%'
+      ignore_patterns: '%tasks.phpstan.ignore_patterns%'
+      triggered_by: '%tasks.phpstan.triggered_by%'
+      memory_limit: "-1"
+      use_grumphp_paths: true
+
     # Commit message format.
     git_commit_message:
       matchers: '%tasks.git_commit_message.matchers%'

@@ -5,6 +5,11 @@ parameters:
   tasks.phpcs.ignore_patterns:
     - vendor/
     - tests/fixtures/
+  code-review.ignore:
+    - vendor/
+    - tests/fixtures/
+  tasks.phpcs.ignore_patterns: '%code-review.ignore%'
+  tasks.phpstan.ignore_patterns: '%code-review.ignore%'
   tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml
 
 grumphp:
