@@ -27,7 +27,8 @@ abstract class PhpStanTestBase extends AbstractTest
         $collection = new FilesCollection([$this->getFixture($file)]);
         $context = new RunContext($collection);
         $result = $this->runTask($configuration, 'phpstan', $context);
-        $this->assertEquals($expectedResultCode, $result->getResultCode(), "Failed on $file expected code $expectedResultCode");
+        $messages = $result->getAllMessages()['phpstan'] ?? 'No messages.';
+        $this->assertEquals($expectedResultCode, $result->getResultCode(), "Failed on $file expected code $expectedResultCode. Message: $messages");
     }
 
     /**

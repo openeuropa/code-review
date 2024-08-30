@@ -12,6 +12,9 @@ class PhpStanDrupalTest extends PhpStanTestBase
     /**
      * Provides test cases for testing the PHPStan task for Drupal.
      *
+     * PHP files are ignored by extension.neon in tests/fixtures path for Drupal
+     * PHPStan, so we check incorrect code with .module file.
+     *
      * @return array
      *   Test data.
      */
@@ -19,7 +22,7 @@ class PhpStanDrupalTest extends PhpStanTestBase
     {
         return [
             [
-                'DrupalClassIncorrect.php',
+                'incorrect-code.module',
                 'drupal-conventions',
                 TaskResult::FAILED,
             ],

@@ -24,9 +24,9 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
                 TaskResult::FAILED,
                 [
                     'error' => [
-                        17 => 1,
-                        20 => 1,
-                        23 => 1,
+                        16 => 1,
+                        19 => 1,
+                        22 => 1,
                     ],
                 ],
             ],

@@ -26,7 +26,8 @@
       },
     "phpstan/extension-installer": {
       "ignore": [
-        "mglaman/phpstan-drupal"
+        "mglaman/phpstan-drupal",
+        "phpstan/phpstan-deprecation-rules"
       ]
     },
     "_readme": [

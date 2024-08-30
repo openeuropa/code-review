@@ -5,12 +5,13 @@ namespace Drupal\testmodule;
 /**
  * Some service.
  */
-class DrupalClassCorrect {
+class DrupalClassIncorrect {
 
   /**
    * Test method.
    */
   public function test(): bool {
+    \Drupal::service('test');
     return TRUE;
   }
 

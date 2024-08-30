@@ -1,0 +1,8 @@
+parameters:
+  drupal:
+    drupal_root: 'tests/fixtures/build'
+
+includes:
+  - ../../vendor/mglaman/phpstan-drupal/extension.neon
+  - ../../vendor/mglaman/phpstan-drupal/rules.neon
+  - ../../vendor/phpstan/phpstan-deprecation-rules/rules.neon
