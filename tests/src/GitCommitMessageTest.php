@@ -5,7 +5,6 @@ namespace OpenEuropa\CodeReview\Tests;
 use GrumPHP\Collection\FilesCollection;
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Task\Context\GitCommitMsgContext;
-use GrumPHP\Task\Context\RunContext;
 
 /**
  * Tests for git commit message conventions.
@@ -35,7 +34,7 @@ class GitCommitMessageTest extends AbstractTest
      * Test case provider function.
      *
      * @return array
-     *      Test data.
+     *   Test data.
      */
     public function commitMessageProvider(): array
     {

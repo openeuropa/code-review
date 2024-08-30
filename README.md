@@ -23,6 +23,12 @@ For Drupal projects, `drupal-conventions.yml` should be imported instead.
 
 OE Components should use `oe-components-conventions.yml`
 
+Projects using Drupal rules based conventions like phpcs in `drupal-conventions` and `oe-components-conventions.yml` have to require Coder via Composer:
+
+```bash
+composer require --dev drupal/coder
+```
+
 ### Commands
 
 GrumPHP tasks will be run at every commit, if you wish to run them without performing a commit use the following command:
@@ -115,7 +121,7 @@ Parameters available from base-conventions in new version are the same, no chang
 
 ### Installation
 
-The library is provides docker-compose configuration file to be used for development.
+The library provides a docker-compose configuration file to be used for development.
 
 #### Requirements:
 

@@ -5,12 +5,12 @@ namespace Drupal\testmodule;
 use Drupal\BlockBase;
 
 /**
- * Some service.
+ * Some Drupal class.
  */
-class DrupalClass extends BlockBase {
+class DrupalClassIncorrect extends BlockBase {
 
   /**
-   * Using \Drupal here but it should be injected instead.
+   * Test method.
    *
    * @deprecated Test.
    */

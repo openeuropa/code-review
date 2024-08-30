@@ -2,36 +2,13 @@
 
 namespace OpenEuropa\CodeReview\Tests;
 
-use GrumPHP\Collection\FilesCollection;
-use GrumPHP\Task\Context\GitPreCommitContext;
-use GrumPHP\Task\Context\RunContext;
+use GrumPHP\Runner\TaskResult;
 
 /**
  * Tests the PHP_CodeSniffer task using the library conventions.
  */
-class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
+class PhpCodeSnifferLibraryTest extends PhpCodeSnifferTestBase
 {
-    /**
-     * Tests PHP code to make sure CodeSniffer triggers the appropriate errors.
-     *
-     * @param string $file
-     *   Name of the fixture to use in the test.
-     * @param string $configuration
-     *   The name of the configuration to use in the task.
-     * @param array $expectedFailures
-     *   An array of failures that are expected to be thrown when testing the fixture for coding standards violations.
-     *
-     * @dataProvider phpCodeSnifferTaskProvider
-     */
-    public function testPhpCodeSnifferTask(string $file, string $configuration, array $expectedFailures): void
-    {
-        $collection = new FilesCollection([$this->getFixture($file)]);
-        $context = new RunContext($collection);
-
-        $result = $this->runTask($configuration, 'phpcs', $context);
-        $this->assertEquals($expectedFailures, $this->getFailures($result->first()));
-    }
-
     /**
      * Provides test cases for testing the PHP_CodeSniffer task.
      *
@@ -46,24 +23,33 @@ class PhpCodeSnifferTest extends PhpCodeSnifferTestBase
      *
      * @see testPhpCodeSnifferTask()
      */
-    public function phpCodeSnifferTaskProvider()
+    public function dataProvider()
     {
         return [
             [
                 'phpcs/incorrect-library-code.php',
                 'library-conventions',
+                TaskResult::FAILED,
                 [
                     'error' => [
                         8 => 1,
                         15 => 1,
                         25 => 1,
                         32 => 1,
+                        6 => 1,
                     ],
                 ],
             ],
             [
                 'phpcs/correct-library-code.php',
                 'library-conventions',
+                TaskResult::PASSED,
+                [],
+            ],
+            [
+                'phpcs/correct-code.xxx',
+                'library-conventions',
+                TaskResult::SKIPPED,
                 [],
             ],
         ];

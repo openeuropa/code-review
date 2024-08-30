@@ -4,7 +4,6 @@ namespace OpenEuropa\CodeReview\Tests\Fixtures\PhpCs;
 
 class IncorrectLibraryCode
 {
-
     /**
      * A correctly indented docblock.
      */

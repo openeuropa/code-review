@@ -7,40 +7,44 @@ use GrumPHP\Collection\FilesCollection;
 use GrumPHP\Task\Context\RunContext;
 
 /**
- * Tests for git commit message conventions.
+ * Tests for Drupal conventions.
  */
-class PhpMessDetectorTest extends AbstractTest
+class PhpMessDetectorDrupalTest extends AbstractTest
 {
     /**
      * Tests different git messages against the predefined conventions.
      *
      * @param string $file
      *   Name of the fixture.
-     * @param int $expectedResultCode
+     * @param int    $expectedResultCode
      *   Expected result after the test.
      *
      * @dataProvider dataProvider
      */
-    public function testPhpCodeMessage(string $file, int $expectedResultCode): void
+    public function testPhpMessDetector(string $file, int $expectedResultCode): void
     {
         $collection = new FilesCollection([$this->getFixture($file)]);
         $context = new RunContext($collection);
 
-        $result = $this->runTask('library-conventions', 'phpmd', $context);
+        $result = $this->runTask('drupal-conventions', 'phpmd', $context);
         $this->assertEquals($expectedResultCode, $result->getResultCode());
     }
 
     /**
      * Test case provider function.
      *
+     * Test file extensions.
+     *
      * @return array
-     *      Test data.
+     *   Test data.
      */
     public function dataProvider(): array
     {
         return [
-            ['phpmd/correct-code.php', TaskResult::PASSED],
-            ['phpmd/incorrect-code.php', TaskResult::FAILED],
+            ['phpmd/correct-code.inc', TaskResult::PASSED],
+            ['phpmd/correct-code.module', TaskResult::PASSED],
+            ['phpmd/correct-code.theme', TaskResult::PASSED],
+            ['phpmd/ignored-code.xxx', TaskResult::SKIPPED],
         ];
     }
 }
