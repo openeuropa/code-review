@@ -5,12 +5,12 @@ namespace OpenEuropa\CodeReview\Tests;
 use GrumPHP\Runner\TaskResult;
 
 /**
- * Tests the PHP_CodeSniffer task using the Drupal conventions.
+ * Tests for PHPStan conventions.
  */
-class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
+class PhpStanDrupalTest extends PhpStanTestBase
 {
     /**
-     * Provides test cases for testing the PHP_CodeSniffer task for Drupal.
+     * Provides test cases for testing the PHPStan task for Drupal.
      *
      * @return array
      *   Test data.
@@ -22,55 +22,41 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
                 'DrupalClassIncorrect.php',
                 'drupal-conventions',
                 TaskResult::FAILED,
-                [
-                    'error' => [
-                        17 => 1,
-                        20 => 1,
-                        23 => 1,
-                    ],
-                ],
             ],
             [
                 'DrupalClassCorrect.php',
                 'drupal-conventions',
                 TaskResult::PASSED,
-                [],
             ],
             [
                 'correct-code.inc',
                 'drupal-conventions',
                 TaskResult::PASSED,
-                [],
             ],
             [
                 'correct-code.module',
                 'drupal-conventions',
                 TaskResult::PASSED,
-                [],
             ],
             [
                 'correct-code.theme',
                 'drupal-conventions',
                 TaskResult::PASSED,
-                [],
             ],
             [
                 'correct-code.install',
                 'drupal-conventions',
                 TaskResult::SKIPPED,
-                [],
             ],
             [
                 'correct-code.yml',
                 'drupal-conventions',
                 TaskResult::SKIPPED,
-                [],
             ],
             [
                 'correct-code.xxx',
                 'drupal-conventions',
                 TaskResult::SKIPPED,
-                [],
             ],
         ];
     }

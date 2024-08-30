@@ -34,9 +34,11 @@ class PhpCodeSnifferLibraryTest extends PhpCodeSnifferTestBase
                     'error' => [
                         8 => 1,
                         15 => 1,
-                        25 => 1,
-                        32 => 1,
                         6 => 1,
+                        20 => 1,
+                        26 => 1,
+                        33 => 1,
+                        34 => 1,
                     ],
                 ],
             ],

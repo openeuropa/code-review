@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenEuropa\CodeReview\Tests\Fixtures\PhpCs;
+namespace OpenEuropa\CodeReview\Tests\Fixtures;
 
 class LibraryClassIncorrect
 {
@@ -17,6 +17,7 @@ class LibraryClassIncorrect
       */
     public function anotherMethodWithAnIncorrectlyIndentedDocblock()
     {
+      $this->unknownMethod();
     }
 
     public function aMethodContainingAnIncorrectlyIndentedArray()
@@ -28,7 +29,8 @@ class LibraryClassIncorrect
 
     public function aMethodContainingAnIncorrectlyIndentedMultilineStatement()
     {
-        $this->userManager
+        $this
+          ->userManager
           ->delete();
     }
 }

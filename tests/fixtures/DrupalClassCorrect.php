@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\testmodule;
+namespace OpenEuropa\CodeReview\Tests\Fixtures;
 
 /**
  * Some Drupal class.

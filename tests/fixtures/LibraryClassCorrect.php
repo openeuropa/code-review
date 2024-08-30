@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenEuropa\CodeReview\Tests\Fixtures\PhpCs;
+namespace OpenEuropa\CodeReview\Tests\Fixtures;
 
 class LibraryClassCorrect
 {

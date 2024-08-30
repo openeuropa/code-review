@@ -11,6 +11,7 @@ class DrupalClassCorrect {
    * Test method.
    */
   public function test(): bool {
+    \Drupal::service('test');
     return TRUE;
   }
 

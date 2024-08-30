@@ -24,7 +24,6 @@ class PhpCodeSnifferComponentTest extends PhpCodeSnifferTestBase
                 TaskResult::FAILED,
                 [
                     'error' => [
-                        16 => 1,
                         17 => 1,
                         20 => 1,
                         23 => 1,

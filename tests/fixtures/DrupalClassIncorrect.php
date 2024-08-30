@@ -1,19 +1,19 @@
 <?php
 
-namespace Drupal\testmodule;
+namespace OpenEuropa\CodeReview\Tests\Fixtures;
 
 /**
  * Some Drupal class.
  */
-class DrupalClassIncorrect extends BlockBase {
+class DrupalClassIncorrect {
 
   /**
-   * Test method.
+   * Test method using \Drupal call instead of dependency injection.
    *
    * @deprecated Test.
    */
   public function test() {
-      \Drupal::service('transliteration');
+    \Drupal::service('test');
     return true;
   }
 

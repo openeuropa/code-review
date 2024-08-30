@@ -9,7 +9,11 @@
   "require-dev": {
     "phpunit/phpunit": "^9.5.5",
     "drupal/coder": "^8.3.16",
-    "phpstan/phpstan": "^1.12"
+    "mglaman/phpstan-drupal": "^1.2",
+    "phpstan/phpstan-deprecation-rules": "^1.2",
+    "drupal/core-recommended": "^10 || ^11",
+    "composer/installers": "^2",
+    "phpstan/extension-installer": "^1.4"
   },
   "autoload-dev": {
     "psr-4": {
@@ -17,6 +21,14 @@
     }
   },
   "extra": {
+    "installer-paths": {
+        "tests/fixtures/build/core": ["type:drupal-core"]
+      },
+    "phpstan/extension-installer": {
+      "ignore": [
+        "mglaman/phpstan-drupal"
+      ]
+    },
     "_readme": [
       "Explicit minimum version requirement for phpunit/phpunit due to lower versions using deprecated Serializable interface."
     ]
@@ -28,7 +40,9 @@
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "phpro/grumphp-shim": true,
-      "phpro/grumphp": true
+      "phpro/grumphp": true,
+      "composer/installers": true,
+      "phpstan/extension-installer": true
     }
   }
 }
