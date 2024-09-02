@@ -9,8 +9,16 @@ Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPH
 ### Installation
 Install the code review component via Composer:
 
+PHP library:
+
 ```bash
-composer require --dev openeuropa/code-review
+composer require --dev openeuropa/code-review-library
+```
+
+Drupal projects:
+
+```bash
+composer require --dev openeuropa/code-review-drupal
 ```
 
 In your project root create the following `grumphp.yml.dist`:
@@ -68,6 +76,11 @@ Below the list of task parameters can that be overridden on a per-project basis:
 - `tasks.phpcs.triggered_by`
 - `tasks.phpcs.whitelist_patterns`
 - `tasks.phpcs.warning_severity`
+- `tasks.phpstan.autoload_file`
+- `tasks.phpstan.configuration`
+- `tasks.phpstan.level`
+- `tasks.phpstan.force_patterns`
+- `tasks.phpstan.triggered_by`
 - `tasks.git_commit_message.matchers`
 
 It is also possible to extend the list of tasks to be run by adding tasks under the `tasks:` tree as shown below:

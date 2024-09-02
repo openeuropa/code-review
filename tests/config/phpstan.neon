@@ -1,6 +1,6 @@
 parameters:
   drupal:
-    drupal_root: 'tests/fixtures/build'
+    drupal_root: tests/fixtures/build/core
 
 includes:
   - ../../vendor/mglaman/phpstan-drupal/extension.neon

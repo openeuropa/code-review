@@ -27,9 +27,6 @@ pipeline:
       - /cache:/cache
     commands:
       - export COMPOSER=composer.dev.json
-      - export DRUPAL_FINDER_DRUPAL_ROOT='tests/fixtures/build'
-      - export DRUPAL_FINDER_COMPOSER_ROOT='.'
-      - export DRUPAL_FINDER_VENDOR_DIR='vendor'
       - composer self-update --2
       - composer update --prefer-lowest --ansi
     when:
@@ -43,9 +40,6 @@ pipeline:
       - /cache:/cache
     commands:
       - export COMPOSER=composer.dev.json
-      - export DRUPAL_FINDER_DRUPAL_ROOT='tests/fixtures/build'
-      - export DRUPAL_FINDER_COMPOSER_ROOT='.'
-      - export DRUPAL_FINDER_VENDOR_DIR='vendor'
       - composer self-update --2
       - composer install --ansi
     when:

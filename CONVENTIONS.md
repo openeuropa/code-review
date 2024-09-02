@@ -22,6 +22,15 @@ There is also a [base conventions](dist/base-conventions.yml) file, this one is 
   except:
   - `Drupal.Commenting.Deprecated` because this rule only makes sense for core and projects in drupal.org.
 
+## PHP Stan
+
+- For generic PHP projects: PHPStan default config, more info about available configuration: https://phpstan.org/user-guide/getting-started
+
+- For Drupal projects:
+  - [mglaman/phpstan-drupal](https://github.com/mglaman/phpstan-drupal): allows to understand how to read code in a Drupal.
+  - [phpstan/phpstan-deprecation-rules](https://github.com/phpstan/phpstan-deprecation-rules): this extension emits deprecation warnings on code.
+  - [phpstan/extension-installer](https://github.com/phpstan/extension-installer): package autoconfigures PHPStan to load the previous packages.
+
 ## Commit messages
 
 Valid default commit messages: `Issue #123: My commit.` or `OPENEUROPA-123: My commit.`
