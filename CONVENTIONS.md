@@ -22,19 +22,6 @@ There is also a [base conventions](dist/base-conventions.yml) file, this one is 
   except:
   - `Drupal.Commenting.Deprecated` because this rule only makes sense for core and projects in drupal.org.
 
-## PHP Mess Detector
-
-- [Code size rules](https://phpmd.org/rules/index.html#code-size-rules) except:
-  - `ExcessiveMethodLength`
-  - `ExcessiveClassLength`
-  - `ExcessivePublicCount`
-  - `TooManyMethods`
-  - `TooManyPublicMethods`
-- [Naming Rules](https://phpmd.org/rules/index.html#naming-rules) except:
-  - `ShortVariable`
-  - `LongVariable`
-  - `ConstructorWithNameAsEnclosingClass`
-
 ## Commit messages
 
 Valid default commit messages: `Issue #123: My commit.` or `OPENEUROPA-123: My commit.`

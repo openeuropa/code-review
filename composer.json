@@ -7,8 +7,7 @@
     "phpro/grumphp-shim": "^2.7"
   },
   "require-dev": {
-    "drupal/coder": "^8.3.16",
-    "phpmd/phpmd": "^2.15"
+    "drupal/coder": "^8.3.16"
   },
   "config": {
     "allow-plugins": {

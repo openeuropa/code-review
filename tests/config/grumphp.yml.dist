@@ -1,6 +1,2 @@
 imports:
   - { resource: ../../dist/{configuration}.yml }
-
-parameters:
-  tasks.phpmd.ruleset:
-  - ./resources/phpmd-ruleset.xml

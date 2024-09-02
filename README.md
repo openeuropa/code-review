@@ -68,9 +68,6 @@ Below the list of task parameters can that be overridden on a per-project basis:
 - `tasks.phpcs.triggered_by`
 - `tasks.phpcs.whitelist_patterns`
 - `tasks.phpcs.warning_severity`
-- `tasks.phpmd.exclude`
-- `tasks.phpmd.ruleset`
-- `tasks.phpmd.triggered_by`
 - `tasks.git_commit_message.matchers`
 
 It is also possible to extend the list of tasks to be run by adding tasks under the `tasks:` tree as shown below:
@@ -113,9 +110,13 @@ New version removes ExtraTasks extension. Any aditional task previously declared
 
 ```
 
-Projects using 2.x conventions won't require changes as they are kept in version 3.x.
+In adittion, PHP Mess detector is no longer available as part of tasks configured.
 
-Parameters available from base-conventions in new version are the same, no changes required in this section.
+The task has been removed and related parameters too.
+
+If you wish to continue using the task, you can add this as part of GrumPHP previously seen.
+
+Other conventions and parameters remains the same.
 
 ## Development
 
