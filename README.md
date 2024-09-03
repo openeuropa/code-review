@@ -110,13 +110,9 @@ New version removes ExtraTasks extension. Any aditional task previously declared
 
 ```
 
-In adittion, PHP Mess detector is no longer available as part of tasks configured.
+In addition, PHP Mess Detector is no longer available as part of the configured tasks. The task and related parameters have been removed. If you wish to continue using PHP Mess Detector, you can add it as part of GrumPHP as previously described.
 
-The task has been removed and related parameters too.
-
-If you wish to continue using the task, you can add this as part of GrumPHP previously seen.
-
-Other conventions and parameters remains the same.
+All other conventions and parameters remain the same.
 
 ## Development
 
