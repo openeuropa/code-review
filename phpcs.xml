@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
-<!-- PHP_CodeSniffer standard for OpenEuropa PHP libraries. -->
 <!-- See http://pear.php.net/manual/en/package.php.php-codesniffer.annotated-ruleset.php -->
-<ruleset name="OpenEuropa PHP library">
-    <description>Coding standard for OpenEuropa PHP libraries.</description>
+<ruleset name="Code review phpcs">
+    <description>Coding standard for code review.</description>
 
     <rule ref="./vendor/squizlabs/php_codesniffer/src/Standards/PSR12" />
 
