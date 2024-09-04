@@ -2,130 +2,19 @@
 [![Build Status](https://drone.fpfis.eu/api/badges/openeuropa/code-review/status.svg?branch=3.x)](https://drone.fpfis.eu/openeuropa/code-review)
 [![Packagist](https://img.shields.io/packagist/v/openeuropa/code-review.svg)](https://packagist.org/packages/openeuropa/code-review)
 
-Make automatic [conventions](CONVENTIONS.md) checking on each commit via [GrumPHP](https://github.com/phpro/grumphp).
-
 ## Usage
 
-### Installation
-Install the code review component via Composer:
+This component forms the foundation for both Drupal and PHP Library conventions. It offers core functionality that the derived components expand upon. To use these conventions in your project, pick the derived component that fits your needs. For more details, visit the following pages:
 
-PHP library:
-
-```bash
-composer require --dev openeuropa/code-review-library
-```
-
-Drupal projects:
-
-```bash
-composer require --dev openeuropa/code-review-drupal
-```
-
-In your project root create the following `grumphp.yml.dist`:
-
-```yaml
-imports:
-  - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
-```
-For Drupal projects, `drupal-conventions.yml` should be imported instead.
-
-OE Components should use `oe-components-conventions.yml`
-
-Projects using Drupal rules based conventions like phpcs in `drupal-conventions` and `oe-components-conventions.yml` have to require Coder via Composer:
-
-```bash
-composer require --dev drupal/coder
-```
-
-### Commands
-
-GrumPHP tasks will be run at every commit, if you wish to run them without performing a commit use the following command:
-
-```bash
-./vendor/bin/grumphp run
-```
-
-If you want to simulate the tasks that will be run when creating a new commit:
-
-```bash
-./vendor/bin/grumphp git:pre-commit
-```
-
-Check [GrumPHP documentation](https://github.com/phpro/grumphp/tree/master/doc) for more.
-
-### Customization
-
-This component offers a variety of ready conventions that all projects need to follow.
-This list of default conventions can be found in [CONVENTIONS.md](CONVENTIONS.md).
-
-Since GrumPHP uses the [Symfony Dependency Injection component](http://symfony.com/doc/current/components/dependency_injection.html)
-you can override specific parameters in your project's `grumphp.yml.dist` file as follows:
-
-```yaml
-imports:
-  - { resource: ./vendor/openeuropa/code-review/dist/oe-component-conventions.yml }
-
-parameters:
-  tasks.git_commit_message.matchers: ['/^JIRA-\d+: [A-Z].+\./']
-```
-
-Below the list of task parameters can that be overridden on a per-project basis:
-
-- `tasks.phpcs.standard`
-- `tasks.phpcs.ignore_patterns`
-- `tasks.phpcs.triggered_by`
-- `tasks.phpcs.whitelist_patterns`
-- `tasks.phpcs.warning_severity`
-- `tasks.phpstan.autoload_file`
-- `tasks.phpstan.configuration`
-- `tasks.phpstan.level`
-- `tasks.phpstan.force_patterns`
-- `tasks.phpstan.triggered_by`
-- `tasks.git_commit_message.matchers`
-
-It is also possible to extend the list of tasks to be run by adding tasks under the `tasks:` tree as shown below:
-
-```yaml
-imports:
-  - { resource: ./vendor/openeuropa/code-review/dist/library-conventions.yml }
-
-grumphp:
-  tasks:
-    phpparser: ~
-```
-
-GrumPHP already has a series of tasks that can be used out of the box, you can find the complete list in the
-[GrumPHP tasks page](https://github.com/phpro/grumphp/blob/v2.x/doc/tasks.md).
-
-If you wih you can create your own tasks as explained in the [GrumPHP extensions page](https://github.com/phpro/grumphp/blob/v2.x/doc/extensions.md).
+- PHP Library: https://github.com/openeuropa/code-review-library
+- Drupal project: https://github.com/openeuropa/code-review-drupal
 
 ### Upgrade from 2.x to 3.x
 
-New version removes ExtraTasks extension. Any aditional task previously declared in
-`extra_tasks` will need to be placed inside `tasks` under `grumphp` tree.
+This component is no longer used as the final version for any project. If you're upgrading to the 3.x version, please refer to the transition section in the relevant derived component’s documentation:
 
-```diff yaml
-
-- extra_tasks:
--   phpparser:
--      ignore_patterns:
--       - vendor/
--
-- grumphp:
--   extensions:
--     - OpenEuropa\CodeReview\ExtraTasksExtension
-
-+ grumphp:
-+   tasks:
-+     phpparser:
-+      ignore_patterns:
-+        - vendor/
-
-```
-
-In addition, PHP Mess Detector is no longer available as part of the configured tasks. The task and related parameters have been removed. If you wish to continue using PHP Mess Detector, you can add it as part of GrumPHP as previously described.
-
-All other conventions and parameters remain the same.
+- [PHP Library](https://github.com/openeuropa/code-review-library#transition-from-code-review-2x)
+- [Drupal project](https://github.com/openeuropa/code-review-drupal#transition-from-code-review-2x)
 
 ## Development
 
