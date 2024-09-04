@@ -26,21 +26,13 @@ pipeline:
     volumes:
       - /cache:/cache
     commands:
-      - export COMPOSER=composer.dev.json
       - composer self-update --2
       - composer install --ansi
 
   grumphp:
-    group: test
     image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     commands:
       - ./vendor/bin/grumphp run
-
-  phpunit:
-    group: test
-    image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
-    commands:
-      - ./vendor/bin/phpunit
 
 matrix:
   PHP_VERSION:

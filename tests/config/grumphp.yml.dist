@@ -1,8 +1,0 @@
-imports:
-  - { resource: ../../dist/{configuration}.yml }
-
-parameters:
-  # Add manually includes for Drupal PHPStan and Deprecation rules.
-  # Extension installer uses Composer plugin to include any dependency with
-  # configuration in extra section.
-  tasks.phpstan.configuration: tests/config/phpstan.neon

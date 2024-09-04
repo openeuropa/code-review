@@ -1,5 +1,0 @@
-imports:
-  - { resource: ../../dist/{configuration}.yml }
-
-parameters:
-  tasks.phpcs.standard: ./resources/library-phpcs-ruleset.xml

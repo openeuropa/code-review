@@ -1,9 +1,5 @@
 /vendor/
-/tests/config/grumphp.yml
-/tests/fixtures/build/
 composer.lock
-composer.dev.lock
 grumphp.yml
-phpunit.xml
 .idea
 docker-compose.*.yml
