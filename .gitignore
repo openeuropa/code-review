@@ -1,5 +1,4 @@
 /vendor/
 composer.lock
-grumphp.yml
 .idea
 docker-compose.*.yml

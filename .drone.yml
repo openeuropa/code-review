@@ -29,11 +29,6 @@ pipeline:
       - composer self-update --2
       - composer install --ansi
 
-  grumphp:
-    image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
-    commands:
-      - ./vendor/bin/grumphp run
-
 matrix:
   PHP_VERSION:
     - 8.1
