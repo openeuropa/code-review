@@ -1,4 +1,14 @@
-# Changelog
+# Change Log
+
+## [3.0.0](https://github.com/openeuropa/code-review/tree/3.0.0) (2024-11-28)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha6...3.0.0)
+
+**Merged pull requests:**
+
+- OEL-3326: Drop task PHP Mess Detector in 3.x [\#162](https://github.com/openeuropa/code-review/pull/162) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
+- OEL-3328: Add task PHPStan in 3.x [\#161](https://github.com/openeuropa/code-review/pull/161) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
+- OEL-3327: Improve tests coverage in 3.x [\#160](https://github.com/openeuropa/code-review/pull/160) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
+- OEL-3256: Upgrade GrumPHP to v2 [\#159](https://github.com/openeuropa/code-review/pull/159) ([AaronGilMartinez](https://github.com/AaronGilMartinez))
 
 ## [2.0.0-alpha6](https://github.com/openeuropa/code-review/tree/2.0.0-alpha6) (2023-01-03)
 
