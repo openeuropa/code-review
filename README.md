@@ -22,10 +22,10 @@ For Drupal projects, `drupal-conventions.yml` should be imported instead.
 
 ### Using Docker Compose
 
-Alternatively, you can build a development setup using [Docker](https://www.docker.com/get-docker) and 
+Alternatively, you can build a development setup using [Docker](https://www.docker.com/get-docker) and
 [Docker Compose](https://docs.docker.com/compose/) with the provided configuration.
 
-Docker provides the necessary services and tools such as a web server and a database server to get the site running, 
+Docker provides the necessary services and tools such as a web server and a database server to get the site running,
 regardless of your local host configuration.
 
 #### Requirements:
@@ -37,7 +37,7 @@ regardless of your local host configuration.
 
 By default, Docker Compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file.
 By convention, the `docker-compose.yml` contains your base configuration and it's provided by default.
-The override file, as its name implies, can contain configuration overrides for existing services or entirely new 
+The override file, as its name implies, can contain configuration overrides for existing services or entirely new
 services.
 If a service is defined in both files, Docker Compose merges the configurations.
 
@@ -122,26 +122,52 @@ Below the list of task parameters can that be overridden on a per-project basis:
 - `tasks.phpmd.triggered_by`
 - `tasks.git_commit_message.matchers`
 
-More on how to import and override configuration files [here](http://symfony.com/doc/current/service_container/import.html).
-
-It is also possible to extend the list of tasks to be run by loading the extra tasks extension and adding tasks under
-the `extra_tasks:` parameter as shown below:
+It is also possible to extend the list of tasks to be run by adding tasks under the `tasks:` tree as shown below:
 
 ```yaml
 imports:
-  - { resource: vendor/openeuropa/code-review/dist/library-conventions.yml }
+  - { resource: ./vendor/openeuropa/code-review-drupal/dist/drupal-conventions.yml }
 
-parameters:
-  extra_tasks:
+grumphp:
+  tasks:
     phpparser: ~
-  extensions:
-    - OpenEuropa\CodeReview\ExtraTasksExtension
 ```
 
 GrumPHP already has a series of tasks that can be used out of the box, you can find the complete list in the
-[GrumPHP tasks page](https://github.com/phpro/grumphp/blob/master/doc/tasks.md).
+[GrumPHP tasks page](https://github.com/phpro/grumphp/blob/v2.x/doc/tasks.md).
 
-It is also possible to create your own tasks as explained in the [GrumPHP extensions page](https://github.com/phpro/grumphp/blob/master/doc/extensions.md).
+If you wih you can create your own tasks as explained in the [GrumPHP extensions page](https://github.com/phpro/grumphp/blob/v2.x/doc/extensions.md).
+
+### Transition from code-review 2.x
+
+If you wish to transition to code-review-drupal from code-review version 2.x, please replace the package via Composer:
+
+Some adjustments are needed in `grumphp.yml` file.
+
+This component removes ExtraTasks extension. Any aditional task previously declared in `extra_tasks` will need to be placed inside `tasks` under `grumphp` tree.
+
+```diff yaml
+
+- extra_tasks:
+-   phpparser:
+-      ignore_patterns:
+-       - vendor/
+-
+- grumphp:
+-   extensions:
+-     - OpenEuropa\CodeReview\ExtraTasksExtension
+
++ grumphp:
++   tasks:
++     phpparser:
++      ignore_patterns:
++        - vendor/
+
+```
+
+In addition, PHP Mess Detector is no longer available as part of the configured tasks. The task and related parameters have been removed. If you wish to continue using PHP Mess Detector, you can add it as part of GrumPHP as previously described.
+
+All other conventions and parameters remain the same.
 
 ## Usage
 
@@ -168,7 +194,7 @@ This reads the [Github API](https://api.github.com/repos/openeuropa/code-review)
 **Prerequisites**
 
 - Local Docker machine running.
-- A [Github Access Token](https://github.com/settings/tokens) should be generated and exported (or written to ~/.gitconfig) as `CHANGELOG_GITHUB_TOKEN=<YOUR TOKEN HERE>`  
+- A [Github Access Token](https://github.com/settings/tokens) should be generated and exported (or written to ~/.gitconfig) as `CHANGELOG_GITHUB_TOKEN=<YOUR TOKEN HERE>`
 
 Before tagging a new release export the following:
 
@@ -186,7 +212,7 @@ composer run-script changelog
 ## Troubleshooting
 
 **GrumPHP not fired on new commits**
- 
+
 With Git 2.9+ (June 2016) you have a new option for centralizing hooks: `core.hooksPath`. In case GrumPHP is not
 fired on new commits check for `core.hooksPath` global option by running:
 
@@ -197,7 +223,7 @@ git config --global --list
 To unset that option run:
 
 ```bash
-git config --global --unset core.hooksPath 
+git config --global --unset core.hooksPath
 ```
 
 **Generate Changelog on Mac**

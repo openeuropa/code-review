@@ -5,10 +5,10 @@
   "require": {
     "php": ">=8.0",
     "drupal/coder": "^8.3.16",
-    "phpmd/phpmd" : "^2.12",
-    "phpro/grumphp": "^1.1",
-    "squizlabs/php_codesniffer": "^3.6",
-    "amphp/parallel": "^1.4.1"
+    "phpmd/phpmd" : "^2.15",
+    "phpro/grumphp": "^1.1 || ^2.12",
+    "squizlabs/php_codesniffer": "^3.7",
+    "amphp/parallel": "^2.3"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5.5"
@@ -25,8 +25,7 @@
   },
   "extra": {
     "_readme": [
-        "Explicit minimum version requirement for phpunit/phpunit due to lower versions using deprecated Serializable interface.",
-        "Explicit minimum version requirement for amphp/parallel due to lower versions missing return type on BasicEnvironment::offsetGet method."
+        "Explicit minimum version requirement for phpunit/phpunit due to lower versions using deprecated Serializable interface."
     ]
   },
   "scripts": {
