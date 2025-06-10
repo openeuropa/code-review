@@ -48,6 +48,8 @@ class PhpCodeSnifferDrupalTest extends PhpCodeSnifferTestBase
                         18 => 1,
                         21 => 1,
                         24 => 1,
+                        25 => 1,
+                        26 => 1,
                     ],
                 ],
             ],
