@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0](https://github.com/openeuropa/code-review/tree/2.0.0) (2025-06-10)
+
+[Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha6...2.0.0)
+
+**Merged pull request:**
+
+-  EWPP-5554: Update dependencies. [\#164](https://github.com/openeuropa/code-review/pull/164) ([nagyad](https://github.com/nagyad))
+
 ## [2.0.0-alpha6](https://github.com/openeuropa/code-review/tree/2.0.0-alpha6) (2023-01-03)
 
 [Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha5...2.0.0-alpha6)
