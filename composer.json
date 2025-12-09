@@ -4,12 +4,17 @@
   "license": "EUPL-1.2",
   "require": {
     "php": ">=8.1",
-    "phpro/grumphp-shim": "^2.7"
+    "phpro/grumphp-shim": "2.17.0"
   },
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "phpro/grumphp-shim": true
     }
+  },
+  "extra": {
+    "_readme": [
+      "Locking grumphp-shim because 2.18.0 version has broken requirements check."
+    ]
   }
 }
