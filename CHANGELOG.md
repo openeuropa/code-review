@@ -1,5 +1,13 @@
 # Change Log
 
+## [3.1.0](https://github.com/openeuropa/code-review/tree/3.1.0) (2025-12-10)
+[Full Changelog](https://github.com/openeuropa/code-review/compare/3.0.0...3.1.0)
+
+**Merged pull requests:**
+
+- EWPP-6348: Lock grumphp-shim to 2.17.0 until it is fixed. [\#168](https://github.com/openeuropa/code-review/pull/168) ([intelektron](https://github.com/intelektron))
+- EWPP-5817: Use github actions for CI. [\#167](https://github.com/openeuropa/code-review/pull/167) ([nagyad](https://github.com/nagyad))
+
 ## [3.0.0](https://github.com/openeuropa/code-review/tree/3.0.0) (2024-11-28)
 [Full Changelog](https://github.com/openeuropa/code-review/compare/2.0.0-alpha6...3.0.0)
 
