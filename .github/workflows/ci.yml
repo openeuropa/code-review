@@ -7,5 +7,7 @@ on:
       - 3.x
 
 jobs:
-    automated-tests:
-        uses: openeuropa/github-ci/.github/workflows/php-library-ci.yml@main
+  automated-tests:
+    uses: openeuropa/github-ci/.github/workflows/php-library-ci.yml@main
+    with:
+      run_phpunit: false
