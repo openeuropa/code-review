@@ -1,10 +1,21 @@
-# Change Log
+# Changelog
+
+## [3.2.0](https://github.com/openeuropa/code-review/tree/3.2.0) (2026-05-05)
+
+[Full Changelog](https://github.com/openeuropa/code-review/compare/3.1.0...3.2.0)
+
+**Merged pull requests:**
+
+- EWPP-6758: Update phpro/grumphp-shim to latest version. [\#172](https://github.com/openeuropa/code-review/pull/172) ([22Alexandra](https://github.com/22Alexandra))
+- EWPP-6339: Cache docker images for GitHub actions. [\#170](https://github.com/openeuropa/code-review/pull/170) ([nagyad](https://github.com/nagyad))
 
 ## [3.1.0](https://github.com/openeuropa/code-review/tree/3.1.0) (2025-12-10)
+
 [Full Changelog](https://github.com/openeuropa/code-review/compare/3.0.0...3.1.0)
 
 **Merged pull requests:**
 
+- Prepare release 3.1.0. [\#169](https://github.com/openeuropa/code-review/pull/169) ([intelektron](https://github.com/intelektron))
 - EWPP-6348: Lock grumphp-shim to 2.17.0 until it is fixed. [\#168](https://github.com/openeuropa/code-review/pull/168) ([intelektron](https://github.com/intelektron))
 - EWPP-5817: Use github actions for CI. [\#167](https://github.com/openeuropa/code-review/pull/167) ([nagyad](https://github.com/nagyad))
 
